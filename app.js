@@ -1,21 +1,35 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 8080;
+const dashboardRouter = require('./routes/dashboard')
+const { users, ROLE } = require('./data');
+const {authUser, authRole} = require('./basicAuth')
 
-// set the view engine to ejs
-app.use(express.static('public'))
+
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
+app.use(express.json())
+app.use(setUser)
+// app.use('/dashboard', dashboardRouter);
 
-// use res.render to load up an ejs view file
-
-// index page
 app.get('/', function(req, res) {
      res.render("pages/index")
+     
 });
 
-// about page
-app.get('/dashboard', function(req, res) {
-     res.send('You just logged in')
-});
+app.get('/design', (req, res) => {
+     res.render('pages/design')
+})
 
+
+function setUser(req, res, next) {
+     const userId = req.body.userId
+     if (userId) {
+       req.user = users.find(user => user.id === userId)
+       
+     }
+
+     next()
+}
+
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
