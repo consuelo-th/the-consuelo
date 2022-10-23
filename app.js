@@ -20,6 +20,10 @@ app.get('/design', (req, res) => {
      res.render('pages/design')
 })
 
+app.get('/register', (req, res) => {
+     res.render('pages/register')
+})
+
 
 function setUser(req, res, next) {
      const userId = req.body.userId
