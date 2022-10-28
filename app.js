@@ -21,15 +21,5 @@ app.get('/design', (req, res) => {
 })
 
 
-function setUser(req, res, next) {
-     const userId = req.body.userId
-     if (userId) {
-       req.user = users.find(user => user.id === userId)
-       
-     }
-
-     next()
-}
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
