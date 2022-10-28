@@ -20,6 +20,10 @@ app.get('/design', (req, res) => {
      res.render('pages/design')
 })
 
+app.get('/register', (req, res) => {
+     res.render('pages/register')
+})
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
