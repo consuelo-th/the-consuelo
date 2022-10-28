@@ -1,20 +1,16 @@
 const express = require('express');
 const app = express();
-const dashboardRouter = require('./routes/dashboard')
-const { users, ROLE } = require('./data');
-const {authUser, authRole} = require('./basicAuth')
 
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(express.json())
-app.use(setUser)
-// app.use('/dashboard', dashboardRouter);
 
 app.get('/', function(req, res) {
      res.render("pages/index")
      
 });
+
 
 app.get('/design', (req, res) => {
      res.render('pages/design')
@@ -22,6 +18,14 @@ app.get('/design', (req, res) => {
 
 app.get('/register', (req, res) => {
      res.render('pages/register')
+})
+
+app.get('/login', (req, res) => {
+     res.render('pages/login')
+})
+
+app.get('/reset', (req, res) => {
+     res.render('pages/reset')
 })
 
 

@@ -16,7 +16,8 @@ module.exports = {
       "helper": "#595E5B",
       "white": "#FFF",
       "icon":"#6C6F6D",
-      "grey-50": "#464646"
+      "gray-50": "#464646",
+      "gray-40": "#585858",
 
     },
     fontFamily: {      

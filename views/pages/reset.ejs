@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>REGISTER | CONSUELO</title>
+        <title>RESET PASSWORD</title>
         <link rel="stylesheet" href="/css/main.css">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -27,72 +27,75 @@
         <section class="flex flex-wrap lg:h-4/5 lg:items-center text-body">
             <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8">
                 <div class="mx-auto max-w-xs space-y-4">
-                    <h1 class="font-semibold text-2xl text-primary-60">Create a new account</h1>
-                    <p class="font-thin">You are one step towards getting better!</p>
-                    <button class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm shadow-sm text-gray-40 bg-secondary"><img src="/images/google-button.svg" alt="google" class="mr-2 inline align-middle"> Sign up with google</button>
-                    <p class="text-center">or</p>
+                    <h1 class="font-semibold text-2xl text-primary-60">Forgot password</h1>
+                    <p class="font-thin">Input your new desired password in the input fields below to create a new password.</p>
                 </div>
-                <form action="" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
-                    <div>
-                        <label for="First name" class="sr-only">First name</label>
-                        <input
-                        type="text"
-                        class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
-                        placeholder="First name"
-                        name="firstName"
-                        />
-                    </div>
-        
-                    <div>
-                    <label for="Last name" class="sr-only">Last name</label>
-                    <input
-                        type="text"
-                        class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
-                        placeholder="Last name"
-                        name="lastName"
-                    />
-                    </div>
-            
+                <form action="/" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
                     <div>
                         <label for="email" class="sr-only">Email</label>
                         <input
                             type="email"
                             class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
-                            placeholder="First name"
+                            placeholder="Email"
                             name="email"
                         />
                     </div>
-            
+                    <div>
+                        <label for="passworrd" class="sr-only">reset</label>
+                        <input
+                            type="submit"
+                            class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 text-md font-bold text-white shadow-sm bg-primary-50"
+                            value="Request Password Change"
+                            name="login"
+                        />
+                    </div>
+                
+                </form>
+
+                <form action="" class="hidden mx-auto mt-4 mb-0 max-w-xs space-y-4">
                     <div>
                         <label for="passworrd" class="sr-only">First name</label>
                         <input
                             type="password"
                             class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
                             placeholder="Password"
-                            name="password"
+                            name="password1"
+                        />
+                    </div>
+                    <div>
+                        <label for="passworrd" class="sr-only">First name</label>
+                        <input
+                            type="password"
+                            class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
+                            placeholder="Confirm password"
+                            name="password2"
                         />
                     </div>
 
-                    <p class="text-gray-40 font-semibold text-sm">Password must be up to 7 characters</p>
-                    <p class="text-body font-thin">By signing up, you agree to the <a href="#" class="text-primary-60">Terms of Service</a> and <a href="#" class="text-primary-60">Privacy Policy</a>.</p>
                     <div>
-                        <label for="passworrd" class="sr-only">FSubmit</label>
+                        <label for="passworrd" class="sr-only">reset</label>
                         <input
                             type="submit"
-                            class="w-full rounded-lg border-primary-50 border-[1px] text-center p-3 text-md font-bold text-white shadow-sm bg-primary-50"
-                            value="Sign Up"
-                            name="signUp"
+                            class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 text-md font-bold text-white shadow-sm bg-primary-50"
+                            value="Reset password"
+                            name="login"
                         />
                     </div>
-                    <p class="font-thin text-lg">Already have an account? <a href="/login" class="text-primary-60">Sign in</a></p>
-
+                
                 </form>
+
+                <div class="hidden flex-col items-center mx-auto mt-4 mb-0 max-w-xs space-y-4 text-primary-60">
+                    <h1 class="font-semibold text-2xl">Success</h1>
+                    <i class="fa-regular fa-circle-check fa-4x"></i>
+                    <p class="font-thin text-body">Your password has been reset successfully</p>
+                    <button type="submit" class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 text-md font-bold text-white shadow-sm bg-primary-50">Sign in</button>
+                </div>
             </div>
         
             <div class="relative  w-full sm:h-96 lg:h-full lg:w-1/2">
                 <img
                     alt="Welcome"
-                    src="/images/reg-banner.png"
+                    src="/images/reg-ba0nner.png"
                 />
             </div>
         </section>
