@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: 'Montserrat', sans-serif;
+}
 
-@font-face {
-    font-family: "Montserrat";
-    src: url("../public/fonts/ADELIA.otf");
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
