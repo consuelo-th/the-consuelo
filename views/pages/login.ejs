@@ -24,12 +24,12 @@
             </div>
         </header>
 
-        <section class="flex flex-wrap lg:h-4/5 lg:items-center text-body">
+        <section class="flex flex-wrap flex-ba lg:h-4/5 lg:items-center text-body">
             <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8">
                 <div class="mx-auto max-w-xs space-y-4">
                     <h1 class="font-semibold text-2xl text-primary-60">Sign into Consuelo</h1>
                     <p class="font-light">You are one step towards getting better!</p>
-                    <button class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm shadow-sm text-gray-40 bg-secondary"><img src="/images/google-button.svg" alt="google" class="mr-2 inline"> Sign up with google</button>
+                    <button class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm shadow-sm text-gray-40 bg-secondary"><img src="/images/google-button.svg" alt="google" class="mr-2 inline"> Sign up with Google</button>
                     <p class="text-center">or</p>
                 </div>
                 <form action="" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
@@ -64,12 +64,42 @@
             </div>
         
             <div class="relative  w-full sm:h-96 lg:h-full lg:w-1/2">
-                <img
-                    alt="Welcome"
-                    src="/images/reg-banner.png"
-                />
+                <div class="images">
+                    <img
+                        alt="Welcome"
+                        src="/images/reg-banner.png"
+                    />
+                </div>
+                <div class="images">
+                    <img
+                        alt="Welcome"
+                        src="/images/reg-banner1.png"
+                    />
+                </div>
+                <div class="images">
+                    <img
+                        alt="Welcome"
+                        src="/images/reg-banner2.png"
+                    />
+                </div>
             </div>
         </section>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("images");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                
+                slides[slideIndex-1].style.display = "block";  
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
   
     </body>
 </html>
