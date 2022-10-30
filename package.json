@@ -4,8 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js && npx tailwindcss -i ./public/css/input.css -o ./public/css/main.css --watch",
-    "test": ""
+    "test": "",
+    "start": "node app.js",
+    "devStart": "node app.js",
+    "tw:build": "npx tailwindcss -i ./public/css/input.css -o ./public/css/main.css --watch"
   },
   "repository": {
     "type": "git",
