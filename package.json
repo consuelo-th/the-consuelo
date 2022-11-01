@@ -4,8 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js && npx tailwindcss -i ./public/css/input.css -o ./public/css/main.css --watch",
-    "test": ""
+    "test": "",
+    "start": "node app.js",
+    "devStart": "nodemon app.js",
+    "tw:build": "npx tailwindcss -i ./public/css/input.css -o ./public/css/main.css --watch"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,10 @@
   },
   "homepage": "https://github.com/consuelo-th/the-consuelo#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20"
+    "mongoose": "^6.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

@@ -1,33 +1,28 @@
-const express = require('express');
+require("./database/connection");
+const express = require("express");
 const app = express();
+const usersRoutes = require("./routes/user");
 
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+app.use(express.json());
 
-app.use(express.static('public'));
-app.set('view engine', 'ejs');
-app.use(express.json())
+// parse incoming post request's body
+app.use(express.urlencoded({ extended: false }));
 
-app.get('/', function(req, res) {
-     res.render("pages/index")
-     
+app.use("/user", usersRoutes);
+
+app.get("/", function (req, res) {
+  res.render("pages/index");
 });
 
+app.get("/design", (req, res) => {
+  res.render("pages/design");
+});
 
-app.get('/design', (req, res) => {
-     res.render('pages/design')
-})
-
-app.get('/register', (req, res) => {
-     res.render('pages/register')
-})
-
-app.get('/login', (req, res) => {
-     res.render('pages/login')
-})
-
-app.get('/reset', (req, res) => {
-     res.render('pages/reset')
-})
-
+app.use((req, res) => {
+  res.render("pages/errorPages/404");
+});
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
