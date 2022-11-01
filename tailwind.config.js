@@ -18,6 +18,7 @@ module.exports = {
       "icon":"#6C6F6D",
       "gray-50": "#464646",
       "gray-40": "#585858",
+      "error": "#BF5E5E"
 
     },
     fontFamily: {      

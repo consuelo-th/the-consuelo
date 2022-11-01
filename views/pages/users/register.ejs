@@ -32,53 +32,68 @@
                     <button class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm shadow-sm text-gray-40 bg-secondary"><img src="/images/google-button.svg" alt="google" class="mr-2 inline align-middle"> Sign up with google</button>
                     <p class="text-center">or</p>
                 </div>
-                <form action="" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
-                    <div>
+                <form action="/user/register" method="post" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
+                    <div class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between">
                         <label for="First name" class="sr-only">First name</label>
                         <input
                         type="text"
-                        class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
+                        class="text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
                         placeholder="First name"
                         name="firstName"
                         />
                     </div>
         
-                    <div>
-                    <label for="Last name" class="sr-only">Last name</label>
-                    <input
-                        type="text"
-                        class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
-                        placeholder="Last name"
-                        name="lastName"
-                    />
+                    <div class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between">
+                      <label for="Last name" class="sr-only">Last name</label>
+                      <input
+                          type="text"
+                          class="text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
+                          placeholder="Last name"
+                          name="lastName"
+                      />
                     </div>
             
-                    <div>
-                        <label for="email" class="sr-only">Email</label>
-                        <input
-                            type="email"
-                            class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
-                            placeholder="First name"
-                            name="email"
-                        />
+                    <div class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between">
+                      <label for="email" class="sr-only">Email</label>
+                      <input
+                          type="email"
+                          class="text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
+                          placeholder="Email"
+                          name="email"
+                      />
                     </div>
             
-                    <div>
-                        <label for="passworrd" class="sr-only">First name</label>
-                        <input
-                            type="password"
-                            class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
-                            placeholder="Password"
-                            name="password"
-                        />
+                    <div class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between">
+                      <label for="passworrd" class="sr-only">First name</label>
+                      <input
+                          type="password"
+                          class=" text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
+                          placeholder="Password"
+                          name="password"
+                          id="password"
+                      />
+
+                      <div onclick="togglePasswordVisibility()">
+                        <i class="fa-regular fa-eye" ></i> 
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                      </div>
+                      
                     </div>
 
-                    <p class="text-gray-40 font-semibold text-sm">Password must be up to 7 characters</p>
+                    <div class="form-errors">
+                      <% if (false) { %>
+                        <p class="text-error font-semibold text-sm">Password must be up to 7 characters</p>
+                        <h2><%= user.name %></h2>
+                      <% } else { %>
+                        <p class="text-gray-40 font-semibold text-sm"><i class="fa-solid fa-circle-check pr-2"></i> Password must be up to 7 characters</p>
+                      <% }%>
+                    </div>
+                    
                     <p class="text-body font-light">By signing up, you agree to the <a href="#" class="text-primary-60">Terms of Service</a> and <a href="#" class="text-primary-60">Privacy Policy</a>.</p>
                     <div>
                         <button type="submit" class="w-full rounded-lg border-primary-50 border-[1px] text-center p-3 text-md font-bold text-white shadow-sm bg-primary-50">Sign up</button>
                     </div>
-                    <p class="font-light text-lg">Already have an account? <a href="/login" class="text-primary-60">Sign in</a></p>
+                    <p class="font-light text-lg">Already have an account? <a href="/user/login" class="text-primary-60">Sign in</a></p>
 
                 </form>
             </div>
@@ -90,6 +105,17 @@
                 />
             </div>
         </section>
+
+        <script>
+          function togglePasswordVisibility() {
+              var password = document.getElementById("password");
+              if (password.type === "password") {
+                password.type = "text";
+              } else {
+                password.type = "password";
+              }
+            }
+        </script>
   
     </body>
 </html>

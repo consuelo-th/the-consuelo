@@ -32,54 +32,73 @@
                     <button class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm shadow-sm text-gray-40 bg-secondary"><img src="/images/google-button.svg" alt="google" class="mr-2 inline"> Sign up with Google</button>
                     <p class="text-center">or</p>
                 </div>
-                <form action="" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
-                    <div>
+                <form action="/user/login" method="post" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
+                    <div class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between">
                         <label for="email" class="sr-only">Email</label>
                         <input
                             type="email"
-                            class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
+                            class="text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
                             placeholder="Email"
                             name="email"
                         />
                     </div>
             
-                    <div>
+                    <div class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between">
                         <label for="passworrd" class="sr-only">First name</label>
                         <input
                             type="password"
-                            class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
+                            class=" text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
                             placeholder="Password"
                             name="password"
+                            id="password"
                         />
-                    </div>
 
-                    <p class="text-gray-40 font-semibold text-sm"><i class="fa-solid fa-circle-check pr-2"></i> Password must be up to 7 characters</p>
+                        <div onclick="togglePasswordVisibility()">
+                          <i class="fa-regular fa-eye" ></i> 
+                          <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                        </div>
+                        
+                    </div>
+                    
+                      <% if (false) { %>
+                        <p class="text-error font-semibold text-sm">Password must be up to 7 characters</p>
+                        <h2><%= user.name %></h2>
+                      <% } else { %>
+                        <p class="text-error font-semibold text-sm"><i class="fa-solid fa-circle-xmark"></i> incorrect username or password</p>
+                      <% }%>
+                    <div>
+
+                    </div>
+                    
                     <p class="text-body font-light">By signing up, you agree to the <a href="#" class="text-primary-60">Terms of Service</a> and <a href="#" class="text-primary-60">Privacy Policy</a>.</p>
                     <div>
                         <button type="submit" class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 text-md font-bold text-white shadow-sm bg-primary-50">Sign in</button>
                     </div>
-                    <p class="font-light text-lg">Don't have account? <a href="/register" class="text-primary-60">Sign up</a></p>
+                    <p class="font-light text-lg">Don't have account? <a href="/user/register" class="text-primary-60">Sign up</a></p>
 
                 </form>
             </div>
         
-            <div class="relative  w-full sm:h-96 lg:h-full lg:w-1/2">
+            <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
                 <div class="images">
                     <img
                         alt="Welcome"
                         src="/images/reg-banner.png"
+                        class="absolute inset-0 h-full w-full object-cover"
                     />
                 </div>
                 <div class="images">
                     <img
                         alt="Welcome"
                         src="/images/reg-banner1.png"
+                        class="absolute inset-0 h-full w-full object-cover"
                     />
                 </div>
                 <div class="images">
                     <img
                         alt="Welcome"
                         src="/images/reg-banner2.png"
+                        class="absolute inset-0 h-full w-full object-cover"
                     />
                 </div>
             </div>
@@ -97,7 +116,16 @@
                 if (slideIndex > slides.length) {slideIndex = 1}    
                 
                 slides[slideIndex-1].style.display = "block";  
-                setTimeout(showSlides, 2000); // Change image every 2 seconds
+                setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+
+            function togglePasswordVisibility() {
+              var password = document.getElementById("password");
+              if (password.type === "password") {
+                password.type = "text";
+              } else {
+                password.type = "password";
+              }
             }
         </script>
   
