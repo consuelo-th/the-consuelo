@@ -61,11 +61,6 @@
           </button>
           <p class="text-center">or</p>
         </div>
-
-        <% if (locals.error) { %>
-        <span><%= error %> </span>
-        <% } %>
-
         <form
           action="/user/login"
           method="post"
@@ -112,7 +107,7 @@
           </div>
           <p class="font-thin text-lg">
             Don't have account?
-            <a href="/register" class="text-primary-60">Sign up</a>
+            <a href="/user/register" class="text-primary-60">Sign up</a>
           </p>
         </form>
       </div>

@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcrypt");
 const User = require("../database/models").User;
 
 router.get("/register", (req, res) => {
@@ -18,7 +19,6 @@ router.get("/dashboard", (req, res) => {
   res.render("pages/users/dashboard");
 });
 
-//TODO encrypt passwords
 router.post("/register", async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
@@ -32,11 +32,12 @@ router.post("/register", async (req, res) => {
         formData: req.body,
       });
     } else {
+      const hashedPassword = await bcrypt.hash(req.body.password, 10);
       const newUser = new User({
         firstName,
         lastName,
         email,
-        password,
+        password: hashedPassword,
       });
       newUser.save((err, newUserDoc) => {
         if (err) {
@@ -70,7 +71,7 @@ router.post("/login", async (req, res) => {
   const user = await User.findOne({ email });
 
   if (user) {
-    if (user.password === password) {
+    if (await bcrypt.compare(password, user.password)) {
       //valid details
       res.redirect("/user/dashboard");
     } else {
