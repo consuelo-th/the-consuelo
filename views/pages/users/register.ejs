@@ -48,7 +48,7 @@
           <h1 class="font-semibold text-2xl text-primary-60">
             Create a new account
           </h1>
-          <p class="font-thin">You are one step towards getting better!</p>
+          <p class="font-light">You are one step towards getting better!</p>
           <button
             class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm shadow-sm text-gray-40 bg-secondary"
           >
@@ -66,67 +66,84 @@
           method="post"
           class="mx-auto mt-4 mb-0 max-w-xs space-y-4"
         >
-          <div>
+          <div
+            class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between"
+          >
             <label for="First name" class="sr-only">First name</label>
             <input
               type="text"
-              class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
+              class="text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
               placeholder="First name"
               name="firstName"
               value="<%= (locals.formData) ? formData.firstName : ''%>"
             />
           </div>
 
-          <div>
+          <div
+            class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between"
+          >
             <label for="Last name" class="sr-only">Last name</label>
             <input
               type="text"
-              class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
+              class="text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
               placeholder="Last name"
               name="lastName"
               value="<%= (locals.formData) ? formData.lastName : ''%>"
             />
           </div>
 
-          <div>
+          <div
+            class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between"
+          >
             <label for="email" class="sr-only">Email</label>
             <input
               type="email"
-              class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
+              class="text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
               placeholder="Email"
               name="email"
               value="<%= (locals.formData) ? formData.email : ''%>"
             />
           </div>
 
-          <div>
+          <div
+            class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm text-gray-40 shadow-md focus-within:border-primary-50 focus:outline-none bg-secondary flex items-center justify-between"
+          >
             <label for="passworrd" class="sr-only">First name</label>
             <input
               type="password"
-              class="w-full rounded-lg border-gray-50 border-[1px] p-3 pr-12 text-sm shadow-sm text-gray-40 focus-visible:outline-primary-50 focus-visible:border-primary-50 bg-secondary"
+              class="text-gray-40 focus-visible:outline-none w-11/12 bg-secondary"
               placeholder="Password"
               name="password"
+              id="password"
               value="<%= (locals.formData) ? formData.password : ''%>"
             />
+
+            <div onclick="togglePasswordVisibility()">
+              <i class="fa-regular fa-eye"></i>
+              <!-- <i class="fa-regular fa-eye-slash"></i> -->
+            </div>
           </div>
 
-          <p class="text-gray-40 font-semibold text-sm">
-            Password must be up to 7 characters
-          </p>
-          <p class="text-body font-thin">
+          <div class="form-errors">
+            <% if (locals.error) { %>
+            <p class="text-error font-semibold text-sm"><%= error %></p>
+            <% }%>
+          </div>
+
+          <p class="text-body font-light">
             By signing up, you agree to the
             <a href="#" class="text-primary-60">Terms of Service</a> and
             <a href="#" class="text-primary-60">Privacy Policy</a>.
           </p>
           <div>
-            <label for="passworrd" class="sr-only">FSubmit</label>
-            <input
+            <button
               type="submit"
               class="w-full rounded-lg border-primary-50 border-[1px] text-center p-3 text-md font-bold text-white shadow-sm bg-primary-50"
-              value="Sign Up"
-            />
+            >
+              Sign up
+            </button>
           </div>
-          <p class="font-thin text-lg">
+          <p class="font-light text-lg">
             Already have an account?
             <a href="/user/login" class="text-primary-60">Sign in</a>
           </p>
@@ -137,5 +154,16 @@
         <img alt="Welcome" src="/images/reg-banner.png" />
       </div>
     </section>
+
+    <script>
+      function togglePasswordVisibility() {
+        var password = document.getElementById("password");
+        if (password.type === "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      }
+    </script>
   </body>
 </html>
