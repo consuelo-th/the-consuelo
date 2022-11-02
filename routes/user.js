@@ -68,26 +68,41 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
-  const user = await User.findOne({ email });
+  if (email !== "" && password !== "") {
+    const user = await User.findOne({ email });
 
-  if (user) {
-    if (await bcrypt.compare(password, user.password)) {
-      //valid details
-      res.redirect("/user/dashboard");
+    if (user) {
+      if (await bcrypt.compare(password, user.password)) {
+        //valid details
+        res.redirect("/user/dashboard");
+      } else {
+        //wrong password
+        res.render("pages/users/login", {
+          error: "Invalid email or password",
+          formData: req.body,
+        });
+      }
     } else {
-      //wrong password
+      //no record with the submitted email
       res.render("pages/users/login", {
         error: "Invalid email or password",
         formData: req.body,
       });
     }
   } else {
-    //no record with the submitted email
     res.render("pages/users/login", {
-      error: "Invalid email or password",
+      error: "All input fields must be filled",
       formData: req.body,
     });
   }
 });
+
+router.get("/home", (req, res) => {});
+
+router.get("/self-affirmation", (req, res) => {});
+router.get("/mental-health-tips", (req, res) => {});
+router.get("/forum", (req, res) => {});
+router.get("/blog", (req, res) => {});
+router.get("/logout", (req, res) => {});
 
 module.exports = router;
