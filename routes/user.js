@@ -15,8 +15,8 @@ router.get("/reset", (req, res) => {
   res.render("pages/users/reset");
 });
 
-router.get("/dashboard", (req, res) => {
-  res.render("pages/users/dashboard");
+router.get("/home", (req, res) => {
+  res.render("pages/users/home");
 });
 
 router.post("/register", async (req, res) => {
@@ -51,7 +51,7 @@ router.post("/register", async (req, res) => {
         } else {
           //user saved
           //redirect to homepage
-          res.redirect("/user/dashboard");
+          res.redirect("/user/home");
         }
       });
     }
@@ -70,20 +70,18 @@ router.post("/login", async (req, res) => {
 
   if (email !== "" && password !== "") {
     const user = await User.findOne({ email });
-
     if (user) {
-      if (await bcrypt.compare(password, user.password)) {
+      if (user.password === password) {
         //valid details
-        res.redirect("/user/dashboard");
+        res.redirect("/user/home");
       } else {
-        //wrong password
+        //no record with the submitted email
         res.render("pages/users/login", {
           error: "Invalid email or password",
           formData: req.body,
         });
       }
     } else {
-      //no record with the submitted email
       res.render("pages/users/login", {
         error: "Invalid email or password",
         formData: req.body,
@@ -97,7 +95,9 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.get("/home", (req, res) => {});
+router.get("/home", (req, res) => {
+  res.render("pages/users/home");
+});
 
 router.get("/self-affirmation", (req, res) => {});
 router.get("/mental-health-tips", (req, res) => {});
