@@ -14,377 +14,143 @@
 </head>
 <body class="bg-secondary">
     
-    <!-- header nav -->
-    <header class="flex justify-between items-center py-2 px-6 bg-primary-60">
-        <div class="flex space-x-1">
-            <a href="/">
-                <img alt="consuelo-logo" src="/images/logo.png"/>
-            </a>
-            <h1 class="px-2 text-white font-bold text-lg">
-                Consuelo
-            </h1>
-        </div>
-        <div class="flex space-x-2">
-            <p><i class="fa-regular fa-bell text-secondary"></i></p>
-            <p><i class="fas fa-user-circle text-secondary"></i></p>
-        </div>
+
+<!-- component -->
+<div class="flex flex-row min-h-screen ">
+  <aside class="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+  >
+
+    <!-- sidebar header  -->
+    <div class="flex h-screen flex-col border-r bg-primary-60 text-white static">
+      <div class="sidebar-header flex space-x-1 px-4 py-4">
+        <a href="/user/home">
+            <img alt="consuelo-logo" src="/images/logo.png"/>
+        </a>
+        <h1 class="px-2 text-white font-bold text-lg">
+            Consuelo
+        </h1>
+    </div>
+
+    <!-- sidebar -->
+    <nav aria-label="Main Nav" class="main-nav mt-20 flex flex-col space-y-2 w-full">
+      <a href="/user/home" class="flex items-center px-4 py-3 bg-primary-10 border-l-8 border-solid border-l-primary-70 text-primary-60" >
+        <!-- <i class="fa-solid fa-house-chimney"></i> -->
+        <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+
+
+        <span class="ml-3 text-sm font-medium"> Home </span>
+      </a>
+
+      <a href="/user/self-affirmation" class="flex items-center px-4 py-3 transition-all">
+        <i class="fa-solid fa-house-chimney"></i>
+        <span class="ml-3 text-sm font-medium"> Self Affirmation </span>
+      </a>
+
+      <a href="/user/mental-health-tips" class="flex items-center px-4 py-3 transition-all" >
+        <i class="fa-solid fa-house-chimney"></i>
+        <span class="ml-3 text-sm font-medium"> Mental Health Tips </span>
+      </a>
+
+      <a href="/user/forum" class="flex items-center px-4 py-3 transition-all" >
+        <i class="fa-solid fa-house-chimney"></i>
+        <span class="ml-3 text-sm font-medium"> Forum </span>
+      </a>
+
+      <a href="/user/music" class="px-4 py-3 transition-all" >
+        <i class="fa-solid fa-music"></i>
+        <span class="ml-3 text-sm font-medium"> Music </span>
+      </a>
+      <a href="/user/blog" class="flex items-center px-4 py-3 transition-all" >
+        <i class="fa-solid fa-house-chimney"></i>
+        <span class="ml-3 text-sm font-medium"> Blog </span>
+      </a>
+      <a ref="/user/logout" class="flex items-center px-4 py-3 transition-all">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <span class="ml-3 text-sm font-medium"> Logout </span>
+      </a>
+
+    
+    </nav>
+    
+    </div>
+  </aside>
+  <main class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in bg-[#EFF3F6]">
+    <header class="header bg-white shadow p-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-xl">Welcome back, Hassy 💚</h1>
+        <p>Your feelings are welcome here</p>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <i class="fa-regular fa-bell"></i>
+
+        <span class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer">
+          <i class="fa-regular fa-user"></i>
+
+          <i class="fa-solid fa-angle-down"></i>
+        </span>
+      </div>
+        
     </header>
 
-    <div class="flex">
-        <section class="border-r-2 border-primary-40 border-solid w-40">
-            <nav class="my-4 ml-2">
-                <ul class="flex flex-col justify-between items-stretch space-y-4" >
-                    <li class=" bg-primary-10 border-l-4 border-primary-70 p-2 "><a href="/" class="text-body"><i class="fa-solid fa-house text-icon"></i> Home</a></li>
-                    <li class="p-2 "><a href="/" class="text-body"><i class="fa-solid fa-house text-icon"></i> Home</a></li>
-                    <li class="p-2 "><a href="/" class="text-body"><i class="fa-solid fa-house text-icon"></i> Home</a></li>
-                    <li class="p-2 "><a href="/" class="text-body"><i class="fa-solid fa-house text-icon"></i> Home</a></li>
-                    <li class="p-2 "><a href="/" class="text-body"><i class="fa-solid fa-house text-icon"></i> Home</a></li>
-                    <li class="p-2 "><a href="/" class="text-body"><i class="fa-solid fa-house text-icon"></i> Home</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section class="grid grid-cols-3 gap-3 place-items-center">
-            <div class="space-y-2">
-                <button class="text-white bg-primary-50 rounded-sm w-32 mx-auto p-1">Button <i class="fa-solid fa-angle-right"></i></button>
-                <button class="text-white bg-primary-70 rounded-sm w-32 mx-auto p-1">Button <i class="fa-solid fa-angle-right"></i></button>
-            </div>
 
-            <div class="space-y-2">
-                <button class="text-white bg-primary-50 rounded-sm w-32 mx-auto p-1">Button </button>
-                <button class="text-white bg-primary-70 rounded-sm w-32 mx-auto p-1">Button </button>
-            </div>
+    <div class="main-content flex flex-col flex-grow p-4">
+       main content here
+       
 
-            <div class="space-y-2">
-                <button class="text-primary-50 border-primary-50 border-2 border-solid rounded-sm w-32 mx-auto p-1">Button </button>
-                <button class="text-primary-50 border-primary-50 border-2 border-solid rounded-sm w-32 mx-auto p-1">Button </button>
-            </div>
-
-            <div class="space-y-2">
-                <button class="text-primary-50 border-primary-50 border-2 border-solid rounded-sm w-64 mx-auto p-1">Button </button>
-                <button class="text-primary-50 border-primary-50 border-2 border-solid rounded-sm w-64 mx-auto p-1">Button </button>
-            </div>
-
-            <div class="space-y-2">
-                <button class="text-white bg-primary-50 rounded-sm w-64 mx-auto p-1">Button </button>
-                <button class="text-white bg-primary-70 rounded-sm w-64 mx-auto p-1">Button </button>
-            </div>
-
-            <div class="">
-                <label for="UserEmail" class="block text-xs font-medium text-gray-700">
-                  Email
-                </label>
-              
-                <input
-                  type="email"
-                  id="UserEmail"
-                  placeholder="example@rhcp.com"
-                  class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm border-primary-90 border-solid border-2"
-                />
-              </div>
-        </section>
-
-
-        <div class="flex h-screen flex-col justify-between border-r bg-white">
-            <div class="px-4 py-6">
-              <span class="block h-10 w-32 rounded-lg bg-gray-200"></span>
-          
-              <nav aria-label="Main Nav" class="mt-6 flex flex-col space-y-1">
-                <a
-                  href="#"
-                  class="flex items-center rounded-lg bg-gray-100 px-4 py-2 text-gray-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 opacity-75"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-          
-                  <span class="ml-3 text-sm font-medium"> General </span>
-                </a>
-          
-                <details class="group">
-                  <summary
-                    class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 opacity-75"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-          
-                    <span class="ml-3 text-sm font-medium"> Teams </span>
-          
-                    <span
-                      class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </summary>
-          
-                  <nav aria-label="Teams Nav" class="mt-1.5 ml-8 flex flex-col">
-                    <a
-                      href="#"
-                      class="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 opacity-75"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                        />
-                      </svg>
-          
-                      <span class="ml-3 text-sm font-medium"> Banned Users </span>
-                    </a>
-          
-                    <a
-                      href="#"
-                      class="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 opacity-75"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-          
-                      <span class="ml-3 text-sm font-medium"> Calendar </span>
-                    </a>
-                  </nav>
-                </details>
-          
-                <a
-                  href="#"
-                  class="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 opacity-75"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-                    />
-                  </svg>
-          
-                  <span class="ml-3 text-sm font-medium"> Billing </span>
-                </a>
-          
-                <a
-                  href="#"
-                  class="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 opacity-75"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                    />
-                  </svg>
-          
-                  <span class="ml-3 text-sm font-medium"> Invoices </span>
-                </a>
-          
-                <details class="group">
-                  <summary
-                    class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 opacity-75"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
-          
-                    <span class="ml-3 text-sm font-medium"> Account </span>
-          
-                    <span
-                      class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </summary>
-          
-                  <nav aria-label="Account Nav" class="mt-1.5 ml-8 flex flex-col">
-                    <a
-                      href="#"
-                      class="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 opacity-75"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
-                        />
-                      </svg>
-          
-                      <span class="ml-3 text-sm font-medium"> Details </span>
-                    </a>
-          
-                    <a
-                      href="#"
-                      class="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 opacity-75"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                        />
-                      </svg>
-          
-                      <span class="ml-3 text-sm font-medium"> Security </span>
-                    </a>
-          
-                    <form action="/logout">
-                      <button
-                        type="submit"
-                        class="flex w-full items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-5 w-5 opacity-75"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                          />
-                        </svg>
-          
-                        <span class="ml-3 text-sm font-medium"> Logout </span>
-                      </button>
-                    </form>
-                  </nav>
-                </details>
-              </nav>
-            </div>
-          
-            <div class="sticky inset-x-0 bottom-0 border-t border-gray-100">
-              <a
-                href="#"
-                class="flex shrink-0 items-center bg-white p-4 hover:bg-gray-50"
-              >
-                <img
-                  alt="Man"
-                  src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  class="h-10 w-10 rounded-full object-cover"
-                />
-          
-                <div class="ml-1.5">
-                  <p class="text-xs">
-                    <strong class="block font-medium">Eric Frusciante</strong>
-          
-                    <span> eric@frusciante.com </span>
-                  </p>
-                </div>
-              </a>
-            </div>
+        <section class="grid grid-cols-2 gap-3 place-items-center">
+          <div class="space-y-2">
+              <button class="text-white bg-primary-50 rounded-sm w-32 mx-auto p-1">Button <i class="fa-solid fa-angle-right"></i></button>
+              <button class="text-white bg-primary-70 rounded-sm w-32 mx-auto p-1">Button <i class="fa-solid fa-angle-right"></i></button>
           </div>
-          
-
+  
+          <div class="space-y-2">
+              <button class="text-white bg-primary-50 rounded-sm w-32 mx-auto p-1">Button </button>
+              <button class="text-white bg-primary-70 rounded-sm w-32 mx-auto p-1">Button </button>
+          </div>
+  
+          <div class="space-y-2">
+              <button class="text-primary-50 border-primary-50 border-2 border-solid rounded-sm w-32 mx-auto p-1">Button </button>
+              <button class="text-primary-50 border-primary-50 border-2 border-solid rounded-sm w-32 mx-auto p-1">Button </button>
+          </div>
+  
+          <div class="space-y-2">
+              <button class="text-primary-50 border-primary-50 border-2 border-solid rounded-sm w-64 mx-auto p-1">Button </button>
+              <button class="text-primary-50 border-primary-50 border-2 border-solid rounded-sm w-64 mx-auto p-1">Button </button>
+          </div>
+  
+          <div class="space-y-2">
+              <button class="text-white bg-primary-50 rounded-sm w-64 mx-auto p-1">Button </button>
+              <button class="text-white bg-primary-70 rounded-sm w-64 mx-auto p-1">Button </button>
+          </div>
+  
+          <div class="">
+              <label for="UserEmail" class="block text-xs font-medium text-gray-700">
+                Email
+              </label>
+            
+              <input
+                type="email"
+                id="UserEmail"
+                placeholder="example@rhcp.com"
+                class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm border-primary-90 border-solid border-2"
+              />
+            </div>
+          </section>
+         
     </div>
-    <!-- sidebar nav -->
 
 
+
+
+    <footer class="footer px-4 py-6">
+      <div class="footer-content">
+        <p class="text-sm text-gray-600 text-center">© Brandname 2020. All rights reserved. <a href="https://twitter.com/iaminos">by iAmine</a></p>
+      </div>
+    </footer>
+  </main>
+</div>
+        
     
 </body>
 </html>
