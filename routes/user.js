@@ -14,8 +14,8 @@ router.get("/reset", (req, res) => {
   res.render("pages/users/reset");
 });
 
-router.get("/dashboard", (req, res) => {
-  res.render("pages/users/dashboard");
+router.get("/home", (req, res) => {
+  res.render("pages/users/home");
 });
 
 //TODO encrypt passwords
@@ -50,7 +50,7 @@ router.post("/register", async (req, res) => {
         } else {
           //user saved
           //redirect to homepage
-          res.redirect("/user/dashboard");
+          res.redirect("/user/home");
         }
       });
     }
@@ -72,7 +72,7 @@ router.post("/login", async (req, res) => {
   if (user) {
     if (user.password === password) {
       //valid details
-      res.redirect("/user/dashboard");
+      res.redirect("/user/home");
     } else {
       //wrong password
       res.render("pages/users/login", {
