@@ -99,10 +99,22 @@ router.get("/home", (req, res) => {
   res.render("pages/users/home");
 });
 
-router.get("/self-affirmation", (req, res) => {});
-router.get("/mental-health-tips", (req, res) => {});
-router.get("/forum", (req, res) => {});
-router.get("/blog", (req, res) => {});
+router.get("/self-affirmation", (req, res) => {
+  res.render("pages/users/self-affirmation")
+});
+
+router.get("/mental-health-tips", (req, res) => {
+  res.render("pages/users/mental-health-tips")
+});
+router.get("/forum", (req, res) => {
+  res.render("pages/users/forum")
+});
+router.get("/music", (req, res) => {
+  res.render("pages/users/music")
+});
+router.get("/blog", (req, res) => {
+  res.render("pages/users/blog")
+});
 router.get("/logout", (req, res) => {});
 
 module.exports = router;
