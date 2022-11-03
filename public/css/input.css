@@ -22,5 +22,5 @@ h6 {
 }
 
 .main-nav > *:hover {
-  @apply bg-primary-10 border-l-8 border-solid border-l-primary-70 text-primary-60
+  @apply bg-primary-10 border-l-8 border-solid border-l-primary-70 text-primary-60 ease-in-out duration-300 
 }
