@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcrypt");
 const User = require("../database/models").User;
 
 router.get("/register", (req, res) => {
@@ -18,7 +19,6 @@ router.get("/home", (req, res) => {
   res.render("pages/users/home");
 });
 
-//TODO encrypt passwords
 router.post("/register", async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
@@ -32,11 +32,12 @@ router.post("/register", async (req, res) => {
         formData: req.body,
       });
     } else {
+      const hashedPassword = await bcrypt.hash(req.body.password, 10);
       const newUser = new User({
         firstName,
         lastName,
         email,
-        password,
+        password: hashedPassword,
       });
       newUser.save((err, newUserDoc) => {
         if (err) {
@@ -67,26 +68,53 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
-  const user = await User.findOne({ email });
-
-  if (user) {
-    if (user.password === password) {
-      //valid details
-      res.redirect("/user/home");
+  if (email !== "" && password !== "") {
+    const user = await User.findOne({ email });
+    if (user) {
+      if (user.password === password) {
+        //valid details
+        res.redirect("/user/home");
+      } else {
+        //no record with the submitted email
+        res.render("pages/users/login", {
+          error: "Invalid email or password",
+          formData: req.body,
+        });
+      }
     } else {
-      //wrong password
       res.render("pages/users/login", {
         error: "Invalid email or password",
         formData: req.body,
       });
     }
   } else {
-    //no record with the submitted email
     res.render("pages/users/login", {
-      error: "Invalid email or password",
+      error: "All input fields must be filled",
       formData: req.body,
     });
   }
 });
+
+router.get("/home", (req, res) => {
+  res.render("pages/users/home");
+});
+
+router.get("/self-affirmation", (req, res) => {
+  res.render("pages/users/self-affirmation")
+});
+
+router.get("/mental-health-tips", (req, res) => {
+  res.render("pages/users/mental-health-tips")
+});
+router.get("/forum", (req, res) => {
+  res.render("pages/users/forum")
+});
+router.get("/music", (req, res) => {
+  res.render("pages/users/music")
+});
+router.get("/blog", (req, res) => {
+  res.render("pages/users/blog")
+});
+router.get("/logout", (req, res) => {});
 
 module.exports = router;
