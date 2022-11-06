@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700&family=Poppins&display=swap');
 
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
@@ -556,6 +556,10 @@ video {
   position: static;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -726,6 +730,10 @@ video {
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
 .hidden{
   display: none;
 }
@@ -744,6 +752,14 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.h-96{
+  height: 24rem;
+}
+
+.h-auto{
+  height: auto;
 }
 
 .h-64{
@@ -768,10 +784,6 @@ video {
 
 .h-32{
   height: 8rem;
-}
-
-.h-auto{
-  height: auto;
 }
 
 .min-h-screen{
@@ -850,6 +862,10 @@ video {
   max-width: 56rem;
 }
 
+.max-w-lg{
+  max-width: 32rem;
+}
+
 .max-w-md{
   max-width: 28rem;
 }
@@ -907,6 +923,10 @@ video {
 
 .place-items-center{
   place-items: center;
+}
+
+.items-start{
+  align-items: flex-start;
 }
 
 .items-center{
@@ -996,6 +1016,11 @@ video {
   border-bottom-left-radius: 0.25rem;
 }
 
+.rounded-t-lg{
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .border-2{
   border-width: 2px;
 }
@@ -1028,6 +1053,16 @@ video {
 .border-primary-90{
   --tw-border-opacity: 1;
   border-color: rgb(22 55 37 / var(--tw-border-opacity));
+}
+
+.border-primary-60{
+  --tw-border-opacity: 1;
+  border-color: rgb(44 110 73 / var(--tw-border-opacity));
+}
+
+.border-afribook{
+  --tw-border-opacity: 1;
+  border-color: rgb(108 111 109 / var(--tw-border-opacity));
 }
 
 .border-gray-50{
@@ -1095,6 +1130,11 @@ video {
 
 .bg-cover{
   background-size: cover;
+}
+
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-4{
@@ -1168,16 +1208,16 @@ video {
   padding-bottom: 3rem;
 }
 
+.pb-4{
+  padding-bottom: 1rem;
+}
+
 .pr-12{
   padding-right: 3rem;
 }
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pb-4{
-  padding-bottom: 1rem;
 }
 
 .text-center{
@@ -1284,6 +1324,16 @@ video {
 .text-primary-50{
   --tw-text-opacity: 1;
   color: rgb(79 134 103 / var(--tw-text-opacity));
+}
+
+.text-secondary-100{
+  --tw-text-opacity: 1;
+  color: rgb(85 85 76 / var(--tw-text-opacity));
+}
+
+.text-afribook{
+  --tw-text-opacity: 1;
+  color: rgb(108 111 109 / var(--tw-text-opacity));
 }
 
 .text-body{
@@ -1442,6 +1492,10 @@ h6 {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 .focus-within\:border-primary-50:focus-within{
   --tw-border-opacity: 1;
   border-color: rgb(79 134 103 / var(--tw-border-opacity));
@@ -1552,6 +1606,18 @@ h6 {
     margin-left: 0px;
   }
 
+  .md\:ml-64{
+    margin-left: 16rem;
+  }
+
+  .md\:h-auto{
+    height: auto;
+  }
+
+  .md\:w-48{
+    width: 12rem;
+  }
+
   .md\:w-auto{
     width: auto;
   }
@@ -1583,6 +1649,15 @@ h6 {
     --tw-space-x-reverse: 0;
     margin-right: calc(3rem * var(--tw-space-x-reverse));
     margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:rounded-none{
+    border-radius: 0px;
+  }
+
+  .md\:rounded-l-lg{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
 
   .md\:pb-14{

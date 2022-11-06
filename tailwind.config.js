@@ -16,6 +16,8 @@ module.exports = {
       "primary-40":"#729E86",
       "primary-10":"#D5E2DB",
       "secondary": "#E5E5E5",
+      "secondary-100": "#55554C",
+      "afribook": "#6C6F6D",
       "text-title": "#050B08",
       "body": "#2F3431",
       "helper": "#595E5B",

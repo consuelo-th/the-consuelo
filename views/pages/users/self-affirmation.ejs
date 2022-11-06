@@ -40,7 +40,7 @@
     <!-- component -->
     <div class="flex flex-row min-h-screen">
       <aside
-        class="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+        class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
       >
         <!-- sidebar header  -->
         <div
@@ -100,11 +100,6 @@
               <i class="fa-solid fa-house-chimney"></i>
               <span class="ml-3 text-sm font-medium"> Forum </span>
             </a>
-
-            <a href="/user/music" class="px-4 py-3 transition-all">
-              <i class="fa-solid fa-music"></i>
-              <span class="ml-3 text-sm font-medium"> Music </span>
-            </a>
             <a
               href="/user/blog"
               class="flex items-center px-4 py-3 transition-all"
@@ -112,8 +107,12 @@
               <i class="fa-solid fa-house-chimney"></i>
               <span class="ml-3 text-sm font-medium"> Blog </span>
             </a>
+            <a href="/user/music" class="fflex items-center px-4 py-3 transition-all" >
+              <i class="fa-solid fa-music"></i>
+              <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
+            </a>
             <a
-              ref="/user/logout"
+              href="/user/logout"
               class="flex items-center px-4 py-3 transition-all"
             >
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -124,7 +123,7 @@
       </aside>
 
       <main
-        class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in bg-[#EFF3F6]"
+        class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]"
       >
       <header
       class="header bg-white shadow py-4 flex justify-between items-center px-10"

@@ -36,9 +36,7 @@
   <body class="bg-secondary">
     <!-- component -->
     <div class="flex flex-row min-h-screen">
-      <aside
-        class="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
-      >
+      <aside class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500">
         <!-- sidebar header  -->
         <div
           class="flex h-screen flex-col border-r bg-primary-60 text-white static"
@@ -99,10 +97,6 @@
               <span class="ml-3 text-sm font-medium"> Forum </span>
             </a>
 
-            <a href="/user/music" class="px-4 py-3 transition-all">
-              <i class="fa-solid fa-music"></i>
-              <span class="ml-3 text-sm font-medium"> Music </span>
-            </a>
             <a
               href="/user/blog"
               class="flex items-center px-4 py-3 bg-primary-10 border-l-8 border-solid border-l-primary-70 text-primary-60"
@@ -110,8 +104,14 @@
               <i class="fa-solid fa-house-chimney"></i>
               <span class="ml-3 text-sm font-medium"> Blog </span>
             </a>
+
+            <a href="/user/music" class="flex items-center px-4 py-3 transition-all">
+              <i class="fa-solid fa-music"></i>
+              <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
+            </a>
+
             <a
-              ref="/user/logout"
+              href="/user/logout"
               class="flex items-center px-4 py-3 transition-all"
             >
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -121,18 +121,16 @@
         </div>
       </aside>
 
-      <main
-        class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in bg-[#EFF3F6]"
-      >
+      <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]" >
         <div>
           <header
             class="header bg-white shadow py-4 flex justify-between items-center px-10"
           >
             <div>
               <h1 class="text-xl">
-                Welcome back, <%- userDetails.firstName %> 💚
+                Blog
               </h1>
-              <p>Your feelings are welcome here</p>
+              <p>Our blog features different perspectives and insights on mental health issues and topics.  </p>
             </div>
 
             <div class="flex items-center space-x-3">
@@ -149,16 +147,77 @@
           </header>
 
           <div class="main-content flex flex-col flex-grow py-4 px-10">
-            main content here
+            <div class="grid gap-2">
+              <div  class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/blog.png" alt="blog img">
+                
+                <div class="flex flex-col px-4 leading-normal gap-2">
+                    <h2 class="">Healing through music; the impact of music therapy on mental health</h2>
+  
+                    <div class="flex justify-between items-center text-secondary-100 max-w-lg">
+                      <p>September 30, 2022</p>
+                      <p>|</p>
+                      <p><i class="fa-regular fa-clock"></i>  5 Mins Read</p>
+                      <p>|</p>
+                      <p>Written by hussy</p>
+                    </div>
+  
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor massa erat aliquam lectus. Duis duis id nibh sem morbi leo eget egestas eget. Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis <a href="#" class="text-primary-60 font-bold">read more...</a></p>
+                </div>
+              </div>
+              <div  class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/blog.png" alt="blog img">
+                
+                <div class="flex flex-col px-4 leading-normal gap-2">
+                    <h2 class="">Healing through music; the impact of music therapy on mental health</h2>
+  
+                    <div class="flex justify-between items-center text-secondary-100 max-w-lg">
+                      <p>September 30, 2022</p>
+                      <p>|</p>
+                      <p><i class="fa-regular fa-clock"></i>  5 Mins Read</p>
+                      <p>|</p>
+                      <p>Written by hussy</p>
+                    </div>
+  
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor massa erat aliquam lectus. Duis duis id nibh sem morbi leo eget egestas eget. Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis <a href="#" class="text-primary-60 font-bold">read more...</a></p>
+                </div>
+              </div>
+              <div  class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/blog.png" alt="blog img">
+                
+                <div class="flex flex-col px-4 leading-normal gap-2">
+                    <h2 class="">Healing through music; the impact of music therapy on mental health</h2>
+  
+                    <div class="flex justify-between items-center text-secondary-100 max-w-lg">
+                      <p>September 30, 2022</p>
+                      <p>|</p>
+                      <p><i class="fa-regular fa-clock"></i>  5 Mins Read</p>
+                      <p>|</p>
+                      <p>Written by hussy</p>
+                    </div>
+  
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor massa erat aliquam lectus. Duis duis id nibh sem morbi leo eget egestas eget. Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis <a href="#" class="text-primary-60 font-bold">read more...</a></p>
+                </div>
+              </div>
+
+            </div>
+            
+
           </div>
 
           <footer class="footer px-4 py-6">
-            <div class="footer-content">
-              <p class="text-sm text-gray-600 text-center">
-                &copy; consuélo 2020. All rights reserved.
-                <a href="/">by consuélo dev team</a>
-              </p>
-            </div>
+              <nav aria-label="page navigation">
+                <ul class="flex justify-center gap-2 text-afribook font-semibold poppins text-lg">
+                  <li><button><i class="fa-solid fa-angle-left"></i></button></li>
+                  <li><button class="border border-primary-60 rounded-lg px-2">1</button></li>
+                  <li><button class="border border-afribook rounded-lg px-2">2</button></li>
+                  <li><button class="border border-afribook rounded-lg px-2">3</button></li>
+                  <li><button class="border border-afribook rounded-lg px-2">4</button></li>
+                  <li><button class="border border-afribook rounded-lg px-2">5</button></li>
+                  <li><button class="border border-afribook rounded-lg px-2">6</button></li>
+                  <li><button ><i class="fa-solid fa-angle-right"></i></button></li>
+                </ul>
+              </nav>
           </footer>
         </div>
       </main>
