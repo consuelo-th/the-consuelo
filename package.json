@@ -28,10 +28,13 @@
   "homepage": "https://github.com/consuelo-th/the-consuelo#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "mongoose": "^6.7.0"
+    "express-session": "^1.17.3",
+    "mongoose": "^6.7.0",
+    "nodemon": "^2.0.20"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

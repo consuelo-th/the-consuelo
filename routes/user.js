@@ -2,23 +2,125 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const User = require("../database/models").User;
+const MentalHealthTip = require("../database/models").MentalHealthTip;
+let session;
 
+//GET REQUESTS
 router.get("/register", (req, res) => {
-  res.render("pages/users/register");
+  session = req.session;
+  if (session.userID) {
+    res.redirect("/user/home");
+  } else {
+    res.render("pages/users/register");
+  }
 });
 
 router.get("/login", (req, res) => {
-  res.render("pages/users/login");
+  session = req.session;
+  if (session.userID) {
+    res.redirect("/user/home");
+  } else {
+    res.render("pages/users/login");
+  }
 });
 
 router.get("/reset", (req, res) => {
   res.render("pages/users/reset");
 });
 
-router.get("/home", (req, res) => {
-  res.render("pages/users/home");
+router.get("/home", async (req, res) => {
+  session = req.session;
+  if (session.userID) {
+    //get all the users details excluding the
+    //password, admin status, savedCards and email
+    const userDetails = await User.findOne(
+      { _id: session.userID },
+      { password: 0, admin: 0, savedCardsId: 0, email: 0 }
+    );
+    res.render("pages/users/home", {
+      userDetails,
+    });
+  } else {
+    res.redirect("/user/login");
+  }
 });
 
+router.get("/self-affirmation", async (req, res) => {
+  session = req.session;
+  if (session.userID) {
+    //get all the users details excluding the
+    //password, admin status, savedCards and email
+    const userDetails = await User.findOne(
+      { _id: session.userID },
+      { password: 0, admin: 0, savedCardsId: 0, email: 0 }
+    );
+    res.render("pages/users/self-affirmation", {
+      userDetails,
+    });
+  } else {
+    res.redirect("/user/login");
+  }
+});
+
+router.get("/mental-health-tips", async (req, res) => {
+  session = req.session;
+  if (session.userID) {
+    //get all the users details excluding the
+    //password, admin status, savedCards and email
+    const userDetails = await User.findOne(
+      { _id: session.userID },
+      { password: 0, admin: 0, savedCardsId: 0, email: 0 }
+    );
+    res.render("pages/users/mental-health-tips", {
+      userDetails,
+    });
+  } else {
+    res.redirect("/user/login");
+  }
+});
+
+router.get("/forum", async (req, res) => {
+  session = req.session;
+  if (session.userID) {
+    //get all the users details excluding the
+    //password, admin status, savedCards and email
+    const userDetails = await User.findOne(
+      { _id: session.userID },
+      { password: 0, admin: 0, savedCardsId: 0, email: 0 }
+    );
+    res.render("pages/users/forum", {
+      userDetails,
+    });
+  } else {
+    res.redirect("/user/login");
+  }
+});
+
+router.get("/music", (req, res) => {
+  res.render("pages/users/music");
+});
+
+router.get("/blog", async (req, res) => {
+  session = req.session;
+  if (session.userID) {
+    //get all the users details excluding the
+    //password, admin status, savedCards and email
+    const userDetails = await User.findOne(
+      { _id: session.userID },
+      { password: 0, admin: 0, savedCardsId: 0, email: 0 }
+    );
+    res.render("pages/users/blog", { userDetails });
+  } else {
+    res.redirect("/user/login");
+  }
+});
+
+router.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.redirect("/user/login");
+});
+
+//POST REQUESTS
 router.post("/register", async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
@@ -51,6 +153,8 @@ router.post("/register", async (req, res) => {
         } else {
           //user saved
           //redirect to homepage
+          session = req.session;
+          session.userID = newUserDoc._id;
           res.redirect("/user/home");
         }
       });
@@ -71,8 +175,11 @@ router.post("/login", async (req, res) => {
   if (email !== "" && password !== "") {
     const user = await User.findOne({ email });
     if (user) {
-      if (user.password === password) {
+      //comparing the hashed password with the submitted password
+      if (await bcrypt.compare(password, user.password)) {
         //valid details
+        session = req.session;
+        session.userID = user._id;
         res.redirect("/user/home");
       } else {
         //no record with the submitted email
@@ -94,27 +201,5 @@ router.post("/login", async (req, res) => {
     });
   }
 });
-
-router.get("/home", (req, res) => {
-  res.render("pages/users/home");
-});
-
-router.get("/self-affirmation", (req, res) => {
-  res.render("pages/users/self-affirmation")
-});
-
-router.get("/mental-health-tips", (req, res) => {
-  res.render("pages/users/mental-health-tips")
-});
-router.get("/forum", (req, res) => {
-  res.render("pages/users/forum")
-});
-router.get("/music", (req, res) => {
-  res.render("pages/users/music")
-});
-router.get("/blog", (req, res) => {
-  res.render("pages/users/blog")
-});
-router.get("/logout", (req, res) => {});
 
 module.exports = router;
