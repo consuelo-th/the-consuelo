@@ -43,6 +43,7 @@ router.get("/home", async (req, res) => {
   } else {
     res.redirect("/user/login");
   }
+  
 });
 
 router.get("/self-affirmation", async (req, res) => {

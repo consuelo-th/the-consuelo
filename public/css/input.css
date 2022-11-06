@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700&family=Poppins&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,4 +23,9 @@ h6 {
 
 .main-nav > *:hover {
   @apply bg-primary-10 border-l-8 border-solid border-l-primary-70 text-primary-60 ease-in-out duration-300 
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+
 }
