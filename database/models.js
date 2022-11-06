@@ -9,6 +9,8 @@ const userSchema = new mongoose.Schema({
   verified: { type: Boolean, default: false },
   //an array of saved affirmation cards ID
   savedCardsId: [{ type: String }],
+  profileImageUrl: { type: String, default: "default-image" },
+  notifications: [{ read: { type: Boolean, default: false }, content: String }],
 });
 
 const affirmationSchema = new mongoose.Schema({
@@ -22,15 +24,33 @@ const mentalHealthTipSchema = new mongoose.Schema({
   description: String,
 });
 
+const forumSchema = new mongoose.Schema({
+  author: String,
+  datePosted: Date,
+  content: String,
+  likes: { type: Number, default: 0 },
+  comments: { type: Number, default: 0 },
+});
+
+const forumCommentSchema = new mongoose.Schema({
+  postID: String,
+  authorID: String,
+  comment: String,
+});
+
 const User = mongoose.model("User", userSchema);
 const Affirmation = mongoose.model("Affirmation", affirmationSchema);
-const MentalHealthTips = mongoose.model(
+const MentalHealthTip = mongoose.model(
   "Mental Health Tip",
   mentalHealthTipSchema
 );
+const forum = mongoose.model("Forum", forumSchema);
+const forumComment = mongoose.model("Forum comments", forumCommentSchema);
 
 module.exports = {
   User,
   Affirmation,
-  MentalHealthTips,
+  MentalHealthTip,
+  forum,
+  forumComment,
 };
