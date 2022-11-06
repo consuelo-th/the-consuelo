@@ -33,6 +33,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="bg-secondary">
     <!-- component -->
     <div class="flex flex-row min-h-screen">
@@ -129,9 +130,7 @@
             class="header bg-white shadow py-4 flex justify-between items-center px-10"
           >
             <div>
-              <h1 class="text-xl">
-                Welcome back, <%- userDetails.firstName %> 💚
-              </h1>
+              <h1 class="text-xl">Welcome back, Hassy 💚</h1>
               <p>Your feelings are welcome here</p>
             </div>
 
@@ -148,8 +147,109 @@
             </div>
           </header>
 
-          <div class="main-content flex flex-col flex-grow py-4 px-10">
-            main content here
+          <div
+            class="main-content flex flex-col flex-grow py-4 px-10"
+            id="main"
+          >
+            <div
+              class="flex my-0 mx-auto flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center pb-4 md:pb-14"
+            >
+              <div
+                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto hover:shadow-2xl tips-card"
+                id="cl"
+              >
+                <img
+                  class="w-full max-w-xs md:max-w-md h-auto"
+                  src="/images/friendship.svg"
+                  alt="Friendship"
+                />
+                <div class="p-4">
+                  <h1>Friendship</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto hover:shadow-2xl tips-card"
+              >
+                <img
+                  class="w-full max-w-xs md:max-w-md h-auto"
+                  src="/images/selfcare.svg"
+                  alt="Self-care"
+                />
+                <div class="p-4">
+                  <h1>Self-care</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto hover:shadow-2xl tips-card"
+              >
+                <img
+                  class="w-full max-w-xs md:max-w-md h-auto"
+                  src="/images/anxiety.svg"
+                  alt="anxiety"
+                />
+                <div class="p-4">
+                  <h1>Anxiety</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col flex-wrap md:flex-nowrap md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center"
+            >
+              <div
+                class="bg-white rounded-2xl md:w-auto hover:shadow-2xl w-full max-w-xs md:max-w-md h-auto tips-card"
+              >
+                <img
+                  src="/images/selfesteem.svg"
+                  alt="self-esteem"
+                  class="w-full max-w-xs md:max-w-md h-auto"
+                />
+                <div class="p-4">
+                  <h1>Boost self-esteem</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto md:w-auto hover:shadow-2xl tips-card"
+              >
+                <img
+                  class="w-full max-w-xs md:max-w-md h-auto"
+                  src="/images/stress_management.svg"
+                  alt="stress management"
+                />
+                <div class="p-4">
+                  <h1>Stress management</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto md:w-auto hover:shadow-2xl tips-card"
+              >
+                <img
+                  class="w-full max-w-xs md:max-w-md h-auto"
+                  src="/images/trauma.svg"
+                  alt="Trauma"
+                />
+                <div class="p-4">
+                  <h1>Trauma</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <footer class="footer px-4 py-6">
@@ -163,5 +263,7 @@
         </div>
       </main>
     </div>
+
+    <script src="/JS/mental-health-tips.js"></script>
   </body>
 </html>
