@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CONSUÉLO ~ HOME</title>
+    <title>CONSUELO ~ HOME</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -37,7 +37,7 @@
     <!-- component -->
     <div class="flex flex-row min-h-screen">
       <aside
-        class="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+        class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
       >
         <!-- sidebar header  -->
         <div
@@ -99,10 +99,6 @@
               <span class="ml-3 text-sm font-medium"> Forum </span>
             </a>
 
-            <a href="/user/music" class="px-4 py-3 transition-all">
-              <i class="fa-solid fa-music"></i>
-              <span class="ml-3 text-sm font-medium"> Music </span>
-            </a>
             <a
               href="/user/blog"
               class="flex items-center px-4 py-3 transition-all"
@@ -110,8 +106,14 @@
               <i class="fa-solid fa-house-chimney"></i>
               <span class="ml-3 text-sm font-medium"> Blog </span>
             </a>
+
+            <a href="/user/music" class="flex items-center px-4 py-3 transition-all">
+              <i class="fa-solid fa-music"></i>
+              <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
+            </a>
+            
             <a
-              ref="/user/logout"
+              href="/user/logout"
               class="flex items-center px-4 py-3 transition-all"
             >
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -122,7 +124,7 @@
       </aside>
 
       <main
-        class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in bg-[#EFF3F6]"
+        class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]"
       >
         <div>
           <header
