@@ -30,7 +30,7 @@ app.get("/design", (req, res) => {
 });
 
 app.use((req, res) => {
-  res.render("pages/errorPages/404");
+  res.render("pages/templates/404");
 });
 
 const PORT = process.env.PORT || 3000;
