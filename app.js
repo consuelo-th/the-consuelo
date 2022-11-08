@@ -2,6 +2,7 @@ require("./database/connection");
 const express = require("express");
 const app = express();
 const usersRoutes = require("./routes/user");
+const therapistsRouter = require("./routes/therapists");
 const cookieParser = require("cookie-parser");
 const sessions = require("express-session");
 
@@ -20,6 +21,7 @@ app.use(cookieParser());
 // parse incoming post request's body
 app.use(express.urlencoded({ extended: false }));
 app.use("/user", usersRoutes);
+app.use("/th", therapistsRouter);
 
 app.get("/", function (req, res) {
   res.render("pages/index");
