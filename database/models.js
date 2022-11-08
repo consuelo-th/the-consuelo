@@ -38,6 +38,14 @@ const forumCommentSchema = new mongoose.Schema({
   comment: String,
 });
 
+const blogSchema = new mongoose.Schema({
+  title: String,
+  datePosted: Date,
+  readTime: String,
+  author: String,
+  content: String,
+});
+
 const User = mongoose.model("User", userSchema);
 const Affirmation = mongoose.model("Affirmation", affirmationSchema);
 const MentalHealthTip = mongoose.model(
@@ -46,6 +54,7 @@ const MentalHealthTip = mongoose.model(
 );
 const forum = mongoose.model("Forum", forumSchema);
 const forumComment = mongoose.model("Forum comments", forumCommentSchema);
+const blog = mongoose.model("blog", blogSchema);
 
 module.exports = {
   User,
@@ -53,4 +62,5 @@ module.exports = {
   MentalHealthTip,
   forum,
   forumComment,
+  blog,
 };
