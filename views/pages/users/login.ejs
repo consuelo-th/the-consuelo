@@ -73,15 +73,17 @@
               value="<%= (locals.formData) ? formData.password : ''%>"
             />
 
-            <div onclick="togglePasswordVisibility()">
-              <i class="fa-regular fa-eye"></i>
-              <!-- <i class="fa-regular fa-eye-slash"></i> -->
+            <div >
+              <i class="fa-regular fa-eye-slash" id="togglePassword"></i>
             </div>
+        
           </div>
 
           <% if (locals.error) { %>
           <p class="text-error font-semibold text-sm"><i class="fa-solid fa-circle-xmark"></i> <%= error %></p>
-          <% } %>
+          <% } else {%>
+            <p class="font-semibold text-sm"><i class="fa-solid fa-circle-check"></i> Password must be up to 7 characters</p>
+          <%}%>
           <p class="text-body font-light">
             By signing up, you agree to the
             <a href="#" class="text-primary-60">Terms of Service</a> and
@@ -104,32 +106,7 @@
       </div>
 
     </section>
-    <script>
-      let slideIndex = 0;
-      showSlides();
-      function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("images");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-          slideIndex = 1;
-        }
 
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 5000); // Change image every 2 seconds
-      }
-
-      function togglePasswordVisibility() {
-        var password = document.getElementById("password");
-        if (password.type === "password") {
-          password.type = "text";
-        } else {
-          password.type = "password";
-        }
-      }
-    </script>
+    <script src="/js/auth.js"></script>
   </body>
 </html>
