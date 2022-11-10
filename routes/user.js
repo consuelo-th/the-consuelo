@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const User = require("../database/models").User;
 const MentalHealthTip = require("../database/models").MentalHealthTip;
+const Blog = require("../database/models").blog;
 let session;
 
 //GET REQUESTS
@@ -43,7 +44,6 @@ router.get("/home", async (req, res) => {
   } else {
     res.redirect("/user/login");
   }
-  
 });
 
 router.get("/self-affirmation", async (req, res) => {
@@ -110,9 +110,25 @@ router.get("/blog", async (req, res) => {
       { _id: session.userID },
       { password: 0, admin: 0, savedCardsId: 0, email: 0 }
     );
-    res.render("pages/users/blog", { userDetails });
+    const blogPosts = await Blog.find();
+    
+    //pagination will come later
+    res.render("pages/users/blog", { userDetails, blogPosts });
   } else {
     res.redirect("/user/login");
+  }
+});
+
+router.get("/blog/:id", async (req, res) => {
+  try {
+    const blogItem = await Blog.findById(req.params.id);
+    if (blogItem) {
+      res.render("pages/templates/blog", {blogItem}); //the page that'll display a single blog post
+    } else {
+      //the ID Is invalid too
+    }
+  } catch (error) {
+    // ID in the request is invalid, an error page here
   }
 });
 

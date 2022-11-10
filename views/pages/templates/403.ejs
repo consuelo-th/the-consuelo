@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CONSUELO ~ FORUM</title>
+    <title>FORBIDDEN!</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -22,6 +22,8 @@
       sizes="16x16"
       href="/images/favicon/favicon-16x16.png"
     />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//glenthemes.github.io/iconsax/geticons.js"></script>
     <link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet">
@@ -37,9 +39,7 @@
   <body class="bg-secondary">
     <!-- component -->
     <div class="flex flex-row min-h-screen">
-      <aside
-        class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
-      >
+      <aside class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500">
         <!-- sidebar header  -->
         <div
           class="flex h-screen flex-col border-r bg-primary-60 text-white static"
@@ -83,7 +83,7 @@
 
             <a
               href="/user/forum"
-              class="flex items-center px-4 py-3 nav-active"
+              class="flex items-center px-4 py-3"
             >
               <i class="iconsax" icon-name="group"></i>
               <span class="ml-3 text-sm font-medium"> Forum </span>
@@ -114,42 +114,14 @@
       </aside>
 
       <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]" >
-        <div>
-          <header
-            class="header bg-white shadow py-4 flex justify-between items-center px-10"
-          >
-            <div>
-              <h1 class="text-xl">
-                Welcome back, <%- userDetails.firstName %> 💚
-              </h1>
-              <p>Your feelings are welcome here</p>
-            </div>
-
-            <div class="flex items-center space-x-3">
-              <i class="fa-regular fa-bell"></i>
-
-              <span
-                class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer"
-              >
-                <i class="fa-regular fa-user"></i>
-
-                <i class="fa-solid fa-angle-down"></i>
-              </span>
-            </div>
-          </header>
-
-          <div class="main-content flex flex-col flex-grow py-4 px-10">
-            main content here
-          </div>
-
-          <footer class="footer px-4 py-6">
-            <div class="footer-content">
-              <p class="text-sm text-gray-600 text-center">
-                &copy; consuélo 2020. All rights reserved.
-                <a href="/">by consuélo dev team</a>
-              </p>
-            </div>
-          </footer>
+        <div class="grid place-items-center gap-3">
+          <h1>403</h1>
+          <p>Forbidden</p>
+          <p>We’re sorry, you do not access to view this page</p>
+          
+          <a href="/user/home" class="w-full text-center border-primary-50 border-[1px] p-3 text-md text-white shadow-sm bg-primary-50 max-w-xs" >
+            Go Back
+          </a>
         </div>
       </main>
     </div>

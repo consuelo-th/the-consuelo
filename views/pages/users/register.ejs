@@ -99,16 +99,17 @@
               value="<%= (locals.formData) ? formData.password : ''%>"
             />
 
-            <div onclick="togglePasswordVisibility()">
-              <i class="fa-regular fa-eye"></i>
-              <!-- <i class="fa-regular fa-eye-slash"></i> -->
+            <div>
+              <i class="fa-regular fa-eye-slash" id="togglePassword"></i>
             </div>
           </div>
 
           <div class="form-errors">
             <% if (locals.error) { %>
             <p class="text-error font-semibold text-sm"> <i class="fa-solid fa-circle-xmark"></i> <%= error %></p>
-            <% }%>
+            <% } else { %>
+              <p class="font-semibold text-sm"><i class="fa-solid fa-circle-check"></i> Password must be up to 7 characters</p>
+            <%}%>
           </div>
 
           <p class="text-body font-light">
@@ -136,15 +137,6 @@
       </div>
     </section>
 
-    <script>
-      function togglePasswordVisibility() {
-        var password = document.getElementById("password");
-        if (password.type === "password") {
-          password.type = "text";
-        } else {
-          password.type = "password";
-        }
-      }
-    </script>
+    <script src="/js/auth.js"></script>
   </body>
 </html>

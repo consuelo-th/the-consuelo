@@ -24,10 +24,12 @@
     />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
-      <link rel="stylesheet" href="/css/main.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <script defer src="/js/selfAffirmation.js"></script>
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//glenthemes.github.io/iconsax/geticons.js"></script>
+    <link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -35,6 +37,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body class="bg-secondary">
     <!-- component -->
@@ -60,62 +63,54 @@
           >
             <a
               href="/user/home"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <!-- <i class="fa-solid fa-house-chimney"></i> -->
-              <svg
-                aria-hidden="true"
-                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                ></path>
-              </svg>
 
+              <i class="iconsax" icon-name="layout-2"></i>
               <span class="ml-3 text-sm font-medium"> Home </span>
             </a>
             <a
               href="/user/self-affirmation"
-              class="flex items-center px-4 py-3 bg-primary-10 border-l-8 border-solid border-l-primary-70 text-primary-60"
+              class="flex items-center px-4 py-3 nav-active"
             >
-              <i class="fa-solid fa-house-chimney"></i>
+              <i class="iconsax" icon-name="document-sketch"></i>
               <span class="ml-3 text-sm font-medium"> Self Affirmation </span>
             </a>
 
             <a
               href="/user/mental-health-tips"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <i class="fa-solid fa-house-chimney"></i>
+              <i class="iconsax" icon-name="message-dots-notif"></i>
               <span class="ml-3 text-sm font-medium"> Mental Health Tips </span>
             </a>
 
             <a
               href="/user/forum"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <i class="fa-solid fa-house-chimney"></i>
+              <i class="iconsax" icon-name="group"></i>
               <span class="ml-3 text-sm font-medium"> Forum </span>
             </a>
+
             <a
               href="/user/blog"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <i class="fa-solid fa-house-chimney"></i>
+            <i class="iconsax" icon-name="document-text-1"></i>
               <span class="ml-3 text-sm font-medium"> Blog </span>
             </a>
-            <a href="/user/music" class="fflex items-center px-4 py-3 transition-all" >
-              <i class="fa-solid fa-music"></i>
+
+            <a href="/user/music" class="flex items-center px-4 py-3">
+              <i class="iconsax" icon-name="message-dash-1"></i>
               <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
             </a>
+            
             <a
               href="/user/logout"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <i class="iconsax" icon-name="logout-1"></i>
               <span class="ml-3 text-sm font-medium"> Logout </span>
             </a>
           </nav>
@@ -279,7 +274,7 @@
       </div>
     </div>
     <!-- Overlay -->
-    <div class="overlay hidden absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"></div> 
-    
+    <div class="overlay hidden absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"></div>    
+    <script src="/js/selfAffirmation.js"></script>
 </body>
 </html>
