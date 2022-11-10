@@ -13,4 +13,8 @@ router.get("/dashboard", (req, res) => {
   res.render("pages/th/dashboard");
 });
 
+router.get("/profile", (req, res) => {
+  res.render("pages/th/profile");
+});
+
 module.exports = router;
