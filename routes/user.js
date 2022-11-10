@@ -111,8 +111,24 @@ router.get("/blog", async (req, res) => {
       { password: 0, admin: 0, savedCardsId: 0, email: 0 }
     );
     const blogPosts = await Blog.find();
-    //pagination will come later
-    res.render("pages/users/blog", { userDetails, blogPosts });
+
+    //this should be in the ejs file
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    res.render("pages/users/blog", { userDetails, blogPosts, months });
   } else {
     res.redirect("/user/login");
   }
@@ -122,7 +138,7 @@ router.get("/blog/:id", async (req, res) => {
   try {
     const blogItem = await Blog.findById(req.params.id);
     if (blogItem) {
-      res.render(); //the page that'll display a single blog post
+      res.render("pages/templates/blog", { blogItem }); //the page that'll display a single blog post
     } else {
       //the ID Is invalid too
     }

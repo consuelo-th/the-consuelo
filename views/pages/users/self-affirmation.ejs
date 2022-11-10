@@ -24,7 +24,12 @@
     />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//glenthemes.github.io/iconsax/geticons.js"></script>
+    <link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -32,6 +37,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body class="bg-secondary">
     <!-- component -->
@@ -57,63 +63,55 @@
           >
             <a
               href="/user/home"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <!-- <i class="fa-solid fa-house-chimney"></i> -->
-              <svg
-                aria-hidden="true"
-                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                ></path>
-              </svg>
 
+              <i class="iconsax" icon-name="layout-2"></i>
               <span class="ml-3 text-sm font-medium"> Home </span>
             </a>
 
             <a
               href="/user/self-affirmation"
-              class="flex items-center px-4 py-3 bg-primary-10 border-l-8 border-solid border-l-primary-70 text-primary-60"
+              class="flex items-center px-4 py-3 nav-active"
             >
-              <i class="fa-solid fa-house-chimney"></i>
+              <i class="iconsax" icon-name="document-sketch"></i>
               <span class="ml-3 text-sm font-medium"> Self Affirmation </span>
             </a>
 
             <a
               href="/user/mental-health-tips"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <i class="fa-solid fa-house-chimney"></i>
+              <i class="iconsax" icon-name="message-dots-notif"></i>
               <span class="ml-3 text-sm font-medium"> Mental Health Tips </span>
             </a>
 
             <a
               href="/user/forum"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <i class="fa-solid fa-house-chimney"></i>
+              <i class="iconsax" icon-name="group"></i>
               <span class="ml-3 text-sm font-medium"> Forum </span>
             </a>
+
             <a
               href="/user/blog"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <i class="fa-solid fa-house-chimney"></i>
+            <i class="iconsax" icon-name="document-text-1"></i>
               <span class="ml-3 text-sm font-medium"> Blog </span>
             </a>
-            <a href="/user/music" class="fflex items-center px-4 py-3 transition-all" >
-              <i class="fa-solid fa-music"></i>
+
+            <a href="/user/music" class="flex items-center px-4 py-3">
+              <i class="iconsax" icon-name="message-dash-1"></i>
               <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
             </a>
+            
             <a
               href="/user/logout"
-              class="flex items-center px-4 py-3 transition-all"
+              class="flex items-center px-4 py-3"
             >
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <i class="iconsax" icon-name="logout-1"></i>
               <span class="ml-3 text-sm font-medium"> Logout </span>
             </a>
           </nav>
@@ -123,44 +121,165 @@
       <main
         class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]"
       >
+      <header
+      class="header bg-white shadow py-4 flex justify-between items-center px-10"
+      >
         <div>
-          <header
-            class="header bg-white shadow py-4 flex justify-between items-center px-10"
-          >
-            <div>
-              <h1 class="text-xl">
-                Welcome back, <%- userDetails.firstName %> 💚
-              </h1>
-              <p>Your feelings are welcome here</p>
+          
+          <h1 class="text-xl">Self Affirmation</h1>
+          <p class="leading-8 text-sm">Take a deep breath while you recite our Affirmation of the Day.</p>
+        </div>
+        
+        <div class="flex items-center space-x-3">
+          <i class="fa-regular fa-bell"></i>
+          
+          <span class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer">
+            <i class="fa-regular fa-user"></i>
+            
+            <i class="fa-solid fa-angle-down"></i>
+          </span>
+        </div>
+        
+      </header>
+      
+      
+      <div class="main-content flex flex-col flex-grow py-4 px-10">
+        <!-- Daily affirmations -->
+        <p class="font-bold text-base text-helper mt-12">Daily affirmation</p>
+
+        <div class="flex">
+          <div class=" w-1/2 max-w-4xl mt-5 relative">
+            <div class="w-96 h-64 shadow-custom bg-card-border rounded-xl relative z-40">
+                <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
+                <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
+                <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
+                <div class="absolute z-50 bg-white p-9 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 h-56 rounded-xl">
+                  <p  class="font-medium text-lg text-center mt-6">I am a force that the world needs. I belong here.</p>
+                  <span class="flex justify-center items-center">
+                    <p class="save-btn font-semibold text-primary-50 hover:text-opacity-80 mt-5 cursor-pointer">Save Card</p>
+                  </span>
+                </div>
             </div>
-
-            <div class="flex items-center space-x-3">
-              <i class="fa-regular fa-bell"></i>
-
-              <span
-                class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer"
-              >
-                <i class="fa-regular fa-user"></i>
-
-                <i class="fa-solid fa-angle-down"></i>
-              </span>
+            <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
+              <div class="w-80 h-56 bg-card-border rounded-xl relative">
+                <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
+              </div>
             </div>
-          </header>
-
-          <div class="main-content flex flex-col flex-grow py-4 px-10">
-            main content here
           </div>
 
-          <footer class="footer px-4 py-6">
-            <div class="footer-content">
-              <p class="text-sm text-gray-600 text-center">
-                &copy; consuélo 2020. All rights reserved.
-                <a href="/">by consuélo dev team</a>
-              </p>
+          <!-- Pagination controls -->
+          <div class="flex items-center ml-10 justify-around w-1/4 max-w-md">
+            <div class="flex">
+              <div class="bg-white shadow-lg w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+              </div>
+              <div class="bg-white shadow-lg ml-5 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </div>
             </div>
-          </footer>
+            <p class="font-bold"> 1 of 2</p>
+          </div>
         </div>
-      </main>
+
+        <!-- Saved Cards -->
+        <p class="font-bold text-base text-helper mt-12">Saved Cards</p>
+        <div class="flex  max-w-6xl">
+          <!-- Flip Cards -->
+          <div class="max-w-4xl mt-5 relative">
+            <div class="w-96 h-64 bg-card-border shadow-custom rounded-xl p-9 relative z-40 flex justify-center items-center">
+                <p class="font-semibold text-primary-50 hover:text-opacity-80 mt-5 cursor-pointer">Flip Cards</p>
+                <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
+                <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
+                <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
+            </div>
+            <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
+              <div class="w-80 h-56 bg-card-border rounded-xl relative">
+                <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
+              </div>
+            </div>
+            <div class="absolute shadow-custom rounded-xl top-8 left-32">
+              <div class="w-72 h-48 bg-card-border rounded-xl relative">
+                <img src="/images/card-lines/thirdcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                <img src="/images/card-lines/thirdcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-32">
+              </div>
+            </div>
+          </div>
+
+          <!-- Flipped Cards and option to unsave -->
+          <div class="max-w-4xl mt-5 ml-48 relative">
+            <div class="w-96 h-64 shadow-custom bg-card-border rounded-xl relative z-40">
+                <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
+                <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
+                <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
+                <div class="absolute z-50 bg-white p-9 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 h-56 rounded-xl">
+                  <p  class="font-medium text-lg text-center mt-6">I am a force that the world needs. I belong here.</p>
+                  <span class="flex justify-center items-center">
+                    <p class="font-semibold text-semantics hover:text-opacity-80 mt-5 cursor-pointer">Unsave Card</p>
+                  </span>
+                </div>
+            </div>
+            <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
+              <div class="w-80 h-56 bg-card-border rounded-xl relative">
+                <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
+              </div>
+            </div>
+            <div class="absolute shadow-custom rounded-xl top-8 left-32">
+              <div class="w-72 h-48 bg-card-border rounded-xl relative">
+                <img src="/images/card-lines/thirdcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                <img src="/images/card-lines/thirdcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-32">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center -ml-20 max-w-6xl mt-8">
+          <div class="flex items-center ml-10 justify-around w-1/4 max-w-md py-6">
+            <div class="flex">
+              <div class="bg-white shadow-lg w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+              </div>
+              <div class="bg-white shadow-lg ml-5 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <p class="font-bold"> 1 of 2</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer px-4 py-6">
+        <div class="footer-content">
+          <p class="text-sm text-gray-600 text-center">&copy; consuélo 2020. All rights reserved. <a href="/">by consuélo dev team</a></p>
+        </div>
+      </footer>
     </div>
-  </body>
+  </main>
+</div>
+       <!-- Modal -->
+    <div class="modal hidden w-96 h-48 bg-white rounded-xl absolute transfrom -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-50">
+      <button class="close-modal text-3xl ml-auto absolute right-4 top-2">&times;</button>
+      <div class="flex justify-center items-center pt-8">
+        <img src="/images/sucessful-icon.svg" alt="" class="w-20">
+      </div>
+      <div class="flex flex-col justify-center items-center mt-2">
+        <p class="font-medium text-lg">Self affirmation card saved</p>
+        <p class="text-sm text-modal leading-6">
+          Self affirmation card added to saved cards
+        </p>
+      </div>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay hidden absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"></div> 
+
+
+
+    
+    <script defer src="/js/selfAffirmation.js"></script>
+</body>
 </html>
