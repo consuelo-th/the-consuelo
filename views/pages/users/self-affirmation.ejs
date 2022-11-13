@@ -43,7 +43,7 @@
     <!-- component -->
     <div class="flex flex-row min-h-screen">
       <aside
-        class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+        class="sidebar fixed h-screen w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
       >
         <!-- sidebar header  -->
         <div
@@ -144,112 +144,122 @@
       
       <div class="main-content flex flex-col flex-grow py-4 px-10">
         <!-- Daily affirmations -->
-        <p class="font-bold text-base text-helper mt-12">Daily affirmation</p>
-
-        <div class="flex">
-          <div class=" w-1/2 max-w-4xl mt-5 relative">
-            <div class="w-96 h-64 shadow-custom bg-card-border rounded-xl relative z-40">
-                <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
-                <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
-                <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
-                <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
-                <div class="absolute z-50 bg-white p-9 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 h-56 rounded-xl">
-                  <p  class="font-medium text-lg text-center mt-6">I am a force that the world needs. I belong here.</p>
-                  <span class="flex justify-center items-center">
-                    <p class="save-btn font-semibold text-primary-50 hover:text-opacity-80 mt-5 cursor-pointer">Save Card</p>
-                  </span>
+        <div class="affirmation-container">
+          <p class="font-bold text-base text-helper mt-12">Daily affirmation</p>
+          <div class="flex">
+            <div class=" w-1/2 max-w-4xl mt-5 relative">
+              <div class="w-96 h-64 shadow-custom bg-card-border rounded-xl relative z-40">
+                  <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
+                  <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
+                  <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                  <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
+                  <div class="absolute z-50 bg-white p-9 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 h-56 rounded-xl">
+                    <p  class="font-medium text-lg text-center mt-6">I am a force that the world needs. I belong here.</p>
+                    <span class="flex justify-center items-center">
+                      <p class="save-btn font-semibold text-primary-50 hover:text-opacity-80 mt-5 cursor-pointer">Save Card</p>
+                    </span>
+                  </div>
+              </div>
+              <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
+                <div class="w-80 h-56 bg-card-border rounded-xl relative">
+                  <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                  <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
                 </div>
-            </div>
-            <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
-              <div class="w-80 h-56 bg-card-border rounded-xl relative">
-                <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
-                <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
               </div>
+            </div>
+  
+            <!-- Pagination controls -->
+            <div class="flex items-center ml-10 justify-around w-1/4 max-w-md">
+              <div class="flex">
+                <div class="bg-white shadow-lg w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+                <div class="bg-white shadow-lg ml-5 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p class="font-bold"> 1 of 2</p>
             </div>
           </div>
 
-          <!-- Pagination controls -->
-          <div class="flex items-center ml-10 justify-around w-1/4 max-w-md">
-            <div class="flex">
-              <div class="bg-white shadow-lg w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
-              </div>
-              <div class="bg-white shadow-lg ml-5 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </div>
-            </div>
-            <p class="font-bold"> 1 of 2</p>
-          </div>
         </div>
+
 
         <!-- Saved Cards -->
-        <p class="font-bold text-base text-helper mt-12">Saved Cards</p>
-        <div class="flex  max-w-6xl">
-          <!-- Flip Cards -->
-          <div class="max-w-4xl mt-5 relative">
-            <div class="w-96 h-64 bg-card-border shadow-custom rounded-xl p-9 relative z-40 flex justify-center items-center">
-                <p class="font-semibold text-primary-50 hover:text-opacity-80 mt-5 cursor-pointer">Flip Cards</p>
-                <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
-                <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
-                <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
-                <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
-            </div>
-            <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
-              <div class="w-80 h-56 bg-card-border rounded-xl relative">
-                <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
-                <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
+        <div class="saved-cards">
+          <p class="font-bold text-base text-helper mt-12">Saved Cards</p>
+          <!-- empty cards -->
+          <!-- <div class="mt-4 empty-cards">
+            <img src="/images/empty-cards.svg" alt="" class="ml-12">
+            <p class="font-medium text-sm mt-3">You currently do not have any saved cards</p>
+          </div> -->
+          <div class="flex  max-w-6xl">
+            <!-- Flip Cards -->
+            <div class="max-w-4xl mt-5 relative">
+              <div class="w-96 h-64 bg-card-border shadow-custom rounded-xl p-9 relative z-40 flex justify-center items-center">
+                  <p class="font-semibold text-primary-50 hover:text-opacity-80 mt-5 cursor-pointer">Flip Cards</p>
+                  <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
+                  <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
+                  <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                  <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
               </div>
-            </div>
-            <div class="absolute shadow-custom rounded-xl top-8 left-32">
-              <div class="w-72 h-48 bg-card-border rounded-xl relative">
-                <img src="/images/card-lines/thirdcard-down12.svg" alt="" class="absolute bottom-0 right-0">
-                <img src="/images/card-lines/thirdcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-32">
-              </div>
-            </div>
-          </div>
-
-          <!-- Flipped Cards and option to unsave -->
-          <div class="max-w-4xl mt-5 ml-48 relative">
-            <div class="w-96 h-64 shadow-custom bg-card-border rounded-xl relative z-40">
-                <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
-                <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
-                <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
-                <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
-                <div class="absolute z-50 bg-white p-9 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 h-56 rounded-xl">
-                  <p  class="font-medium text-lg text-center mt-6">I am a force that the world needs. I belong here.</p>
-                  <span class="flex justify-center items-center">
-                    <p class="font-semibold text-semantics hover:text-opacity-80 mt-5 cursor-pointer">Unsave Card</p>
-                  </span>
+              <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
+                <div class="w-80 h-56 bg-card-border rounded-xl relative">
+                  <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                  <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
                 </div>
-            </div>
-            <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
-              <div class="w-80 h-56 bg-card-border rounded-xl relative">
-                <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
-                <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
+              </div>
+              <div class="absolute shadow-custom rounded-xl top-8 left-32">
+                <div class="w-72 h-48 bg-card-border rounded-xl relative">
+                  <img src="/images/card-lines/thirdcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                  <img src="/images/card-lines/thirdcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-32">
+                </div>
               </div>
             </div>
-            <div class="absolute shadow-custom rounded-xl top-8 left-32">
-              <div class="w-72 h-48 bg-card-border rounded-xl relative">
-                <img src="/images/card-lines/thirdcard-down12.svg" alt="" class="absolute bottom-0 right-0">
-                <img src="/images/card-lines/thirdcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-32">
+  
+            <!-- Flipped Cards and option to unsave -->
+            <div class="max-w-4xl mt-5 ml-48 relative">
+              <div class="w-96 h-64 shadow-custom bg-card-border rounded-xl relative z-40">
+                  <img src="/images/card-lines/firstcard-up12.svg" alt="" class="absolute top-0 left-0">
+                  <img src="/images/card-lines/firstcard-up13.svg" alt="" class="absolute top-0 left-0">
+                  <img src="/images/card-lines/firstcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                  <img src="/images/card-lines/firstcard-down13.svg" alt="" class="absolute bottom-0 right-0">
+                  <div class="absolute z-50 bg-white p-9 transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 h-56 rounded-xl">
+                    <p  class="font-medium text-lg text-center mt-6">I am a force that the world needs. I belong here.</p>
+                    <span class="flex justify-center items-center">
+                      <p class="font-semibold text-semantics hover:text-opacity-80 mt-5 cursor-pointer">Unsave Card</p>
+                    </span>
+                  </div>
               </div>
+              <div class="absolute shadow-custom rounded-xl top-4 left-20 z-30">
+                <div class="w-80 h-56 bg-card-border rounded-xl relative">
+                  <img src="/images/card-lines/secondcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                  <img src="/images/card-lines/secondcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-36">   
+                </div>
+              </div>
+              <div class="absolute shadow-custom rounded-xl top-8 left-32">
+                <div class="w-72 h-48 bg-card-border rounded-xl relative">
+                  <img src="/images/card-lines/thirdcard-down12.svg" alt="" class="absolute bottom-0 right-0">
+                  <img src="/images/card-lines/thirdcard-down13.svg" alt="" class="absolute bottom-0 right-0 h-32">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center items-center -ml-20 max-w-6xl mt-8">
+            <div class="flex items-center ml-10 justify-around w-1/4 max-w-md py-6">
+              <div class="flex">
+                <div class="bg-white shadow-lg w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+                <div class="bg-white shadow-lg ml-5 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p class="font-bold"> 1 of 2</p>
             </div>
           </div>
         </div>
 
-        <div class="flex justify-center items-center -ml-20 max-w-6xl mt-8">
-          <div class="flex items-center ml-10 justify-around w-1/4 max-w-md py-6">
-            <div class="flex">
-              <div class="bg-white shadow-lg w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
-              </div>
-              <div class="bg-white shadow-lg ml-5 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </div>
-            </div>
-            <p class="font-bold"> 1 of 2</p>
-          </div>
-        </div>
       </div>
 
       <footer class="footer px-4 py-6">
