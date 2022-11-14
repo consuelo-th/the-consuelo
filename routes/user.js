@@ -138,13 +138,17 @@ router.get("/blog/:id", async (req, res) => {
   try {
     const blogItem = await Blog.findById(req.params.id);
     if (blogItem) {
-      res.render("pages/templates/blog", { blogItem }); //the page that'll display a single blog post
+      res.render("templates/blog", { blogItem }); //the page that'll display a single blog post
     } else {
       //the ID Is invalid too
     }
   } catch (error) {
     // ID in the request is invalid, an error page here
   }
+});
+
+router.get("/meet-a-therapist", (req, res) => {
+  res.render("pages/users/meet-a-therapist");
 });
 
 router.get("/logout", (req, res) => {
