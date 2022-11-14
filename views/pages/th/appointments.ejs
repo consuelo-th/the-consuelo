@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONSUELO ~ DASHBOARD</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//glenthemes.github.io/iconsax/geticons.js"></script>
+    <link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    
+  </head>
+  <body class="bg-secondary">
+    <!-- component -->
+    <div class="flex flex-row min-h-screen">
+      <aside
+        class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+      >
+        <!-- sidebar header  -->
+        <div
+          class="flex h-screen flex-col border-r bg-primary-50 text-white static"
+        >
+          <div class="sidebar-header flex space-x-1 px-4 py-4">
+            <a href="/user/home">
+              <img alt="consuelo-logo" src="/images/logo.png" />
+            </a>
+            <h1 class="px-2 text-white font-bold text-lg">Consuelo</h1>
+          </div>
+
+          <!-- sidebar -->
+          <nav
+            aria-label="Main Nav"
+            class="main-nav mt-20 flex flex-col space-y-2 w-full"
+          >
+            <a
+              href="/th/dashboard"
+              class="flex items-center px-4 py-3"
+            >
+
+              <i class="iconsax" icon-name="layout-2"></i>
+              <span class="ml-3 text-sm font-medium"> Dashboard </span>
+            </a>
+
+            <a
+              href="/th/appointments"
+              class="flex items-center px-4 py-3 nav-active"
+            >
+              <i class="iconsax" icon-name="document-sketch"></i>
+              <span class="ml-3 text-sm font-medium"> Appointment </span>
+            </a>
+
+            <a
+              href="/th/patients"
+              class="flex items-center px-4 py-3"
+            >
+              <i class="iconsax" icon-name="message-dots-notif"></i>
+              <span class="ml-3 text-sm font-medium"> Patients</span>
+            </a>
+
+            <a
+              href="/th/calendar"
+              class="flex items-center px-4 py-3"
+            >
+              <i class="iconsax" icon-name="group"></i>
+              <span class="ml-3 text-sm font-medium"> Calendar </span>
+            </a>
+
+            <a
+              href="/th/chat"
+              class="flex items-center px-4 py-3"
+            >
+            <i class="iconsax" icon-name="message-dots-notif"></i>
+              <span class="ml-3 text-sm font-medium"> Chat </span>
+            </a>
+            
+            <a
+              href="/th/logout"
+              class="flex items-center px-4 py-3"
+            >
+              <i class="iconsax" icon-name="logout-1"></i>
+              <span class="ml-3 text-sm font-medium"> Logout </span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]">
+        <div class="flex justify-between w-full h-full">
+          <div class="w-[61%] mx-auto mt-5 h-full">
+            <!-- min-h-[calc(100%-6%)] -->
+            <div class="relative w-80 h-10">
+              <input type="text" name="search-field" id="" class="w-full h-full rounded-md pl-[52px] focus-visible:outline-none" placeholder="Search here">
+              <i class="fa fa-search text-[#4B5563] absolute top-3 left-6" aria-hidden="true"></i>
+            </div>
+            <div class="mt-6 min-h-[715px] bg-white rounded-lg py-4 px-6">
+              <!-- min-h-[calc(100%-64px)] -->
+              <h4 class="font-semibold text-base">Appointments</h4>
+
+              <div class="mt-4 mb-2">
+                <ul class="flex font-semibold text-sm">
+                  <li class="w-[27%]">Name</li>
+                  <li class="w-[20%] ml-4">Phone Number</li>
+                  <li class="w-[13%] ml-4">Date</li>
+                  <li class="w-[15%] ml-4">Time</li>
+                  <li class="w-[18%] ml-4">Action</li>
+                </ul>
+              </div>
+              <!-- No appointments -->
+              <div class="flex flex-col min-h-[610px] justify-center items-center">
+                <!-- h-[500px] -->
+                <img src="/images/empty-state.svg" alt="empty files">
+                <p class="text-sm text-modal">You currently have no appointments</p>
+              </div>
+              <!-- Appointment Details -->
+              <!-- <div>
+                <ul class="flex text-sm pt-2 pb-1">
+                  <li class=" w-[27%]">Farouk Muhammed</li>
+                  <li class=" w-[20%] ml-4">08127878919</li>
+                  <li class=" w-[13%] ml-4">01/12/2022</li>
+                  <li class=" w-[15%] ml-4">09:00-09:30</li>
+                  <li class=" w-[18%] ml-4 flex">
+                    <img src="/images/cancel.svg" alt="cancel icon" class="cursor-pointer ">
+                    <img src="/images/eye.svg" alt="eye icon"class="cursor-pointer ml-2">
+                    <img src="/images/confirm.svg" alt="confirm icon" class="cursor-pointer ml-2">
+                  </li>
+                </ul>
+                <hr class="border-[0.5px] mt-1 opacity-20">
+              </div>
+              <div>
+                <ul class="flex text-sm pt-2 pb-1">
+                  <li class=" w-[27%]">Farouk Muhammed</li>
+                  <li class=" w-[20%] ml-4">08127878919</li>
+                  <li class=" w-[13%] ml-4">01/12/2022</li>
+                  <li class=" w-[15%] ml-4">09:00-09:30</li>
+                  <li class=" w-[18%] ml-4 flex">
+                    <img src="/images/cancel.svg" alt="cancel icon" class="cursor-pointer ">
+                    <img src="/images/eye.svg" alt="eye icon"class="cursor-pointer ml-2">
+                    <img src="/images/confirm.svg" alt="confirm icon" class="cursor-pointer ml-2">
+                  </li>
+                </ul>
+                <hr class="border-[0.5px] mt-1 opacity-20">
+              </div>
+              <div>
+                <ul class="flex text-sm pt-2 pb-1">
+                  <li class=" w-[27%]">Farouk Muhammed</li>
+                  <li class=" w-[20%] ml-4">08127878919</li>
+                  <li class=" w-[13%] ml-4">01/12/2022</li>
+                  <li class=" w-[15%] ml-4">09:00-09:30</li>
+                  <li class=" w-[18%] ml-4 flex">
+                    <img src="/images/cancel.svg" alt="cancel icon" class="cursor-pointer ">
+                    <img src="/images/eye.svg" alt="eye icon"class="cursor-pointer ml-2">
+                    <img src="/images/confirm.svg" alt="confirm icon" class="cursor-pointer ml-2">
+                  </li>
+                </ul>
+                <hr class="border-[0.5px] mt-1 opacity-20">
+              </div> -->
+              
+            </div>
+          </div>
+
+          <!-- Therapist Profile -->
+          <div class="w-[34%] bg-white">
+            <h1 class="font-semibold text-xl mt-6 ml-6">Profile</h1>
+            <div class="flex flex-col justify-center items-center mt-6">
+              <div>
+                <img src="/images/user-cirlce-add.svg" alt="" class="cursor-pointer mx-auto">
+                <h1 class="font-semibold text-2xl mt-4">Hassanat Abubakar</h1>
+                <p>Hassanatabubakar@gmail.com</p>
+              </div>
+              <!-- Profile upload -->
+              <!-- <div>
+                <img src="/images/posi.png" alt="" class="rounded-full w-32 h-32 cursor-pointer mx-auto border-2 border-solid border-primary-60">
+                <h1 class="font-semibold text-2xl mt-4">Hassanat Abubakar</h1>
+                <p>Hassanatabubakar@gmail.com</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
