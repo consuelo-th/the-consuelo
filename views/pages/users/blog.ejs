@@ -140,7 +140,6 @@
 
           <div class="main-content flex flex-col flex-grow py-4 px-10">
             <div class="grid gap-2">
-
               <% blogPosts.forEach(blogPost => { %>
                 <div class="grid gap-2">
                   <div  class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl">
@@ -150,7 +149,8 @@
                         <h2 class=""><%= blogPost.title %></h2>
       
                         <div class="flex justify-between items-center text-secondary-100 max-w-lg">
-                          <p> <%= blogPost.datePosted %> </p>
+                          <p> <%= months[new Date(blogPost.datePosted).getMonth()] + " " 
+                            + new Date(blogPost.datePosted).getDate() + ", " + new Date(blogPost.datePosted).getFullYear() %></p>
                           <p>|</p>
                           <p><i class="fa-regular fa-clock"></i>  <%= blogPost.readTime %></p>
                           <p>|</p>
