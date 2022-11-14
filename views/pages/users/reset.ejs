@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body class="bg-secondary">
-        <header class="flex justify-start items-center py-2 px-6 bg-primary-60">
+        <header class="flex justify-start items-center py-2 px-6 bg-primary-60 absolute left-0 right-0 z-10">
             <div class="flex space-x-1">
                 <a href="/">
                     <img alt="consuelo-logo" src="/images/logo.png"/>
@@ -24,13 +24,14 @@
             </div>
         </header>
 
-        <section class="flex flex-wrap text-body lg:items-center ">
-            <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8">
-                <div class="mx-auto max-w-xs space-y-4">
+        <section class="flex justify-between items-start flex-wrap text-body">
+            <div class="sm:px-6 pt-24 w-full px-4 lg:w-1/2 lg:px-8 self-center">
+                <div class="m-auto max-w-xs space-y-4">
                     <h1 class="font-semibold text-2xl text-primary-60">Forgot password</h1>
                     <p class="font-thin">Input your new desired password in the input fields below to create a new password.</p>
                 </div>
-                <form action="/" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
+                
+                <form action="" id="email" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
                     <div>
                         <label for="email" class="sr-only">Email</label>
                         <input
@@ -46,7 +47,7 @@
                 
                 </form>
 
-                <form action="" class="mx-auto mt-4 mb-0 max-w-xs space-y-4">
+                <form action="" id="newPassword" class="hidden mx-auto mt-4 mb-0 max-w-xs space-y-4">
                     <div>
                         <label for="passworrd" class="sr-only">First name</label>
                         <input
@@ -72,22 +73,19 @@
                 
                 </form>
 
-                <div class="flex-col items-center mx-auto mt-4 mb-0 max-w-xs space-y-4 text-primary-60">
+                <div id="success" class="hidden flex-col items-center mx-auto mt-4 mb-0 max-w-xs space-y-4 text-center text-primary-60">
                     <h1 class="font-semibold text-2xl">Success</h1>
                     <i class="fa-regular fa-circle-check fa-4x"></i>
                     <p class="font-thin text-body">Your password has been reset successfully</p>
-                    <button type="submit" class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 text-md font-bold text-white shadow-sm bg-primary-50">Sign in</button>
+                    <a href="/user/login" class="w-full text-center rounded-lg border-primary-50 border-[1px] p-3 text-md font-bold text-white shadow-sm bg-primary-50">Sign in</a>
                 </div>
             </div>
         
-            <div class="relative  w-full sm:h-96 lg:w-1/2">
-                <img
-                    alt="Welcome"
-                    src="/images/reg-banner-1.png"
-                />
-            </div>
+            <div class="max-h-screen w-full lg:w-1/3 sm:h-96">
+                <img alt="Welcome" src="/images/reg-banner-1.png" />
+              </div>
         </section>
-  
+
     </body>
 </html>
   
