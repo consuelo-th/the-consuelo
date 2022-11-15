@@ -113,35 +113,156 @@
         </div>
       </aside>
 
-      <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]" >
+      <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]">
         <div>
-          <header
-            class="header bg-white shadow py-4 flex justify-between items-center px-10"
-          >
+          <header class="header bg-white shadow py-4 flex justify-between items-center px-10">
             <div>
-              <h1 class="text-xl">
-                Welcome back, <%- userDetails.firstName %> 💚
-              </h1>
-              <p>Your feelings are welcome here</p>
+              <h1 class="text-xl">Forum</h1>
+              <p>
+                Our forum is created to help you feel connected, accepted and
+                supported.
+              </p>
             </div>
-
             <div class="flex items-center space-x-3">
               <i class="fa-regular fa-bell"></i>
-
-              <span
-                class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer"
-              >
+    
+              <span class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer">
                 <i class="fa-regular fa-user"></i>
-
+    
                 <i class="fa-solid fa-angle-down"></i>
               </span>
             </div>
           </header>
-
-          <div class="main-content flex flex-col flex-grow py-4 px-10">
-            main content here
+    
+          <div class="main-content flex flex-col flex-grow py-4 px-10" id="main">
+            <section class="flex justify-between flex-col-reverse md:flex-row mb-6">
+              <div class="bg-white rounded-3xl py-5 px-6 max-w-3xl">
+                <button class="float-right text-4xl delete_btn">...</button>
+                <div class="flex pb-4">
+                  <img class="mr-3" src="/images/profile_picture.svg" alt="" />
+                  <div>
+                    <h5>Hassy123</h5>
+                    <p>Posted on Sep, 22, 2022</p>
+                  </div>
+                </div>
+                <p class="pb-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  egestas blandit facilisi dolor velit orci ac lorem. Ultrices
+                  netus convallis scelerisque nam. Ipsum nam vel...
+                </p>
+                <button>
+                  <img class="inline-block" src="/images/like.svg" alt="" /> 10
+                  Likes
+                </button>
+                <button class="underline pl-2 comments_btn">10 Comments</button>
+              </div>
+              <button class="bg-primary-50 py-4 px-6 rounded w-full md:w-48 h-auto ml-0 mb-5 md:mb-0 md:h-fit md:ml-6 mt-12 text-white" id="newtopic_btn">
+                Start a new topic
+              </button>
+            </section>
+            <section class="bg-white rounded-3xl py-5 px-6 max-w-3xl mb-6">
+              <button class="float-right text-4xl delete_btn">...</button>
+              <div class="flex pb-4">
+                <img class="mr-3" src="/images/profile_picture.svg" alt="" />
+                <div>
+                  <h5>Hassy123</h5>
+                  <p>Posted on Sep, 22, 2022</p>
+                </div>
+              </div>
+              <p class="pb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                egestas blandit facilisi dolor velit orci ac lorem. Ultrices
+                netus convallis scelerisque nam. Ipsum nam vel...
+              </p>
+              <button>
+                <img class="inline-block" src="/images/like.svg" alt="" /> 10
+                Likes
+              </button>
+              <button class="underline pl-2 comments_btn">10 Comments</button>
+            </section>
+    
+            <section class="bg-white rounded-3xl py-5 px-6 max-w-3xl mb-6">
+              <button class="float-right text-4xl delete_btn">...</button>
+              <div class="flex pb-4">
+                <img class="mr-3" src="/images/profile_picture.svg" alt="" />
+                <div>
+                  <h5>Hassy123</h5>
+                  <p>Posted on Sep, 22, 2022</p>
+                </div>
+              </div>
+              <p class="pb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                egestas blandit facilisi dolor velit orci ac lorem. Ultrices
+                netus convallis scelerisque nam. Ipsum nam vel...
+              </p>
+              <button>
+                <img class="inline-block" src="/images/like.svg" alt="" /> 10
+                Likes
+              </button>
+              <button class="underline pl-2 comments_btn">10 Comments</button>
+            </section>
+            <section class="bg-white rounded-3xl py-5 px-6 max-w-3xl mb-6">
+              <button class="float-right text-4xl delete_btn">...</button>
+              <div class="flex pb-4">
+                <img class="mr-3" src="/images/profile_picture.svg" alt="" />
+                <div>
+                  <h5>Hassy123</h5>
+                  <p>Posted on Sep, 22, 2022</p>
+                </div>
+              </div>
+              <p class="pb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                egestas blandit facilisi dolor velit orci ac lorem. Ultrices
+                netus convallis scelerisque nam. Ipsum nam vel...
+              </p>
+              <button>
+                <img class="inline-block" src="/images/like.svg" alt="" /> 10
+                Likes
+              </button>
+              <button class="underline pl-2 comments_btn">10 Comments</button>
+            </section>
+    
+            <div id="myModal"
+              class="modal hidden fixed z-1 left-0 top-0 w-full h-full overflow-auto pt-32 bg-opacity-20 bg-secondary-100">
+              <!-- Post New topic Modal content -->
+              <div class="bg-white my-0 mx-auto p-5 w-4/5 h-auto modal-content">
+                <span class="float-right text-4xl hover:cursor-pointer close">&times;</span>
+                <div class="flex pt-9">
+                  <img class="p-2 h-fit w-fit fle mr-3 md:mr-12 " src="/images/profile_picture.svg" alt="" />
+                  <form action="">
+                    <textarea class="ml-3 mr-10 focus:border-none focus:outline-none w-full" name="" id="" cols="100" placeholder="What's going on?" rows="10"></textarea>
+                    <button class="float-right bg-primary-40 p-2" type="submit">Post Topic</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="deleteModal"
+              class="modal hidden fixed z-1 left-0 top-0 w-full h-full overflow-auto pt-32 bg-opacity-20 bg-secondary-100">
+              <!-- Delete Post Modal Content -->
+              <div class="bg-white my-0 mx-auto p-5 w-2/4 h-auto modal-content">
+                <h2>Do you really want to delete?</h2>
+                <div class="flex flex-col mt-6">
+                  <button class="py-2.5 px-4.5 bg-primary-70 mb-3 confirm">
+                    Confirm
+                  </button>
+                  <button class="py-2.5 px-4.5 hover:cursor-pointer bg-secondary-100 cancel">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+    
+            <div id="confirmDeleteModal"
+              class="modal hidden fixed z-1 left-0 top-0 w-full h-full overflow-auto pt-32 bg-opacity-20 bg-secondary-100">
+              <!-- Confirm Delete Post Modal Content -->
+              <div class="bg-white my-0 mx-auto p-5 w-2/4 h-auto modal-content">
+                <img src="/images/success.svg" alt="" />
+                <h2>Post deleted</h2>
+                <p>Your topic has been deleted</p>
+              </div>
+            </div>
           </div>
-
+    
           <footer class="footer px-4 py-6">
             <div class="footer-content">
               <p class="text-sm text-gray-600 text-center">
@@ -153,5 +274,7 @@
         </div>
       </main>
     </div>
+            
+    <script src="/JS/forum.js"></script>  
   </body>
 </html>
