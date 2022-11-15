@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>WELCOME | CONSUELO</title>
+     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png"/>
+     <link rel="manifest" href="/images/favicon/site.webmanifest" />
+     
+     <link rel="stylesheet" href="/css/main.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <div class="relative h-full grid place-items-center">
+        <p>click <button id="openModal">here</button></p>
+        <div id="modal" class="min-w-[40%] mt-10 rounded-sm p-3 text-[#050B08] space-y-3 hidden">
+            <div class="flex justify-between">
+                <h1>Complete your profile</h1>
+                <button class="text-3xl closeModal">&times;</button>
+            </div>
+
+            <div class="flex justify-between items-center shadow-sm border-[1px] border-[#E7E7E7] p-2 hover:cursor-pointer">
+                <div>
+                    <h2 class="font-semibold">Take a selfie</h2>
+                    <p class="text-[#595E5B]">Smile for the camera</p>
+                </div>
+
+                <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                    <p><i class="fa-solid fa-square"> </i> pending</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center shadow-sm border-[1px] border-[#E7E7E7] p-2 hover:cursor-pointer">
+                <div>
+                    <h2 class="font-semibold">Contact address</h2>
+                    <p class="text-[#595E5B]">Please enter a residential/office address</p>
+                </div>
+
+                <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                    <p><i class="fa-solid fa-square"> </i> pending</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center shadow-sm border-[1px] border-[#E7E7E7] p-2 hover:cursor-pointer">
+                <div>
+                    <h2 class="font-semibold">Roles and certificates</h2>
+                    <p class="text-[#595E5B]">Lets us know you are a certified therapist</p>
+                </div>
+
+                <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                    <p><i class="fa-solid fa-square"> </i> pending</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center shadow-sm border-[1px] border-[#E7E7E7] p-2 hover:cursor-pointer">
+                <div>
+                    <h2 class="font-semibold">Phone Number & Email</h2>
+                    <p class="text-[#595E5B]">Input a valid phone and email address </p>
+                </div>
+
+                <div class="text-[#FF9600] bg-[#FF9600] p-1 rounded-md bg-opacity-10">
+                    <p><i class="fa-solid fa-square"> </i> pending</p>
+                </div>
+            </div>
+
+            <button class="inline-flex bg-primary-50 text-white justify-center items-center py-2 px-16 text-base text-center rounded-sm closeModal">
+                Submit
+            </button>
+        </div>
+
+        <div class="min-w-[40%] space-y-5">
+            <h2 class="font-semibold mb-4"><a href="/th/dashboard"><i class="fa-solid fa-arrow-left"> </i> </a> Complete your profile</h2>
+
+            <div class="flex flex-col gap-5">
+                <form action="" class="shadow-sm border-[1px] border-[#E7E7E7] p-4 space-y-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="font-semibold">Contact address</h2>
+                            <p class="text-[#595E5B]">Please enter a residential/office address</p>
+                        </div>
+                        <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                            <p><i class="fa-solid fa-square"> </i> pending</p>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Contact address" class="w-full border-[1px] border-helper px-2">
+                    </div>
+                </form>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <form action="" class="shadow-sm border-[1px] border-[#E7E7E7] p-4 space-y-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="font-semibold">Phone Number & Email</h2>
+                            <p class="text-[#595E5B]">Input a valid phone number</p>
+                        </div>
+                        <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                            <p><i class="fa-solid fa-square"> </i> pending</p>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Phone" class="w-full border-[1px] border-helper px-2">
+                        <input type="email" placeholder="Email" class="w-full border-[1px] border-helper px-2 mt-2">
+                    </div>
+                </form>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <form action="" class="shadow-sm border-[1px] border-[#E7E7E7] p-4 space-y-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="font-semibold">Role & Certificates</h2>
+                            <p class="text-[#595E5B]">Lets us know you are a certified therapist</p>
+                        </div>
+                        <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                            <p><i class="fa-solid fa-square"> </i> pending</p>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+                            Select an option
+                        </label>
+                        <select id="countries" class="w-full border-[1px] border-helper px-2">
+                        <option selected>Choose a Role</option>
+                        <option value="US">Dr.</option>
+                        <option value="CA">Counselor</option>
+                        <option value="FR">Psychiatrist</option>
+                        <option value="DE">Nurse</option>
+                        </select>
+                    </div>
+                    <div class="flex justify-center items-center w-full">
+                        <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-md border-[1px] border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input id="dropzone-file" type="file" class="hidden" />
+                        </label>
+                    </div> 
+                </form>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <form action="" class="shadow-sm border-[1px] border-[#E7E7E7] p-4 space-y-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="font-semibold">Take a selfie</h2>
+                            <p class="text-[#595E5B]">Smile for the camera</p>
+                        </div>
+                        <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                            <p><i class="fa-solid fa-square"> </i> pending</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center w-full">
+                        <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-md border-[1px] border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input id="dropzone-file" type="file" class="hidden" />
+                        </label>
+                    </div> 
+                </form>
+            </div>
+
+            
+
+        </div>
+
+            <div class="flex flex-col gap-5">
+                <form action="" class="shadow-sm border-[1px] border-[#E7E7E7] p-4 space-y-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="font-semibold">Phone Number & Email</h2>
+                            <p class="text-[#595E5B]">Input a valid phone number</p>
+                        </div>
+                        <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                            <p><i class="fa-solid fa-square"> </i> pending</p>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Phone" class="w-full border-[1px] border-helper px-2">
+                        <input type="email" placeholder="Email" class="w-full border-[1px] border-helper px-2 mt-2">
+                    </div>
+                </form>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <form action="" class="shadow-sm border-[1px] border-[#E7E7E7] p-4 space-y-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="font-semibold">Role & Certificates</h2>
+                            <p class="text-[#595E5B]">Lets us know you are a certified therapist</p>
+                        </div>
+                        <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                            <p><i class="fa-solid fa-square"> </i> pending</p>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+                            Select an option
+                        </label>
+                        <select id="countries" class="w-full border-[1px] border-helper px-2">
+                        <option selected>Choose a Role</option>
+                        <option value="US">Dr.</option>
+                        <option value="CA">Counselor</option>
+                        <option value="FR">Psychiatrist</option>
+                        <option value="DE">Nurse</option>
+                        </select>
+                    </div>
+                    <div class="flex justify-center items-center w-full">
+                        <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 rounded-md border-[1px] border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input id="dropzone-file" type="file" class="hidden" />
+                        </label>
+                    </div> 
+                </form>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <form action="" class="shadow-sm border-[1px] border-[#E7E7E7] p-4 space-y-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="font-semibold">Take a selfie</h2>
+                            <p class="text-[#595E5B]">Smile for the camera</p>
+                        </div>
+                        <div class="text-[#FF9600] p-1 rounded-md bg-opacity-10 bg-[#FF9600]">
+                            <p><i class="fa-solid fa-square"> </i> pending</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center w-full">
+                        <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 rounded-md border-[1px] border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input id="dropzone-file" type="file" class="hidden" />
+                        </label>
+                    </div> 
+                </form>
+            </div>
+
+            
+
+        </div>
+
+        
+
+    </div>
+
+    <script src="/js/thVerification.js"></script>
+</body>
+</html>
+
+
+
+
