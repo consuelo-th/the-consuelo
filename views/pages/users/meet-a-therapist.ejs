@@ -121,7 +121,7 @@
       </header>
       
       
-      <div id="main-content" class="hidden flex-col flex-grow py-4 px-10">
+      <div id="main-content" class="flex-col flex-grow py-4 px-10">
         <h1 class="text-base text-helper mt-6">Therapist</h1>
         <div class="md:mt-6 flex flex-wrap md:justify-start gap-6">
 
@@ -220,7 +220,7 @@
       </div>
       
       
-      <div id="verification" class="flex justify-center text-body md:items-center">
+      <div id="verification" class="justify-center text-body md:items-center hidden">
             <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8">
                 <div class="mx-auto max-w-xs">
                     <h1 class="font-semibold text-xl text-primary-60 text-center">Verify your identity</h1>
@@ -228,7 +228,7 @@
                 </div>
 
                 <!-- Input phone number -->
-                <form action="" id="numberInput" class="mx-auto mt-6 mb-0 max-w-xs">
+                <form action="" id="numberInput" class="mx-auto mt-6 mb-0 max-w-xs hidden">
                     <div>
                         <label for="telephone-number" class="sr-only">Phone Number</label>
                         <input
@@ -244,7 +244,7 @@
                 </form>
 
                 <!-- Enter OTP -->
-                <form action="" id="otpInput" class="hidden mx-auto mt-6 mb-0 max-w-xs">
+                <form action="" id="otpInput" class="mx-auto mt-6 mb-0 max-w-xs hidden">
                     <div>
                         <label for="OTP" class="sr-only">OTP</label>
                         <input
@@ -281,6 +281,6 @@
   <!-- Overlay -->
   <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"></div>            
     
-<script src="/JS/meetATherapistAuth.js"></script>
+<script src="/js/meetATherapistAuth.js"></script>
 </body>
 </html>
