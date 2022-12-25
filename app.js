@@ -41,6 +41,10 @@ app.get("/blog", (req, res) => {
   res.render("pages/landing-page/blog-post")
 })
 
+app.get("/list", (req, res) => {
+  res.render("pages/waiting-list")
+})
+
 app.use((req, res) => {
   res.render("templates/404");
 });
