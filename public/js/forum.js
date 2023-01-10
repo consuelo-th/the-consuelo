@@ -4,8 +4,6 @@
 
 let commentsButton = document.querySelectorAll(".comments_btn");
 
-
-
 for (let i = 0; i < commentsButton.length; i++) {
     commentsButton[i].addEventListener("click", function () {
         document.getElementById("main").innerHTML = `

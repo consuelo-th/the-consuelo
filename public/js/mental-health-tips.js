@@ -16,7 +16,6 @@ for (let i = 0; i < mentalTipsCard.length; i++) {
                 <li>Practice self-compassion. Grant yourself enough grace and understand that nobody’s perfect.</li>
             </ul>
         </section>
-        
         `;
   });
 }

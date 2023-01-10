@@ -5,6 +5,7 @@ const usersRoutes = require("./routes/user");
 const therapistsRouter = require("./routes/therapists");
 const cookieParser = require("cookie-parser");
 const sessions = require("express-session");
+const { waitList } = require("./database/models");
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -43,6 +44,34 @@ app.get("/blog", (req, res) => {
 
 app.get("/list", (req, res) => {
   res.render("pages/waiting-list")
+})
+
+app.post("/list", async (req, res) => {
+  const { email } = req.body;
+  if (email !== "") {
+    const emailExists = await waitList.findOne({ email });
+    if (emailExists) {
+      //frontend needs to display the error somewhere
+      //the formdata is for filling back the input fields(page reloads after submission)
+      res.redirect("/");
+    } else {
+      const newEmail = new waitList({
+        email
+      });
+      newEmail.save((err) => {
+        if (err) {
+          //server error
+          //frontend needs to display the error somewhere
+          //the formdata is for filling back the input fields(page reloads after submission)
+          res.redirect("/", {
+            error: "something went wrong please try again",
+          });
+        } else {
+          res.redirect("/");
+        }
+      });
+    }
+  }
 })
 
 app.use((req, res) => {
