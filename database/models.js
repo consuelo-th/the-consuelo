@@ -46,6 +46,10 @@ const blogSchema = new mongoose.Schema({
   content: String,
 });
 
+const waitListSchema = new mongoose.Schema({
+  email: String
+});
+
 const User = mongoose.model("User", userSchema);
 const Affirmation = mongoose.model("Affirmation", affirmationSchema);
 const MentalHealthTip = mongoose.model(
@@ -55,6 +59,7 @@ const MentalHealthTip = mongoose.model(
 const forum = mongoose.model("Forum", forumSchema);
 const forumComment = mongoose.model("Forum comments", forumCommentSchema);
 const blog = mongoose.model("blog", blogSchema);
+const waitList = mongoose.model("wait list", waitListSchema);
 
 module.exports = {
   User,
@@ -63,4 +68,5 @@ module.exports = {
   forum,
   forumComment,
   blog,
+  waitList
 };

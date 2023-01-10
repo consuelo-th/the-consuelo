@@ -1,7 +1,7 @@
 /* Camera functionality */
-let camera_button = document.querySelector("#start-camera");
+let camera_button = document.querySelector("#start-camera"); 
 let video = document.querySelector("#video");
-let click_button = document.querySelector("#click-photo");
+let click_button = document.querySelector("#click-photo"); 
 let canvas = document.querySelector("#canvas");
 let retakeBtn = document.getElementById("retake");
 
