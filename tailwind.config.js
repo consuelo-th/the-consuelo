@@ -6,6 +6,38 @@ module.exports = {
       boxShadow:{
         'custom': `0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1), 
         0 -5px 15px -3px rgb(0 0 0 / 0.1), 0 -4px 6px -4px rgb(0 0 0 / 0.1)`
+      },
+      keyframes:{
+        slide:{
+          '0%': { 'transform': 'translateY(0%)' },
+          '16.6%': { 'transform': 'translateY(-17%)'},
+          '33.2%': { 'transform': 'translateY(-34%)'},
+          '49.8%': { 'transform': 'translateY(-34%)'},
+          '82%': { 'transform': 'translateY(-67%)' },
+          '100%': { 'transform': 'translateY(-67%)' }
+        },
+        fadeOut:{
+          '0%': { 'opacity': '1' },
+          '100%': 
+          {
+            'opacity': '0',
+            'display': 'none', 
+          }
+        },
+        fadeIn:{
+          '0%': { 'opacity': '0', },
+          '50%':{ 'opacity': '0.3' },
+          '100%': 
+          {
+            'opacity': '1',
+            'height': 'auto'
+          }
+        },
+      },
+      animation: {
+        'slide': 'slide 4s 1s linear 1 forwards',
+        'fadeOut': 'fadeOut 1s 4s linear forwards', 
+        'fadeIn': 'fadeIn 2s 4.5s ease-out forwards' 
       }
     },
     colors: {
@@ -18,6 +50,7 @@ module.exports = {
       "primary-40":"#729E86",
       "primary-10":"#D5E2DB",
       "secondary": "#E5E5E5",
+      "secondary-50": '#FEFEE8',
       "secondary-100": "#55554C",
       "afribook": "#6C6F6D",
       "text-title": "#050B08",
@@ -31,7 +64,8 @@ module.exports = {
       "card-border": "#E6F6ED",
       "semantics": "#840B0B",
       "modal": "#667085",
-      "black": "#000000"
+      "black": "#000000",
+      "stroke": "rgba(175, 177, 177, 0.1)"
 
     },
     fontFamily: {      
