@@ -22,28 +22,69 @@
 <body class="bg-secondary">
     
 
+
+
+  <header class="bg-gradient-to-r from-[#46A972] to-[#225A3B]">
+    <nav class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+              <a href="/" class="flex items-center">
+                   <img alt="consuelo-logo" src="/images/logo.png" class="mr-3 h-6 sm:h-9" />
+                   <h1 class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Consuelo</h1>
+              </a>
+            
+              <div class="md:hidden hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
+                <div class="hamburger-menu_1 mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+                <div class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+                <div class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+              </div>
+
+              <div class="navbar fixed left-0 right-0 bottom-0 w-1/2 h-[100vh] transition-all ease-in duration-300 border border-[red] translate-x-[200%] md:-translate-x-0 md:static md:h-auto justify-between items-center md:flex md:w-auto" id="mobile-menu-2">
+                   <ul class="flex flex-col mt-20 font-medium md:flex-row items-center md:space-x-8 md:mt-0">
+                   
+                        <li>
+                             <a href="#features" class="features__link block hover:underline pt-6 md:pt-0">Features</a>
+                        </li>
+                        <li>
+                             <a href="/about" class="block hover:underline pt-6 md:pt-0">About Us</a>
+                        </li>
+                        <li>
+                             <a href="/blog" class="block hover:underline pt-6 md:pt-0">Blog</a>
+                        </li>
+                        <li>
+                             <a href="/user/login" class="block bg-white text-primary-60 justify-center items-center py-2 px-3 text-base font-semibold text-center rounded-sm mt-6 md:mt-0">Sign Up</a>
+                        </li>
+                   </ul>
+              </div>
+         </div>
+    </nav>
+
+</header>
+
+
+
+  
 <!-- component -->
-<div class="flex flex-row min-h-screen ">
+<!-- <div class="flex flex-row min-h-screen ">
   <aside class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
-  >
+  > -->
 
     <!-- sidebar header  -->
-    <div
+    <!-- <div
           class="flex h-screen flex-col border-r bg-primary-60 text-white static"
-        >
-          <div class="sidebar-header flex space-x-1 px-4 py-4">
+        > -->
+          <!-- <div class="sidebar-header mt-28 md:mt-0 flex space-x-1 px-4 py-4 border border-[red]">
             <a href="/user/home">
               <img alt="consuelo-logo" src="/images/logo.png" />
             </a>
             <h1 class="px-2 text-white font-bold text-lg">Consuelo</h1>
-          </div>
+          </div> -->
 
           <!-- sidebar -->
-          <nav
+          <!-- <nav
             aria-label="Main Nav"
-            class="main-nav mt-20 flex flex-col space-y-2 w-full"
-          >
-            <a
+            class="main-nav mt-10 md:mt-20 flex flex-col space-y-2 w-full border border-[red]"
+          > -->
+            <!-- <a
               href="/user/home"
               class="flex items-center px-4 py-3"
             >
@@ -98,17 +139,22 @@
             </a>
           </nav>
         </div>
-  </aside>
+  </aside> -->
 
-  <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]">
+  <!-- <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]">
     <div>
-      <header class="header bg-white shadow py-4 flex justify-between items-center px-10">
-        <div>
-          <h1 class="text-xl">Meet a therapist</h1>
-          <p class="leading-8 text-sm">Book a session with a therapist today</p>
+      <header class="header bg-white shadow py-4 flex justify-between items-center px-6 lg:px-10">
+        <div class="md:hidden hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
+          <div class="hamburger-menu_1 mb-1  w-[30px] h-[2px] transition-all duration-150 ease-in bg-black"></div>
+          <div class="hamburger-menu_2 w-[30px] h-[2px] transition-all duration-150 ease-in bg-black"></div>
+          <div class="hamburger-menu_3 mt-1 w-[30px] h-[2px] transition-all duration-150 ease-in bg-black"></div>
+        </div>
+        <div class="ml-4">
+          <h1 class="text-lg md:text-xl">Meet a therapist</h1>
+          <p class="leading-5 text-[12px] md:text-sm">Book a session with a therapist today</p>
         </div>
         
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3 ml-4">
           <i class="fa-regular fa-bell"></i>
           
           <span class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer">
@@ -215,20 +261,18 @@
 
         <h1 class="text-base text-helper mt-16">Booked Sessions</h1>
         <p class="text-body mt-4">No booked sessions</p>
-        <!-- <p class="text-body mt-4">Your appointment with Dr Hassy Posi has been booked. He will reach out to you on Whatsapp.</p> -->
-
-      </div>
+      </div> -->
       
       
-      <div id="verification" class="justify-center text-body md:items-center hidden">
+      <!-- <div id="verification" class="justify-center text-body md:items-center hidden">
             <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8">
                 <div class="mx-auto max-w-xs">
                     <h1 class="font-semibold text-xl text-primary-60 text-center">Verify your identity</h1>
                     <p class="text-center mt-3">Verifiy your phone number to book a therapist</p>
-                </div>
+                </div> -->
 
                 <!-- Input phone number -->
-                <form action="" id="numberInput" class="mx-auto mt-6 mb-0 max-w-xs hidden">
+                <!-- <form action="" id="numberInput" class="mx-auto mt-6 mb-0 max-w-xs hidden">
                     <div>
                         <label for="telephone-number" class="sr-only">Phone Number</label>
                         <input
@@ -241,10 +285,10 @@
                     <div class="mt-6">
                         <button type="submit" id="numberSubmit" class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 font-medium text-white shadow-sm bg-primary-50">Send OTP</button>
                     </div>
-                </form>
+                </form> -->
 
                 <!-- Enter OTP -->
-                <form action="" id="otpInput" class="mx-auto mt-6 mb-0 max-w-xs hidden">
+                <!-- <form action="" id="otpInput" class="mx-auto mt-6 mb-0 max-w-xs hidden">
                     <div>
                         <label for="OTP" class="sr-only">OTP</label>
                         <input
@@ -256,13 +300,13 @@
                     <div class="mt-6">
                         <button type="submit" id="otpSubmit" class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 font-medium text-white shadow-sm bg-primary-50">Verify</button>
                     </div>
-                </form>
-            </div>
+                </form> -->
+            <!-- </div>
       </div>
          
     </div>
   </main>
-</div>
+</div> -->
 
 <!-- Modal -->
   <div id="modal" class="hidden w-96 h-48 bg-white rounded-xl absolute transfrom -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-50">
@@ -282,5 +326,6 @@
   <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"></div>            
     
 <script src="/js/meetATherapistAuth.js"></script>
+<!-- <script src="/js/sideBar.js"></script> -->
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 const saveBtn = document.querySelector('.save-btn');
 const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
+// const overlay = document.querySelector('.overlay');
 const closeModalBtn = document.querySelector('.close-modal');
 const displayModal = function(){
     modal.classList.remove('hidden');

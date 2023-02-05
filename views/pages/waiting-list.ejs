@@ -255,21 +255,38 @@
                         </span>
 
                         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-3xl">
-                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-primary-60"> 
-                                <i class="fa-brands fa-facebook"></i> 
+                            <a href="https://twitter.com/yourconsuelo" target="_blank" class="text-gray-500"> 
+                                 <i class="fa-brands fa-twitter"></i> 
                             </a>
-                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-primary-60">
-                                <i class="fa-brands fa-twitter"></i>
+                            <a href="https://instagram.com/yourconsuelo" target="_blank" class="text-gray-500">
+                                 <i class="fa-brands fa-instagram"></i>
                             </a>
-                                    
-                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-primary-60">
-                                <i class="fa-brands fa-youtube"></i>
+                                                 
+                            <a href="#" target="_blank" class="text-gray-500" >
+                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
-                        </div>
+                       </div>
                     </div>
                 </div>
             </footer>
         </div>
+
+        <!-- Modal -->
+        <div id="modal" class="hidden w-96 h-48 bg-white rounded-xl absolute transfrom -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-50">
+            <button class="close-modal text-3xl ml-auto absolute right-4 top-2">&times;</button>
+            <div class="flex justify-center items-center pt-8">
+            <img src="/images/sucessful-icon.svg" alt="" class="w-20">
+            </div>
+            <div class="flex flex-col justify-center items-center mt-2">
+            <p class="font-medium text-lg">Success</p>
+            <p class="text-sm text-modal leading-6">
+                You’ve been added to the waitlist.
+            </p>
+            </div>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"></div>  
 
         <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
         <script src="/js/waitingList.js"></script>

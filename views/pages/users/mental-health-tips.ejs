@@ -42,13 +42,13 @@
     <!-- component -->
     <div class="flex flex-row min-h-screen">
       <aside
-        class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+        class="sidebar z-50 fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
       >
         <!-- sidebar header  -->
         <div
         class="flex h-screen flex-col border-r bg-primary-60 text-white static"
       >
-        <div class="sidebar-header flex space-x-1 px-4 py-4">
+        <div class="sidebar-header mt-28 md:mt-0  flex space-x-1 px-4 py-4">
           <a href="/user/home">
             <img alt="consuelo-logo" src="/images/logo.png" />
           </a>
@@ -58,7 +58,7 @@
         <!-- sidebar -->
         <nav
           aria-label="Main Nav"
-          class="main-nav mt-20 flex flex-col space-y-2 w-full"
+          class="main-nav mt-5 md:mt-20 flex flex-col space-y-2 w-full"
         >
           <a
             href="/user/home"
@@ -90,7 +90,7 @@
             class="flex items-center px-4 py-3"
           >
             <i class="iconsax" icon-name="group"></i>
-            <span class="ml-3 text-sm font-medium"> Forum </span>
+            <span class="ml-3 text-sm font-medium"> Community </span>
           </a>
 
           <a
@@ -101,11 +101,6 @@
             <span class="ml-3 text-sm font-medium"> Blog </span>
           </a>
 
-          <a href="/user/meet-a-therapist" class="flex items-center px-4 py-3">
-            <i class="iconsax" icon-name="message-dash-1"></i>
-            <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
-          </a>
-          
           <a
             href="/user/logout"
             class="flex items-center px-4 py-3"
@@ -122,11 +117,16 @@
       >
         <div>
           <header
-            class="header bg-white shadow py-4 flex justify-between items-center px-10"
+            class="header bg-white shadow py-4 flex justify-between items-center px-6 lg:px-10"
           >
-            <div>
-              <h1 class="text-xl">Welcome back, <%- userDetails.firstName %> 💚</h1>
-              <p>Your feelings are welcome here</p>
+            <div class="md:hidden z-50 hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
+              <div class="hamburger-menu_1 mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+              <div class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+              <div class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+            </div>
+            <div class="ml-4">
+              <h1 class="text-lg md:text-xl">Mental Health Tips</h1>
+              <p class="leading-5 text-[12px] md:text-sm">Your daily dose of self-help resources for wellness at your fingertips.</p>
             </div>
 
             <div class="flex items-center space-x-3">
@@ -143,108 +143,72 @@
           </header>
 
           <div
-            class="main-content flex flex-col flex-grow py-4 px-10"
-            id="main"
-          >
-            <div
-              class="flex my-0 mx-auto flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center pb-4 md:pb-14"
-            >
-              <div
-                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto hover:shadow-2xl tips-card"
-                id="cl"
-              >
-                <img
-                  class="w-full max-w-xs md:max-w-md h-auto"
-                  src="/images/friendship.svg"
-                  alt="Friendship"
-                />
-                <div class="p-4">
-                  <h1>Friendship</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </p>
+            class="main-content flex flex-col flex-grow py-4 px-6 lg:px-10"
+            id="main">
+
+            <div class="flex flex-wrap md:flex-col justify-between items-center lg:block">
+              <div  class="flex flex-col items-center w-[145px] min-h-[202px] md:min-h-[auto] my-2 m-0 md:w-auto rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-1.png" alt="blog img">
+                
+                <div class="flex flex-col md:px-4 leading-normal gap-2">
+                    <h2 class="text-xs pt-3  md:text-base">Breakups/Fallout</h2>
+
+                    <p class="text-[10px] md:text-base">Breakups and fallouts happens, what matters is how you handle these situations</p>
                 </div>
               </div>
-              <div
-                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto hover:shadow-2xl tips-card"
-              >
-                <img
-                  class="w-full max-w-xs md:max-w-md h-auto"
-                  src="/images/selfcare.svg"
-                  alt="Self-care"
-                />
-                <div class="p-4">
-                  <h1>Self-care</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </p>
+
+              <div  class="flex flex-col items-center w-[145px] min-h-[202px] md:min-h-[auto] my-2 md:w-auto rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-2.png" alt="blog img">
+                
+                <div class="flex flex-col md:px-4 leading-normal gap-2">
+                    <h2 class="text-xs pt-3 md:text-base">Self-care</h2>
+
+                    <p class="text-[10px] md:text-base">Embracing self-care and prioritising your well-being is key.</p>
                 </div>
               </div>
-              <div
-                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto hover:shadow-2xl tips-card"
-              >
-                <img
-                  class="w-full max-w-xs md:max-w-md h-auto"
-                  src="/images/anxiety.svg"
-                  alt="anxiety"
-                />
-                <div class="p-4">
-                  <h1>Anxiety</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </p>
+
+              <div  class="flex flex-col items-center w-[145px] min-h-[202px] md:min-h-[auto] my-2 md:w-auto rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-2.png" alt="blog img">
+                
+                <div class="flex flex-col md:px-4 leading-normal gap-2">
+                    <h2 class="text-xs pt-3 md:text-base">Amxiety</h2>
+
+                    <p class="text-[10px] md:text-base">To help you cope with anxiety, we have curated some tips to help you through such situations.</p>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex flex-col flex-wrap md:flex-nowrap md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center"
-            >
-              <div
-                class="bg-white rounded-2xl md:w-auto hover:shadow-2xl w-full max-w-xs md:max-w-md h-auto tips-card"
-              >
-                <img
-                  src="/images/selfesteem.svg"
-                  alt="self-esteem"
-                  class="w-full max-w-xs md:max-w-md h-auto"
-                />
-                <div class="p-4">
-                  <h1>Boost self-esteem</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </p>
+
+              <div  class="flex flex-col items-center w-[145px] min-h-[202px] md:min-h-[auto] my-2 md:w-auto rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-2.png" alt="blog img">
+                
+                <div class="flex flex-col md:px-4 leading-normal gap-2">
+                    <h2 class="text-xs pt-3 md:text-base">Self-care</h2>
+
+                    <p class="text-[10px] md:text-base">Embracing self-care and prioritising your well-being is key.</p>
                 </div>
               </div>
-              <div
-                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto md:w-auto hover:shadow-2xl tips-card"
-              >
-                <img
-                  class="w-full max-w-xs md:max-w-md h-auto"
-                  src="/images/stress_management.svg"
-                  alt="stress management"
-                />
-                <div class="p-4">
-                  <h1>Stress management</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </p>
+
+              <div  class="flex flex-col items-center w-[145px] min-h-[202px] md:min-h-[auto] my-2 md:w-auto rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-3.png" alt="blog img">
+                
+                <div class="flex flex-col md:px-4 leading-normal gap-2">
+                    <h2 class="text-xs pt-3  md:text-base">Boost Self esteem</h2>
+
+                    <p class="text-[10px]  md:text-base">Here’s some curated tips to for getting you to feel confident in yourself.</p>
                 </div>
               </div>
-              <div
-                class="bg-white rounded-2xl w-full max-w-xs md:max-w-md h-auto md:w-auto hover:shadow-2xl tips-card"
-              >
-                <img
-                  class="w-full max-w-xs md:max-w-md h-auto"
-                  src="/images/trauma.svg"
-                  alt="Trauma"
-                />
-                <div class="p-4">
-                  <h1>Trauma</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </p>
+
+              <div  class="flex flex-col items-center w-[145px] min-h-[202px] md:min-h-[auto] my-2 md:w-auto rounded-lg md:flex-row max-w-4xl">
+                <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-4.png" alt="blog img">
+                
+                <div class="flex flex-col md:px-4 leading-normal gap-2">
+                    <h2 class="text-xs pt-3  md:text-base">Trauma</h2>
+
+                    <p class="text-[10px]  md:text-base">Here’s some curated tips to help in getting you through recovery from frightening triggers and events.</p>
                 </div>
               </div>
             </div>
+
+
           </div>
 
           <footer class="footer px-4 py-6">
@@ -259,6 +223,10 @@
       </main>
     </div>
 
+    <!-- Overlay -->
+    <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-all duration-500 ease-in-out z-30"></div>            
+
     <script src="/js/mental-health-tips.js"></script>
+    <script src="/js/sideBar.js"></script>
   </body>
 </html>

@@ -41,3 +41,17 @@ h6 {
 .main-nav > *:hover {
   @apply nav-active ease-in-out duration-300
 }
+
+.line1-style {
+  @apply bg-white rotate-45 translate-y-1
+}
+.line3-style {
+  @apply bg-white -rotate-45 -translate-y-2 
+}
+
+.hamburger-pos {
+  @apply fixed right-4 z-50
+}
+.screen{
+  @apply translate-x-full
+}

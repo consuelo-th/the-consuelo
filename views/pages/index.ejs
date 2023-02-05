@@ -16,45 +16,44 @@
 <body>
 
      <div class="bg-gradient-to-r from-[#46A972] to-[#225A3B] text-white py-5">
-          <header>
+          <header class="bg-gradient-to-r from-[#46A972] to-[#225A3B]">
                <nav class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
                     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                          <a href="/" class="flex items-center">
                               <img alt="consuelo-logo" src="/images/logo.png" class="mr-3 h-6 sm:h-9" />
                               <h1 class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Consuelo</h1>
                          </a>
-                         <div class="flex items-center">
-                              
-                              <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                              <span class="sr-only">Open main menu</span>
-                              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                              <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                              </button>
+                       
+                         <div class="md:hidden hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
+                           <div class="hamburger-menu_1 mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-white"></div>
+                           <div class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-white"></div>
+                           <div class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-white"></div>
                          </div>
-                         <div class="hidden justify-between items-center w-full lg:flex lg:w-auto" id="mobile-menu-2">
-                              <ul class="flex flex-col mt-4 font-medium lg:flex-row items-center lg:space-x-8 lg:mt-0">
+           
+                         <div class="navbar fixed z-40 left-0 right-0 bottom-0 w-1/2 h-[100vh] transition-all duration-500 translate-x-[200%] md:-translate-x-0 md:static md:h-auto justify-between items-center md:flex md:w-auto bg-[#225A3B] md:bg-opacity-0" id="mobile-menu-2">
+                              <ul class="flex flex-col mt-20 font-medium md:flex-row items-center md:space-x-8 md:mt-0">
                               
                                    <li>
-                                        <a href="#features" class="features__link block hover:underline">Features</a>
+                                        <a href="#features" class="features__link block hover:underline pt-6 md:pt-0">Features</a>
                                    </li>
                                    <li>
-                                        <a href="/about" class="block hover:underline">About Us</a>
+                                        <a href="/about" class="block hover:underline pt-6 md:pt-0">About Us</a>
                                    </li>
                                    <li>
-                                        <a href="/blog" class="block hover:underline">Blog</a>
+                                        <a href="/blog" class="block hover:underline pt-6 md:pt-0">Blog</a>
                                    </li>
                                    <li>
-                                        <a href="/user/login" class="block bg-white text-primary-60 justify-center items-center py-2 px-3 text-base font-semibold text-center rounded-sm">Sign Up</a>
+                                        <a href="/user/login" class="block bg-white text-primary-60 justify-center items-center py-2 px-3 text-base font-semibold text-center rounded-sm mt-6 md:mt-0">Sign Up</a>
                                    </li>
                               </ul>
                          </div>
                     </div>
                </nav>
-
+           
           </header>
-          <section class="">
+          <section class="px-6 ">
                <div class="grid py-10 mx-auto max-w-screen-xl text-center lg:text-left lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-                    <div class="place-self-center mr-auto lg:col-span-7">
+                    <div class="place-self-center mx-auto lg:col-span-7">
                          <h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl">Affordable mental healthcare for everyone</h1>
                          <p class="mb-6 max-w-2xl font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Your go-to solution to help improve your mental health and growth.</p>
                          
@@ -103,18 +102,11 @@
                          
                               <div data-img="4" class="features cursor-pointer -ml-px border-l-2 border-l-[transparent] p-4 max-w-lg hover:border-primary-50">
                                    <p class="font-semibold text-primary-60 mb-2">
-                                        Forum Community
+                                        Community
                                    </p>
-                                   <p>Our forum is created to help you Feel. Feel connected, accepted, and supported. Come around the forum every time you feel alone.</p>
+                                   <p>Our community is created to help you Feel. Feel connected, accepted, and supported. Come around the forum every time you feel alone.</p>
                               </div>
-                         
-                              <div data-img="5" class="features cursor-pointer -ml-px border-l-2 border-l-[transparent] p-4 max-w-lg hover:border-primary-50">
-                                   <p class="font-semibold text-primary-60 mb-2">
-                                        Meet a Therapist
-                                   </p>
-                                   <p>A step towards wellness; get care from the people who care.</p>
-                              </div>
-                         
+                                                  
                               
                          </nav>
 
@@ -125,7 +117,7 @@
                </div>
 
                <div class="flex justify-center">
-                    <a href="/user/register" class="inline-flex bg-primary-60 text-white justify-center items-center py-3 px-12 text-base text-center rounded-sm">
+                    <a href="/user/register" class="inline-flex bg-primary-60 hover:bg-primary-70 text-white justify-center items-center py-3 px-12 text-base text-center rounded-sm">
                          Get Started
                     </a> 
                </div>
@@ -156,7 +148,7 @@
                     <h2 class="mb-4 text-3xl lg:text-4xl font-bold ">Meet Our Team</h2>
                     <p class="mb-4">Our philosophy is simple — hire a team of diverse, passionate people and foster a culture that empowers you to do you best work.</p>
                </div>
-               <div class="text-center grid lg:grid-cols-4 place-items-center">
+               <div class="text-center grid md:grid-cols-2 lg:grid-cols-4 place-items-center">
                     <div class="overflow-hidden rounded-lg shadow-sm">
                          <img alt="hassanat-ceo" src="/images/hassanat.png" class="object-cover"/>
                     
@@ -331,7 +323,7 @@
      <!-- Footer -->
      <footer class="p-6 lg:px-4 lg:py-16 bg-[#2C6E49] text-white">
           <div class="mx-auto max-w-screen-xl">
-               <div class="md:flex md:justify-between">
+               <div class="md:flex md:justify-between pt-6">
                     <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                          <div>
                          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Main</h2>
@@ -388,7 +380,7 @@
                                 </p>
                       
                                 <form class="mt-4">
-                                  <div class="flex justify-start items-center font-semibold">
+                                   <div class="flex justify-start items-center font-semibold">
                                     <label for="email" class="sr-only">Email</label>
                                     <input class="w-full border-gray-200 px-6 py-3 shadow-sm text-black" type="email" placeholder="Your email address" />
                       
@@ -398,37 +390,52 @@
                                   </div>
                                 </form>
                               </div>
-                            </div>
-                          </div>
+                         </div>
                     </div>
-          
-          <hr class="my-6 border-x-primary-110 sm:mx-auto lg:my-8" />
-          <div class="sm:flex sm:items-center sm:justify-between">
-               <a href="/" class="flex items-center">
-                    <img alt="consuelo-logo" src="/images/logo.png" class="mr-3 h-6 sm:h-9 w-10" />
-                    <h1 class="self-center text-xl font-semibold whitespace-nowrap">Consuelo</h1>
-               </a>
-
-               <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">&copy; 2022 <a href="/" class="hover:underline">Consuelo</a>. All Rights Reserved.
-               </span>
-
-               <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-3xl">
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> 
-                         <i class="fa-brands fa-facebook"></i> 
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                         <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                         <i class="fa-brands fa-youtube"></i>
-                    </a>
                </div>
+               
           </div>
+
+          <div class="mx-auto max-w-screen-xl">
+
+               <hr class="my-6 border-x-white sm:mx-auto lg:my-8" />
+               <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div href="/" class="flex items-center">
+                          <img alt="consuelo-logo" src="/images/logo.png" class="mr-3 h-6 sm:h-9" />
+                          <h1 class="self-center text-xl font-semibold whitespace-nowrap">Consuelo</h1>
+                    </div>
+      
+                    <span class="text-sm mt-4 md:mt-0 text-gray-500 sm:text-center dark:text-gray-400">
+                            &copy; 2022 <a href="/" class="hover:underline">Consuelo</a>. 
+                            All Rights Reserved.
+                    </span>
+      
+                    <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-3xl">
+                         <a href="https://twitter.com/yourconsuelo" target="_blank" class="text-gray-500"> 
+                              <i class="fa-brands fa-twitter"></i> 
+                         </a>
+                         <a href="https://instagram.com/yourconsuelo" target="_blank" class="text-gray-500">
+                              <i class="fa-brands fa-instagram"></i>
+                         </a>
+                                              
+                         <a href="#" target="_blank" class="text-gray-500" >
+                              <i class="fa-brands fa-linkedin"></i>
+                         </a>
+                    </div>
+               </div>
+          </div>        
      </div>
      </footer>
+     
+     <!-- Overlay -->
+     <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-all duration-500 ease-in-out z-30"></div>            
+
           
      <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+     <script src="/js/navBar.js"></script>
+     
+     <!-- navBar is hoisted above landingPage.js because it needs variable from navBar and hence, should not be deleted -->
      <script src="/js/landingPage.js"></script>
+
 </body>
 </html>
