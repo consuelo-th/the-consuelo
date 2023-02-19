@@ -23,7 +23,7 @@ faqLink.addEventListener('click', e => {
 })
 
 emailEl.addEventListener('submit', e => {
-    e.preventDefault()
+    // e.preventDefault()
     const email = emailInput.value
     errorMsg.classList.add('hidden')
     // successMsg.classList.add('hidden')
