@@ -10,6 +10,8 @@ const faqAnswer = document.querySelector('.faq-answer')
 const accordionQuestion = document.querySelectorAll('.accordion-question')
 const accordionAnswer = document.querySelectorAll('.accordion-answer')
 const arrowEL = document.querySelectorAll('.arrow')
+const modal = document.getElementById("modal")
+const overlay = document.querySelector('.overlay')
 
 
 faqLink.addEventListener('click', e => {
@@ -24,14 +26,32 @@ emailEl.addEventListener('submit', e => {
     // e.preventDefault()
     const email = emailInput.value
     errorMsg.classList.add('hidden')
-    successMsg.classList.add('hidden')
+    // successMsg.classList.add('hidden')
+    modal.classList.add('hidden')
+    overlay.classList.add('hidden')
     if(!email.match(mailValidation) || email === ""){
         errorMsg.classList.remove('hidden')
         emailInput.value = ""
     }
     else{
-        successMsg.classList.remove('hidden')
+        modal.classList.remove('hidden')
+        overlay.classList.remove('hidden')
+        // successMsg.classList.remove('hidden')
     }
+})
+
+overlay.addEventListener('click', () => {
+    modal.classList.add('hidden')
+    overlay.classList.add('hidden')
+    emailInput.value = ""
+})
+
+modal.addEventListener('click', e => {
+    let target = e.target.closest('.close-modal')
+    if(!target) return;
+    modal.classList.add('hidden')
+    overlay.classList.add('hidden')
+    emailInput.value = ""
 })
 
 faqEl.addEventListener('click', e => {
@@ -63,3 +83,4 @@ for(let i = 0; i < accordionQuestion.length; i++){
         }
     })
 }
+

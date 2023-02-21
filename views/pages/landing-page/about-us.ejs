@@ -16,41 +16,40 @@
 <body>
 
      <div class="bg-gradient-to-r from-[#46A972] to-[#225A3B] text-white py-5">
-          <header>
+          <header class="bg-gradient-to-r from-[#46A972] to-[#225A3B]">
                <nav class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
                     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                          <a href="/" class="flex items-center">
                               <img alt="consuelo-logo" src="/images/logo.png" class="mr-3 h-6 sm:h-9" />
                               <h1 class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Consuelo</h1>
                          </a>
-                         <div class="flex items-center">
-                              
-                              <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                              <span class="sr-only">Open main menu</span>
-                              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                              <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                              </button>
+                       
+                         <div class="md:hidden hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
+                           <div class="hamburger-menu_1 mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-white"></div>
+                           <div class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-white"></div>
+                           <div class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-white"></div>
                          </div>
-                         <div class="hidden justify-between items-center w-full lg:flex lg:w-auto" id="mobile-menu-2">
-                              <ul class="flex flex-col mt-4 font-medium lg:flex-row items-center lg:space-x-8 lg:mt-0">
+           
+                         <div class="navbar fixed z-40 left-0 right-0 bottom-0 w-1/2 h-[100vh] transition-all duration-500 translate-x-[200%] md:-translate-x-0 md:static md:h-auto justify-between items-center md:flex md:w-auto bg-[#225A3B] md:bg-opacity-0" id="mobile-menu-2">
+                              <ul class="flex flex-col mt-20 font-medium md:flex-row items-center md:space-x-8 md:mt-0">
                               
-                              <li>
-                                   <a href="/#features" class="block hover:underline">Features</a>
-                              </li>
-                              <li>
-                                   <a href="/about" class="block hover:underline">About Us</a>
-                              </li>
-                              <li>
-                                   <a href="/blog" class="block hover:underline">Blog</a>
-                              </li>
-                              <li>
-                                   <a href="/user/login" class="block bg-white text-primary-60 justify-center items-center py-2 px-3 text-base font-semibold text-center rounded-sm">Sign Up</a>
-                              </li>
+                                   <li>
+                                        <a href="/#features" class="features__link block hover:underline pt-6 md:pt-0">Features</a>
+                                   </li>
+                                   <li>
+                                        <a href="/about" class="block hover:underline pt-6 md:pt-0">About Us</a>
+                                   </li>
+                                   <li>
+                                        <a href="/blog" class="block hover:underline pt-6 md:pt-0">Blog</a>
+                                   </li>
+                                   <li>
+                                        <a href="/user/login" class="block bg-white text-primary-60 justify-center items-center py-2 px-3 text-base font-semibold text-center rounded-sm mt-6 md:mt-0">Sign Up</a>
+                                   </li>
                               </ul>
                          </div>
                     </div>
                </nav>
-
+           
           </header>
 
           <section class="lg:bg-[url('/images/hand-drawn.svg')] bg-no-repeat bg-right-bottom">
@@ -64,7 +63,7 @@
      <section class="bg-white">
           <div class="pt-8 lg:pt-16">
             <div class="flex justify-center">
-                <img src="/images/team.png" alt="team">
+                <img src="/images/team.png" alt="team" class="object-contain">
             </div>
 
             <div class="lg:flex justify-between pt-6 px-4 mx-auto max-w-screen-xl lg:pt-16 lg:pb-4 lg:px-6">
@@ -233,32 +232,42 @@
                           </div>
                     </div>
           
-          <hr class="my-6 border-x-primary-110 sm:mx-auto lg:my-8" />
-          <div class="sm:flex sm:items-center sm:justify-between">
-               <a href="/" class="flex items-center">
-                    <img alt="consuelo-logo" src="/images/logo.png" class="mr-3 h-6 sm:h-9 w-10" />
-                    <h1 class="self-center text-xl font-semibold whitespace-nowrap">Consuelo</h1>
-               </a>
+          <div class="mx-auto max-w-screen-xl">
 
-               <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">&copy; 2022 <a href="/" class="hover:underline">Consuelo</a>. All Rights Reserved.
-               </span>
-
-               <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-3xl">
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> 
-                         <i class="fa-brands fa-facebook"></i> 
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                         <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                         <i class="fa-brands fa-youtube"></i>
-                    </a>
+               <hr class="my-6 border-x-white sm:mx-auto lg:my-8" />
+               <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div href="/" class="flex items-center">
+                         <img alt="consuelo-logo" src="/images/logo.png" class="mr-3 h-6 sm:h-9" />
+                         <h1 class="self-center text-xl font-semibold whitespace-nowrap">Consuelo</h1>
+                    </div>
+                
+                    <span class="text-sm mt-4 md:mt-0 text-gray-500 sm:text-center dark:text-gray-400">
+                         &copy; 2022 <a href="/" class="hover:underline">Consuelo</a>. 
+                         All Rights Reserved.
+                    </span>
+                
+                    <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-3xl">
+                         <a href="https://twitter.com/yourconsuelo" target="_blank" class="text-gray-500"> 
+                              <i class="fa-brands fa-twitter"></i> 
+                         </a>
+                         <a href="https://instagram.com/yourconsuelo" target="_blank" class="text-gray-500">
+                              <i class="fa-brands fa-instagram"></i>
+                         </a>
+                                              
+                         <a href="#" target="_blank" class="text-gray-500" >
+                              <i class="fa-brands fa-linkedin"></i>
+                         </a>
+                    </div>
                </div>
           </div>
      </div>
      </footer>
+
+     <!-- Overlay -->
+     <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-all duration-500 ease-in-out z-30"></div>            
           
      <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+     <script src="/js/navBar.js"></script>
+
 </body>
 </html>

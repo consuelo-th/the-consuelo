@@ -41,13 +41,12 @@
     <!-- component -->
     <div class="flex flex-row min-h-screen">
       <aside
-        class="sidebar fixed z-20 w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
-      >
+        class="sidebar fixed z-50 w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500">
         <!-- sidebar header  -->
         <div
           class="flex h-screen flex-col border-r bg-primary-60 text-white static"
         >
-          <div class="sidebar-header flex space-x-1 px-4 py-4">
+          <div class="sidebar-header mt-28 md:mt-0  flex space-x-1 px-4 py-4">
             <a href="/user/home">
               <img alt="consuelo-logo" src="/images/logo.png" />
             </a>
@@ -57,7 +56,7 @@
           <!-- sidebar -->
           <nav
             aria-label="Main Nav"
-            class="main-nav mt-20 flex flex-col space-y-2 w-full"
+            class="main-nav mt-5 md:mt-20 flex flex-col space-y-2 w-full"
           >
             <a
               href="/user/home"
@@ -89,7 +88,7 @@
               class="flex items-center px-4 py-3"
             >
               <i class="iconsax" icon-name="group"></i>
-              <span class="ml-3 text-sm font-medium"> Forum </span>
+              <span class="ml-3 text-sm font-medium"> Community </span>
             </a>
 
             <a
@@ -98,11 +97,6 @@
             >
             <i class="iconsax" icon-name="document-text-1"></i>
               <span class="ml-3 text-sm font-medium"> Blog </span>
-            </a>
-
-            <a href="/user/meet-a-therapist" class="flex items-center px-4 py-3">
-              <i class="iconsax" icon-name="message-dash-1"></i>
-              <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
             </a>
             
             <a
@@ -117,103 +111,101 @@
       </aside>
 
       <main
-        class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]"
-      >
+        class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]">
         <div>
-          <header
-            class="header bg-white shadow py-4 flex justify-between items-center selection px-10 fixed right-0 left-64 z-10"
-          >
-            <div>
-              <h1 class="text-xl">
-                Welcome back, <%- userDetails.firstName %> 💚
-              </h1>
-              <p>Your feelings are welcome here</p>
-            </div>
-
-            <div class="flex items-center space-x-3">
-              <i class="fa-regular fa-bell"></i>
-
-              <span
-                class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer"
-              >
-                <i class="fa-regular fa-user"></i>
-
-                <i class="fa-solid fa-angle-down"></i>
-              </span>
-            </div>
-          </header>
-
-          <div class="main-content grid grid-cols-3 gap-3 mt-28 py-4 px-10">
-            <div class="col-span-2 p-4">
-              <div class="rounded-xl bg-white p-4">
-                <h2 class="mb-4">Meet a therapist</h2>
-
-                <div class="flex gap-3">
-                  <div class="">
-                    <img src="/images/home-therapy.png" alt="">
-                  </div>
+          <div class="w-full">
+            
+            <header
+              class="header bg-white shadow py-4 flex justify-between items-center px-6 lg:px-10 ">
               
-                  <div class="flex flex-col justify-center items-start gap-2">
-                    <h3 class="mt-4 text-lg font-medium sm:text-xl">
-                      <a href="" class="hover:underline"> Book a session with a therapist</a>
-                    </h3>
-              
-                    <p class="mt-1 text-sm text-gray-700">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mattis est, ornare.
-                    </p>
-              
-                    <div class="mt-4">
-                      <a href="/user/meet-a-therapist" class="w-full txt-center border-primary-50 border-[1px] py-3 px-5 font-medium shadow-sm">Book now</a>
-                    </div>
-                  </div>
-                </div>
+              <div class="md:hidden z-50 hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
+                <div class="hamburger-menu_1 mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+                <div class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+                <div class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
               </div>
+
+              <div class="ml-4">
+                <h1 class="text-lg md:text-xl">
+                  Welcome back, <%- userDetails.firstName %> 💚
+                </h1>
+                <p class="leading-5 text-[12px] md:text-sm">Your feelings are welcome here</p>
+              </div>
+  
+              <div class="flex items-center space-x-3">
+                <i class="fa-regular fa-bell"></i>
+  
+                <span
+                  class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer"
+                >
+                  <i class="fa-regular fa-user"></i>
+  
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </div>
+            </header>
+
+          </div>
+
+          <div class="main-content xl:grid xl:grid-cols-3 items-strech py-4 px-6 lg:px-10 ">
+            <div class="xl:col-span-2 py-4 ">
 
               <div class="rounded-xl bg-white p-4 mt-4">
                 <div class="flex justify-between">
-                  <h2 class="mb-4">Meet a therapist</h2>
+                  <h2 class="mb-4">Mental Health Tips</h2>
                   <a href="/user/mental-health">View more</a>
                 </div>
 
-                <div class="space-y-2">
-                  <div  class="flex flex-col items-center rounded-lg md:flex-row max-w-4xl">
-                    <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-1.png" alt="blog img">
+                <div class="flex flex-wrap md:flex-col justify-between items-center lg:block">
+                  <div  class="flex flex-col items-center w-[145px] md:w-auto rounded-lg md:flex-row max-w-4xl">
+                    <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-1.png" alt="blog img">
                     
-                    <div class="flex flex-col px-4 leading-normal gap-2">
-                        <h2 class="">Breakups/Fallout</h2>
+                    <div class="flex flex-col md:px-4 leading-normal gap-2">
+                        <h2 class="text-xs pt-3  md:text-base">Breakups/Fallout</h2>
   
-                        <p class="">Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis.</p>
+                        <p class="text-[10px] md:text-base">Breakups and fallouts happens, what matters is how you handle these situations</p>
                     </div>
                   </div>
 
-                  <div  class="flex flex-col items-center rounded-lg md:flex-row max-w-4xl">
-                    <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-2.png" alt="blog img">
+                  <div  class="flex flex-col items-center w-[145px] md:w-auto rounded-lg md:flex-row max-w-4xl">
+                    <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-2.png" alt="blog img">
                     
-                    <div class="flex flex-col px-4 leading-normal gap-2">
-                        <h2 class="">Self-care</h2>
+                    <div class="flex flex-col md:px-4 leading-normal gap-2">
+                        <h2 class="text-xs pt-3 md:text-base">Self-care</h2>
   
-                        <p class="">Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis.</p>
+                        <p class="text-[10px] md:text-base">Embracing self-care and prioritising your well-being is key.</p>
                     </div>
                   </div>
 
-                  <div  class="flex flex-col items-center rounded-lg md:flex-row max-w-4xl">
-                    <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-3.png" alt="blog img">
+                  <div  class="flex flex-col items-center w-[145px] md:w-auto rounded-lg md:flex-row max-w-4xl">
+                    <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-3.png" alt="blog img">
                     
-                    <div class="flex flex-col px-4 leading-normal gap-2">
-                        <h2 class="">Stress Management</h2>
+                    <div class="flex flex-col md:px-4 leading-normal gap-2">
+                        <h2 class="text-xs pt-3  md:text-base">Stress Management</h2>
   
-                        <p class="">Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis.</p>
+                        <p class="text-[10px]  md:text-base">Give yourself a break. Unwind by catching up with your friends. Create time to do the little things together.</p>
+                    </div>
+                  </div>
+
+                  <div  class="flex flex-col items-center w-[145px] md:w-auto rounded-lg md:flex-row max-w-4xl">
+                    <img class="object-cover w-full h-auto rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/home-tip-4.png" alt="blog img">
+                    
+                    <div class="flex flex-col md:px-4 leading-normal gap-2">
+                        <h2 class="text-xs pt-3  md:text-base">Trauma</h2>
+  
+                        <p class="text-[10px]  md:text-base">Here’s some curated tips to help in getting you through recovery from frightening triggers and events.</p>
                     </div>
                   </div>
                 </div>
-              </div>
-
-            
-
-              
+              </div>              
             </div>
-            <div class="col-span-1 p-4 max-h-screen overflow-y-scroll">
+
+
+
+            <div class="py-4 row-[1/2] ml-4 xl:col-[3] max-h-screen overflow-y-scroll">
               <div class="bg-white rounded-xl flex flex-col px-3 py-6 gap-3">
+                <div class="">
+                  <h2 class="mb-4">Blog</h2>
+                </div>
                 <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg p-3 sm:p-6">
                   <img alt="blog img" src="/images/blog-smile.png" class="w-full object-cover" />
              
@@ -249,46 +241,18 @@
                       </div>
                       
                 </article>
-                <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg p-3 sm:p-6">
-                  <img alt="blog img" src="/images/blog-smile.png" class="w-full object-cover" />
-             
-                  <div class="bg-white">
-                       <a href="#">
-                            <h3 class="mt-0.5 text-gray-900">
-                              A step to step guide on how to deal with anxiety
-                            </h3>
-                       </a>
-                  
-                       <p class="mt-2 text-sm leading-relaxed text-gray-500 ">
-                        3 mins read</p>
-                       <p class="mt-2 text-sm leading-relaxed text-gray-500 ">
-                        3 November, 2022</p>
-                      </div>
-                      
-                </article>
-                <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg p-3 sm:p-6">
-                  <img alt="blog img" src="/images/blog-smile.png" class="w-full object-cover" />
-             
-                  <div class="bg-white">
-                       <a href="#">
-                            <h3 class="mt-0.5 text-gray-900">
-                              A step to step guide on how to deal with anxiety
-                            </h3>
-                       </a>
-                  
-                       <p class="mt-2 text-sm leading-relaxed text-gray-500 ">
-                        3 mins read</p>
-                       <p class="mt-2 text-sm leading-relaxed text-gray-500 ">
-                        3 November, 2022</p>
-                      </div>
-                      
-                </article>
 
               </div>
             </div>
           </div>
         </div>
       </main>
+
     </div>
+
+    <!-- Overlay -->
+    <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-all duration-500 ease-in-out z-30"></div>            
+
+    <script src="/js/sideBar.js"></script>
   </body>
 </html>
