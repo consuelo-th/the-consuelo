@@ -38,13 +38,13 @@
     <!-- component -->
     <div class="flex flex-row min-h-screen">
       <aside
-        class="sidebar fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+        class="sidebar z-50 fixed w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
       >
         <!-- sidebar header  -->
         <div
           class="flex h-screen flex-col border-r bg-primary-60 text-white static"
         >
-          <div class="sidebar-header flex space-x-1 px-4 py-4">
+          <div class="sidebar-header mt-28 md:mt-0 flex space-x-1 px-4 py-4">
             <a href="/user/home">
               <img alt="consuelo-logo" src="/images/logo.png" />
             </a>
@@ -54,7 +54,7 @@
           <!-- sidebar -->
           <nav
             aria-label="Main Nav"
-            class="main-nav mt-20 flex flex-col space-y-2 w-full"
+            class="main-nav mt-5 md:mt-20 flex flex-col space-y-2 w-full"
           >
             <a
               href="/user/home"
@@ -86,7 +86,7 @@
               class="flex items-center px-4 py-3 nav-active"
             >
               <i class="iconsax" icon-name="group"></i>
-              <span class="ml-3 text-sm font-medium"> Forum </span>
+              <span class="ml-3 text-sm font-medium"> Community </span>
             </a>
 
             <a
@@ -97,11 +97,6 @@
               <span class="ml-3 text-sm font-medium"> Blog </span>
             </a>
 
-            <a href="/user/meet-a-therapist" class="flex items-center px-4 py-3">
-              <i class="iconsax" icon-name="message-dash-1"></i>
-              <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
-            </a>
-            
             <a
               href="/user/logout"
               class="flex items-center px-4 py-3"
@@ -113,35 +108,160 @@
         </div>
       </aside>
 
-      <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]" >
+      <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]">
         <div>
-          <header
-            class="header bg-white shadow py-4 flex justify-between items-center px-10"
-          >
-            <div>
-              <h1 class="text-xl">
-                Welcome back, <%- userDetails.firstName %> 💚
-              </h1>
-              <p>Your feelings are welcome here</p>
+          <header class="header bg-white shadow py-4 flex justify-between items-center px-6 lg:px-10">
+            <div class="md:hidden z-50 hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
+              <div class="hamburger-menu_1 mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+              <div class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+              <div class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
             </div>
-
+            <div class="ml-4">
+              <h1 class="text-lg md:text-xl">Community</h1>
+              <p class="leading-5 text-[12px] md:text-sm">Your feelings are welcome here</p>
+            </div>
             <div class="flex items-center space-x-3">
               <i class="fa-regular fa-bell"></i>
-
-              <span
-                class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer"
-              >
+    
+              <span class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer">
                 <i class="fa-regular fa-user"></i>
-
+    
                 <i class="fa-solid fa-angle-down"></i>
               </span>
             </div>
           </header>
+    
+          <div class="main-content flex flex-col flex-grow py-4 px-6 lg:px-10" id="main">
+            <section class="flex justify-between flex-col-reverse lg:flex-row mb-6">
+              <div class="bg-white rounded-3xl py-5 px-6 max-w-3xl">
+                
+                <button class="float-right text-4xl delete_btn">...</button>
+                <div class="flex pb-4">
+                  <img class="mr-3  w-10 h-10" src="/images/profile_picture.svg" alt="" />
+                  <div>
+                    <h5>Hassy123</h5>
+                    <p>Posted on Sep, 22, 2022</p>
+                  </div>
+                </div>
 
-          <div class="main-content flex flex-col flex-grow py-4 px-10">
-            main content here
+                <p class="pb-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  egestas blandit facilisi dolor velit orci ac lorem. Ultrices
+                  netus convallis scelerisque nam. Ipsum nam vel...
+                </p>
+                <button>
+                  <img class="inline-block" src="/images/like.svg" alt="" /> 10
+                  Likes
+                </button>
+                <button class="underline pl-2 comments_btn">10 Comments</button>
+              </div>
+              <button class="bg-primary-50 py-4 px-6 rounded w-full lg:w-48 h-auto ml-0 mb-5 lg:mb-0 md:h-fit lg:ml-6 mt-3 lg:mt-12 text-white" id="newtopic_btn">
+                Start a new topic
+              </button>
+            </section>
+            <section class="bg-white rounded-3xl py-5 px-6 max-w-3xl mb-6">
+              <button class="float-right text-4xl delete_btn">...</button>
+              <div class="flex pb-4">
+                <img class="mr-3  w-10 h-10" src="/images/profile_picture.svg" alt="" />
+                <div>
+                  <h5>Hassy123</h5>
+                  <p>Posted on Sep, 22, 2022</p>
+                </div>
+              </div>
+              <p class="pb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                egestas blandit facilisi dolor velit orci ac lorem. Ultrices
+                netus convallis scelerisque nam. Ipsum nam vel...
+              </p>
+              <button>
+                <img class="inline-block" src="/images/like.svg" alt="" /> 10
+                Likes
+              </button>
+              <button class="underline pl-2 comments_btn">10 Comments</button>
+            </section>
+    
+            <section class="bg-white rounded-3xl py-5 px-6 max-w-3xl mb-6">
+              <button class="float-right text-4xl delete_btn">...</button>
+              <div class="flex pb-4">
+                <img class="mr-3 w-10 h-10" src="/images/profile_picture.svg" alt="" />
+                <div>
+                  <h5>Hassy123</h5>
+                  <p>Posted on Sep, 22, 2022</p>
+                </div>
+              </div>
+              <p class="pb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                egestas blandit facilisi dolor velit orci ac lorem. Ultrices
+                netus convallis scelerisque nam. Ipsum nam vel...
+              </p>
+              <button>
+                <img class="inline-block" src="/images/like.svg" alt="" /> 10
+                Likes
+              </button>
+              <button class="underline pl-2 comments_btn">10 Comments</button>
+            </section>
+            <section class="bg-white rounded-3xl py-5 px-6 max-w-3xl mb-6">
+              <button class="float-right text-4xl delete_btn">...</button>
+              <div class="flex pb-4">
+                <img class="mr-3 w-10 h-10" src="/images/profile_picture.svg" alt="" />
+                <div>
+                  <h5>Hassy123</h5>
+                  <p>Posted on Sep, 22, 2022</p>
+                </div>
+              </div>
+              <p class="pb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                egestas blandit facilisi dolor velit orci ac lorem. Ultrices
+                netus convallis scelerisque nam. Ipsum nam vel...
+              </p>
+              <button>
+                <img class="inline-block" src="/images/like.svg" alt="" /> 10
+                Likes
+              </button>
+              <button class="underline pl-2 comments_btn">10 Comments</button>
+            </section>
+    
+            <div id="myModal"
+              class="modal hidden fixed z-1 left-0 top-0 w-full h-full overflow-auto pt-32 bg-opacity-20 bg-secondary-100">
+              <!-- Post New topic Modal content -->
+              <div class="bg-white my-0 mx-auto p-5 w-4/5 h-auto modal-content">
+                <span class="float-right text-4xl hover:cursor-pointer close">&times;</span>
+                <div class="flex pt-9">
+                  <img class="p-2 h-fit w-fit fle mr-3 md:mr-12 " src="/images/profile_picture.svg" alt="" />
+                  <form action="">
+                    <textarea class="ml-3 mr-10 focus:border-none focus:outline-none w-full" name="" id="" cols="100" placeholder="What's going on?" rows="10"></textarea>
+                    <button class="float-right bg-primary-40 p-2" type="submit">Post Topic</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="deleteModal"
+              class="modal hidden fixed z-1 left-0 top-0 w-full h-full overflow-auto pt-32 bg-opacity-20 bg-secondary-100">
+              <!-- Delete Post Modal Content -->
+              <div class="bg-white my-0 mx-auto p-5 w-2/4 h-auto modal-content">
+                <h2>Do you really want to delete?</h2>
+                <div class="flex flex-col mt-6">
+                  <button class="py-2.5 px-4.5 bg-primary-70 mb-3 confirm">
+                    Confirm
+                  </button>
+                  <button class="py-2.5 px-4.5 hover:cursor-pointer bg-secondary-100 cancel">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+    
+            <div id="confirmDeleteModal"
+              class="modal hidden fixed z-1 left-0 top-0 w-full h-full overflow-auto pt-32 bg-opacity-20 bg-secondary-100">
+              <!-- Confirm Delete Post Modal Content -->
+              <div class="bg-white my-0 mx-auto p-5 w-2/4 h-auto modal-content">
+                <img src="/images/success.svg" alt="" />
+                <h2>Post deleted</h2>
+                <p>Your topic has been deleted</p>
+              </div>
+            </div>
           </div>
-
+    
           <footer class="footer px-4 py-6">
             <div class="footer-content">
               <p class="text-sm text-gray-600 text-center">
@@ -153,5 +273,11 @@
         </div>
       </main>
     </div>
+
+    <!-- Overlay -->
+    <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-all duration-500 ease-in-out z-30"></div>            
+            
+    <script src="/JS/forum.js"></script>  
+    <script src="/js/sideBar.js"></script>
   </body>
 </html>

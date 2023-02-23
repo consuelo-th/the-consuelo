@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Waitlist</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png"/>
+        <link rel="manifest" href="/images/favicon/site.webmanifest" />
+        
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    </head>
+    <body class="">
+
+        <!--Animated page  -->
+        <div class="fixed top-0 left-0 w-full animate-fadeOut">
+            <div class="bg-secondary-50 relative h-screen flex justify-center items-center">
+                <img src="/images/rectangle1.svg" alt="" class="top-right absolute top-0 right-0 w-16 md:w-[137px] md:h-[121px]">
+                <img src="/images/rectangle2.svg" alt="" class="bottom-right absolute bottom-0 right-0 w-16 h-64  md:w-[54px] md:h-[414px]">
+                <img src="/images/rectangle2.svg" alt="" class="top-left absolute top-0 left-0 rotate-180 w-16 h-64 md:w-[54px] md:h-[414px]">
+                <img src="/images/rectangle1.svg" alt="" class="bottom-left absolute bottom-0 left-0 rotate-180 w-16 md:w-[137px] md:h-[121px]">
+                <div class="mx-auto max-w-screen-2xl flex flex-col justify-center items-center "> 
+                    <div class="slider flex flex-col text-center font-bold text-3xl md:text-[55px] md:leading-[90px] lg:text-[76px] h-[38px] md:h-[92px] overflow-hidden">
+                        <div class="animate-slide">
+                            <div class="text-[transparent] bg-gradient-to-r from-[#2C6E49] to-[#38A96A] bg-clip-text mb-10 ">You’re Loved</div>
+                            <div class="text-[transparent] bg-gradient-to-r from-[#2C6E49] to-[#38A96A] bg-clip-text mb-10 ">Your feelings are valid</div>
+                            <div class="text-[transparent] bg-gradient-to-r from-[#2C6E49] to-[#38A96A] bg-clip-text mb-10 ">You’re welcome here</div>
+                        </div>
+    
+                        </div>
+                    <div class="text-5xl lg:text-[68px] mt-5 md:mt-8">💚</div>
+                </div>                
+            </div>
+        </div>
+        <!-- wait-list -->
+        <div class="h-0 overflow-hidden opacity-0 animate-fadeIn">
+            <div class="bg-gradient-to-r from-[#46A972] to-[#225A3B] text-white py-5">
+                <header>
+                    <nav class="border-gray-200 px-4 md:px-6 py-2.5 dark:bg-gray-800">
+                        <div class="flex justify-between items-center mx-auto max-w-screen-xl">
+                            <div class="flex items-center">
+                                <img src="/images/logo.png" alt="consuelo-logo" class="mr-3 h-6 sm:h-9">
+                                <h1 class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Consuelo</h1>
+                            </div>
+                            <div class="" id="">
+                                <ul class="mt-4 font-medium lg:mt-0">
+                                    <li>
+                                        <a href="#faq" class="faq__link block hover:underline">FAQs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <section class="py-10 lg:pt-32 lg:pb-40 px-4 mx-auto max-w-screen-xl mt-8 lg:mt-0">
+                    <div class=" text-center flex flex-col lg:flex-col-reverse md:w-[70%] md:my-0 md:mx-auto lg:w-[90%]">
+                        <h1 class="mb-4 text-3xl font-bold leading-[44px] md:text-4xl lg:text-[80px] lg:leading-none lg:mt-10">Free Mental Health Care For Everyone </h1>
+                        <div class="mt-8 lg:mt-0">
+                            <p class="bg-white text-primary-60 px-4 py-2 font-medium md:text-lg rounded-3xl inline ">Coming Soon 💚</p>
+                        </div>
+                </div>
+                <p class="font-medium text-sm md:text-lg lg:text-xl text-center mt-8 lg:mt-12 ">Join our waitlist and be the first to know when we go live!</p>
+                
+                <div class="flex justify-center items-center mt-8 lg:mt-10 pb-12">
+                    <form action="/list" method="post" class="email__form flex flex-col relative w-full lg:w-[620px] md:w-[540px]">
+                        <input type="text" name="email" id="email" class="email__input w-full lg:h-20 h-12 rounded-lg text-helper font-medium md:text-lg lg:text-xl px-5 focus:outline-none" placeholder="Enter your email..">
+                        <button class="submit lg:absolute top-4 right-4 lg:font-medium font-semibold mt-6 lg:mt-0 bg-[#FEFEE3] text-primary-60 lg:w-[168px] h-[48px] rounded-[6px] lg:bg-primary-50 lg:hover:bg-primary-70 lg:text-white text-center" type="submit">Join now</button>
+                        <span class="error-msg hidden text-[white] mt-3 text-sm md:text-lg lg:text-xl"> <img src="/images/error.png" alt="" class="w-8 inline mr-3">  Please input a valid address!</span>
+                        <span class="success-msg hidden text-[white] mt-3 text-sm md:text-lg lg:text-xl">You have been sucessfully waitlisted!</span>
+                    </form>
+                </div>
+                </section>
+            </div>
+
+            <!-- FAQs -->
+            <section class="bg-white max-w-screen-xl py-8 lg:py-16 md:px-6 px-4 mx-auto" id="faq">
+                <div class="lg:w-[550px] md:w-[65%] md:mx-auto md:text-center lg:mx-0 lg:text-start ">
+                    <h1 class="font-bold text-2xl md:text-[40px] lg:text-6xl text-body">FAQs</h1>
+                    <p class="font-medium text-[22px] md:text-xl mt-5">You’ve been talking, we’ve been listening and now we have answers 💚</p>
+                </div>
+
+                <!-- Mobile view -->
+                <div class="accordion mt-8 lg:hidden">
+                    <div class="accordion-container bg-stroke border border-[#B0B1B1] rounded-md cursor-pointer">
+                        <div class="py-4 px-5 accordion-question mb-0 flex items-center justify-between ">
+                            <h2 class="  font-medium text-base text-body text-left border-0 rounded-none ">
+                                What is Consuelo?
+                            </h2>
+                            <img src="/images/arrow.svg" alt="" class="arrow transition-all duration-300">
+                        </div>
+                        <div class="accordion-answer px-5 max-h-0 overflow-hidden transition-all duration-700">
+                            <p class="pt-4">
+                                Consuelo is an e-mental health solution created for every person dealing with any form of mental distress. 
+                            </p>
+                            <p class="mt-4 pb-5">
+                                Consuelo strives to promote mental awareness, break mental health stigmas, create a safe community, and equally provide support to her users through their mental health journey.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container bg-stroke border border-[#B0B1B1] mt-2 rounded-md cursor-pointer">
+                        <div class="py-4 px-5 accordion-question mb-0 flex items-center justify-between">
+                            <h2 class="  font-medium text-base text-body text-left border-0 rounded-none transition">
+                                Who can use Consuelo?
+                            </h2>
+                            <img src="/images/arrow.svg" alt="" class="arrow transition-all duration-300">
+                        </div>
+                        <div class="accordion-answer px-5 max-h-0 overflow-hidden transition-all duration-700">
+                            <p class="pt-4">
+                                At Consuelo, we recognize that mental health care and support should be based on need, not age nor location. 
+                            </p>
+                            <p class="mt-4 pb-5">
+                                However, with respect to age, Our services will be operating for users from  the age of 16+ above.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container bg-stroke border border-[#B0B1B1] mt-2 rounded-md cursor-pointer">
+                        <div class="py-4 px-5 accordion-question mb-0 flex items-center justify-between">
+                            <h2 class="  font-medium text-base text-body text-left border-0 rounded-none transition">
+                                How can Consuelo help me? 
+                            </h2>
+                            <img src="/images/arrow.svg" alt="" class="arrow transition-all duration-300">
+                        </div>
+                        <div class="accordion-answer px-5 max-h-0 overflow-hidden transition-all duration-700">
+                            <p class="pt-4">
+                                We welcome every person in need of mental support, prioritize your feelings, and offer care to support your journey. 
+                            </p>
+                            <p class="mt-4 pb-5">
+                                Our personalized care and services will include mental health education, daily self-affirmations, as well as a community to help you feel seen, connected, and  supported.                            </p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container bg-stroke border border-[#B0B1B1] mt-2 rounded-md cursor-pointer">
+                        <div class="py-4 px-5 accordion-question mb-0 flex items-center justify-between">
+                            <h2 class="  font-medium text-base text-body text-left border-0 rounded-none transition">
+                                How much does Consuelo services cost?
+                            </h2>
+                            <img src="/images/arrow.svg" alt="" class="arrow transition-all duration-300">
+                        </div>
+                        <div class="accordion-answer px-5 max-h-0 overflow-hidden transition-all duration-700">
+                            <p class="pt-4">
+                                Consuelo’s goal is to provide free, effective and interactive online mental health services that improves your mood and mental health well-being.
+                            </p>
+                            <p class="mt-4 pb-5">
+                                Begin your journey with us for free- all you need is an email address and internet access.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container bg-stroke border border-[#B0B1B1] mt-2 rounded-md cursor-pointer">
+                        <div class="py-4 px-5 accordion-question mb-0 flex items-center justify-between">
+                            <h2 class="  font-medium text-base text-body text-left border-0 rounded-none transition">
+                                When will Consuelo go live?                                                        
+                            </h2>
+                            <img src="/images/arrow.svg" alt="" class="arrow transition-all duration-300">
+                        </div>
+                        <div class="accordion-answer px-5 max-h-0 overflow-hidden transition-all duration-700">
+                            <p class="pt-4">
+                                Finally. we’re happy to announce to you that Consuelo will go live by mid-February 2023.
+                            </p>
+                            <p class="mt-4 pb-5">
+                                In the meantime, stay connected to our socials for more updates, mental health tips, advice, stories as well as weekly dose of motivation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Desktop view -->
+                <div class="mt-6 lg:flex hidden">
+                    <ul class="faq-container w-[550px] font-medium md:text-lg lg:text-xl text-body">
+                        <li class="faq-question p-4 cursor-pointer bg-primary-90 text-white rounded-md border border-[#B0B1B1] border-solid">
+                            <p class="">What is Consuelo?</p>
+                            <div class="hidden">
+                                <p>
+                                    Consuelo is an e-mental health solution created for every person dealing with any form of mental distress. 
+                                </p>
+                                <p class="mt-8">
+                                    Consuelo strives to promote mental awareness, break mental health stigmas, create a safe community, and equally provide support to her users through their mental health journey.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq-question p-4 mt-4 cursor-pointer bg-stroke rounded-md border border-[#B0B1B1] border-solid">
+                            <p class="">Who can use Consuelo?</p>
+                            <div class="hidden">
+                                <p>
+                                    At Consuelo, we recognize that mental health care and support should be based on need, not age nor location. 
+                                </p>
+                                <p  class="mt-8">
+                                    However, with respect to age, Our services will be operating for users from  the age of 16+ above.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq-question p-4 mt-4 cursor-pointer bg-stroke rounded-md border border-[#B0B1B1] border-solid">
+                            <p class="">How can Consuelo help me?</p>
+                            <div class="hidden">
+                                <p>
+                                    We welcome every person in need of mental support, prioritize your feelings, and offer care to support your journey. 
+
+                                <p  class="mt-8">
+                                    Our personalized care and services will include mental health education, daily self-affirmations, as well as a community to help you feel seen, connected, and  supported.                            </p>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq-question p-4 mt-4 cursor-pointer bg-stroke border rounded-md border-[#B0B1B1] border-solid">
+                            <p class="">How much does Consuelo services cost?</p>
+                            <div class="hidden">
+                                <p>
+                                    Consuelo’s goal is to provide free, effective and interactive online mental health services that improves your mood and mental health well-being.
+
+                                <p  class="mt-8">
+                                    Begin your journey with us for free- all you need is an email address and internet access.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq-question p-4 mt-4 cursor-pointer bg-stroke border rounded-md border-[#B0B1B1] border-solid">
+                            <p class="">When will Consuelo go live?</p>
+                            <div class="hidden">
+                                <p>
+                                    Finally. we’re happy to announce to you that Consuelo will go live by mid-February 2023.
+
+                                <p  class="mt-8">
+                                    In the meantime, stay connected to our socials for more updates, mental health tips, advice, stories as well as weekly dose of motivation.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="faq-answer ml-24 pt-10 px-14 rounded-xl font-semibold text-xl text-white bg-[#DDAF37] border-2 border-primary-60 border-solid w-[550px]">
+                        <p>
+                            Consuelo is an e-mental health solution created for every person dealing with any form of mental distress. 
+                        </p>
+                        <p class="mt-8">
+                            Consuelo strives to promote mental awareness, break mental health stigmas, create a safe community, and equally provide support to her users through their mental health journey.
+                        </p>
+                    </div>
+                </div>
+            </section>
+                        
+
+            <!-- Footer -->
+            <footer class="p-6 lg:px-4 lg:py-16 bg-white text-primary-60">
+                <div class="mx-auto max-w-screen-xl">
+
+                    <hr class="my-6 border-x-white sm:mx-auto lg:my-8" />
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div href="/" class="flex items-center">
+                            <img alt="consuelo-logo" src="/images/logo.png" class="mr-3 h-6 sm:h-9" />
+                            <h1 class="self-center text-xl font-semibold whitespace-nowrap">Consuelo</h1>
+                        </div>
+
+                        <span class="text-sm mt-4 md:mt-0 text-gray-500 sm:text-center dark:text-gray-400">
+                            &copy; 2022 <a href="/" class="hover:underline">Consuelo</a>. 
+                            All Rights Reserved.
+                        </span>
+
+                        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-3xl">
+                            <a href="https://twitter.com/yourconsuelo" target="_blank" class="text-gray-500"> 
+                                 <i class="fa-brands fa-twitter"></i> 
+                            </a>
+                            <a href="https://instagram.com/yourconsuelo" target="_blank" class="text-gray-500">
+                                 <i class="fa-brands fa-instagram"></i>
+                            </a>
+                                                 
+                            <a href="#" target="_blank" class="text-gray-500" >
+                                 <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                       </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal" class="hidden w-96 h-48 bg-white rounded-xl absolute transfrom -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-50">
+            <button class="close-modal text-3xl ml-auto absolute right-4 top-2">&times;</button>
+            <div class="flex justify-center items-center pt-8">
+            <img src="/images/sucessful-icon.svg" alt="" class="w-20">
+            </div>
+            <div class="flex flex-col justify-center items-center mt-2">
+            <p class="font-medium text-lg">Success</p>
+            <p class="text-sm text-modal leading-6">
+                You’ve been added to the waitlist.
+            </p>
+            </div>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"></div>  
+
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+        <script src="/js/waitingList.js"></script>
+    </body>
+</html>
+

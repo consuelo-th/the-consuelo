@@ -5,6 +5,7 @@ const usersRoutes = require("./routes/user");
 const therapistsRouter = require("./routes/therapists");
 const cookieParser = require("cookie-parser");
 const sessions = require("express-session");
+const { waitList } = require("./database/models");
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -29,6 +30,48 @@ app.get("/", function (req, res) {
 
 app.get("/design", (req, res) => {
   res.render("pages/design");
+});
+
+//render the landing pages
+
+app.get("/about", (req, res) => {
+  res.render("pages/landing-page/about-us");
+});
+
+app.get("/blog", (req, res) => {
+  res.render("pages/landing-page/blog-post");
+});
+
+app.get("/list", (req, res) => {
+  res.render("pages/waiting-list");
+});
+
+app.post("/list", async (req, res) => {
+  let { email } = req.body;
+  email = email.toLowerCase();
+
+  if (email) {
+    const emailExists = await waitList.findOne({ email });
+    if (emailExists) {
+      //frontend needs to display the error somewhere
+      //the formdata is for filling back the input fields(page reloads after submission)
+      res.render("pages/waiting-list", { error: "email already exists" });
+    } else {
+      const newEmail = new waitList({ email });
+      newEmail.save((err) => {
+        if (err) {
+          //server error
+          //frontend needs to display the error somewhere
+          //the formdata is for filling back the input fields(page reloads after submission)
+          res.redirect("pages/waiting-list", {
+            error: "something went wrong please try again",
+          });
+        } else {
+          console.log("success");
+        }
+      });
+    }
+  }
 });
 
 app.use((req, res) => {

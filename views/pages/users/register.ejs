@@ -5,13 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>REGISTER | CONSUELO</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png"/>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body class="bg-secondary">
     <header class="flex justify-start items-center py-2 px-6 bg-primary-60">
@@ -23,13 +44,27 @@
       </div>
     </header>
 
-    <section class="flex justify-between items-start  flex-wrap text-body">
+    <section class="flex justify-between items-start flex-wrap text-body">
       <div class="sm:px-6 pt-24 lg:pt-8 w-full px-4 lg:w-1/2 lg:px-8">
         <div class="mx-auto max-w-xs space-y-4">
           <h1 class="font-semibold text-2xl text-primary-60">
             Create a new account
           </h1>
           <p class="font-light">You are one step towards getting better!</p>
+          <div
+            class="g_id_signin"
+            data-type="standard"
+            data-shape="rectangular"
+            data-theme="outline"
+            data-text="sign_up_with"
+            data-size="large"
+            data-logo_alignment="left"
+          ></div>
+          <div
+            id="g_id_onload"
+            data-client_id="100508844576-c1fadbvgpte5km7vt39vlc5prsneaa4t.apps.googleusercontent.com"
+            data-callback="handleCredentialResponseRegister"
+          ></div>
           <button
             class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm shadow-sm text-gray-40 bg-secondary"
           >
@@ -106,9 +141,15 @@
 
           <div class="form-errors">
             <% if (locals.error) { %>
-            <p class="text-error font-semibold text-sm"> <i class="fa-solid fa-circle-xmark"></i> <%= error %></p>
+            <p class="text-error font-semibold text-sm">
+              <i class="fa-solid fa-circle-xmark" id="reg__message"></i> <%=
+              error %>
+            </p>
             <% } else { %>
-              <p class="font-semibold text-sm"><i class="fa-solid fa-circle-check"></i> Password must be up to 7 characters</p>
+            <p class="font-semibold text-sm">
+              <i class="fa-solid fa-circle-check" id="reg__message"></i>
+              Password must be up to 7 characters
+            </p>
             <%}%>
           </div>
 
@@ -136,7 +177,7 @@
         <img alt="Welcome" src="/images/reg-banner-1.png" />
       </div>
     </section>
-
+    <script src="/js/googleAuth.js"></script>
     <script src="/js/auth.js"></script>
   </body>
 </html>

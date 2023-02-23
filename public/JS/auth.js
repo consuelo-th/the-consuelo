@@ -1,5 +1,5 @@
 const toggle = document.getElementById("togglePassword");
-const password = document.getElementById("password");
+const password = document.getElementById("password"); 
 
 toggle.addEventListener("click", function() {
   this.classList.toggle("fa-eye");
