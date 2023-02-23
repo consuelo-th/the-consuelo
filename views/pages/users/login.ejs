@@ -5,16 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOGIN | CONSUELO</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png"/>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body class="bg-secondary">
-    <header class="flex justify-start items-center py-2 px-6 bg-primary-60 absolute left-0 right-0 z-10">
+    <header
+      class="flex justify-start items-center py-2 px-6 bg-primary-60 absolute left-0 right-0 z-10"
+    >
       <div class="flex space-x-1">
         <a href="/">
           <img alt="consuelo-logo" src="/images/logo.png" />
@@ -22,13 +46,48 @@
         <h1 class="px-2 text-white font-bold text-lg">Consuelo</h1>
       </div>
     </header>
-
-    <section class="flex justify-between items-start  flex-wrap text-body">
-      <div class=" sm:px-6 pt-24 w-full px-4 lg:w-1/2 lg:px-8">
+    <section class="flex justify-between items-start flex-wrap text-body">
+      <div class="sm:px-6 pt-24 w-full px-4 lg:w-1/2 lg:px-8">
         <div class="mx-auto max-w-xs space-y-4">
           <h1 class="font-semibold text-2xl text-primary-60">
             Sign into Consuelo
           </h1>
+          <div
+            class="g_id_signin"
+            data-type="standard"
+            data-shape="rectangular"
+            data-theme="outline"
+            data-text="sign_up_with"
+            data-size="large"
+            data-logo_alignment="left"
+          ></div>
+          <div
+            id="g_id_onload"
+            data-client_id="100508844576-c1fadbvgpte5km7vt39vlc5prsneaa4t.apps.googleusercontent.com"
+            data-callback="handleCredentialResponse"
+          ></div>
+          <script>
+            function handleCredentialResponse(response) {
+              const responsePayload = jwt_decode(response.credential); //111
+
+              console.log("this is the response payload", responsePayload);
+              console.log("ID: " + responsePayload.sub);
+              console.log("Full Name: " + responsePayload.name);
+              console.log("Given Name: " + responsePayload.given_name);
+              console.log("Family Name: " + responsePayload.family_name);
+              console.log("Image URL: " + responsePayload.picture);
+              console.log("Email: " + responsePayload.email);
+              var xhr = new XMLHttpRequest();
+              xhr.open("POST", "/google-register");
+              xhr.setRequestHeader("Content-Type", "application/json");
+              xhr.onload = function () {
+                console.log("signed in as:" + xhr.responseText);
+              };
+              xhr.send(JSON.stringify({ token: response.credential }));
+            }
+          </script>
+
+          <!--          -->
           <p class="font-light">You are one step towards getting better!</p>
           <button
             class="w-full rounded-lg border-gray-50 border-[1px] p-3 text-sm shadow-sm text-gray-40 bg-secondary"
@@ -73,16 +132,20 @@
               value="<%= (locals.formData) ? formData.password : ''%>"
             />
 
-            <div >
+            <div>
               <i class="fa-regular fa-eye-slash" id="togglePassword"></i>
             </div>
-        
           </div>
 
           <% if (locals.error) { %>
-          <p class="text-error font-semibold text-sm"><i class="fa-solid fa-circle-xmark"></i> <%= error %></p>
+          <p class="text-error font-semibold text-sm">
+            <i class="fa-solid fa-circle-xmark"></i> <%= error %>
+          </p>
           <% } else {%>
-            <p class="font-semibold text-sm"><i class="fa-solid fa-circle-check"></i> Password must be up to 7 characters</p>
+          <p class="font-semibold text-sm">
+            <i class="fa-solid fa-circle-check"></i> Password must be up to 7
+            characters
+          </p>
           <%}%>
           <p class="text-body font-light">
             By signing up, you agree to the
@@ -90,7 +153,10 @@
             <a href="#" class="text-primary-60">Privacy Policy</a>.
           </p>
           <div>
-            <button type="submit" class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 text-md font-bold text-white shadow-sm bg-primary-50" >
+            <button
+              type="submit"
+              class="w-full txt-center rounded-lg border-primary-50 border-[1px] p-3 text-md font-bold text-white shadow-sm bg-primary-50"
+            >
               Sign in
             </button>
           </div>
@@ -104,9 +170,17 @@
       <div class="max-h-screen w-full lg:w-1/3 sm:h-96">
         <img alt="Welcome" src="/images/reg-banner-1.png" />
       </div>
-
     </section>
 
     <script src="/js/auth.js"></script>
+    <script>
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
+      }
+    </script>
   </body>
 </html>

@@ -10,12 +10,22 @@ const testimonialArr = [
     {
         id: 1,
         name: 'Hassy Eke',
-        text: "I love the product and the design calmed my anxiety."
+        text: "My growth and discovery are greatly influenced  by Consuelo"
     },
     {
         id: 2,
         name: 'Grace Alojore',
         text: 'I loved using Consuelo, it helped me through my problems and now I’m healed',
+    },
+    {
+        id: 3,
+        name: 'Jane Brown',
+        text: 'I struggle with anxiety, and reading tips has helped me manage my anxiety',
+    },
+    {
+        id: 4,
+        name: 'Phillips Karr',
+        text: 'Consuelo has been an absolute game changer for my mental health journey',
     },
     {
         id: 5,
@@ -24,7 +34,15 @@ const testimonialArr = [
     },
     {   id: 6,
         name: 'Ade Eke',
-        text:"I love lorem ipsum gan g sagare hasim telt opsum lorel ty, feran yera ipsum lorel fatam."
+        text: 'The community is like a safe space for me, and everyone in there are very supportive'
+    },
+    {   id: 7,
+        name: 'Love Doe',
+        text: "My favorite feature on consuelo is  the Mental Health Tips, which has provided valuable guidance for me in dealing with my Mental Health"
+    },
+    {   id: 8,
+        name: 'Esther Parris',
+        text: "Consuelo gave me clarity in my mental health struggles. It made such a major difference in my life that I couldn't help but speak up about it"
     }
     
 ]
@@ -54,7 +72,7 @@ testimonialEl.addEventListener('click', e => {
     })
 
     let id = +target.dataset.id
-    console.log(id);
+    // console.log(id);
     let testimonial = testimonialArr.find(testimony => testimony.id === id)
     target.classList.add('border-solid', 'border-4', 'border-white', 'rounded-full', 'scale-150')
 
@@ -66,11 +84,15 @@ testimonialEl.addEventListener('click', e => {
 featuresLink.addEventListener('click', e => {
     e.preventDefault()
     const id = e.target.getAttribute('href')
-    // console.log(document.querySelector(id).getBoundingClientRect())
-    // console.log(window.scrollY);
-
     document.querySelector(id).scrollIntoView({
         behavior:'smooth'
     })
+    if(!overlay.classList.contains('hidden')){
+        hamburger.classList.toggle('hamburger-pos')
+        lineOne.classList.toggle('line1-style')
+        lineThree.classList.toggle('line3-style')
+        lineTwo.classList.toggle('opacity-0')
+        navbar.classList.toggle('screen')
+        overlay.classList.toggle('hidden')
+    }
 })
-

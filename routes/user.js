@@ -111,7 +111,7 @@ router.get("/blog", async (req, res) => {
       { password: 0, admin: 0, savedCardsId: 0, email: 0 }
     );
     const blogPosts = await Blog.find();
-    
+
     //pagination will come later
     res.render("pages/users/blog", { userDetails, blogPosts });
   } else {
@@ -123,7 +123,7 @@ router.get("/blog/:id", async (req, res) => {
   try {
     const blogItem = await Blog.findById(req.params.id);
     if (blogItem) {
-      res.render("templates/blog", {blogItem}); //the page that'll display a single blog post
+      res.render("templates/blog", { blogItem }); //the page that'll display a single blog post
     } else {
       //the ID Is invalid too
     }
@@ -133,8 +133,8 @@ router.get("/blog/:id", async (req, res) => {
 });
 
 router.get("/meet-a-therapist", (req, res) => {
-  res.render("pages/users/meet-a-therapist")
-})
+  res.render("pages/users/meet-a-therapist");
+});
 
 router.get("/logout", (req, res) => {
   req.session.destroy();
@@ -148,8 +148,6 @@ router.post("/register", async (req, res) => {
   if (firstName !== "" && lastName !== "" && email !== "" && password !== "") {
     const emailExists = await User.findOne({ email });
     if (emailExists) {
-      //frontend needs to display the error somewhere
-      //the formdata is for filling back the input fields(page reloads after submission)
       res.render("pages/users/register", {
         error: "Email already exist",
         formData: req.body,
