@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema({
   savedCardsId: [{ type: String }],
   profileImageUrl: { type: String, default: "default-image" },
   notifications: [{ read: { type: Boolean, default: false }, content: String }],
+  googleAccountId: String,
 });
 
 const affirmationSchema = new mongoose.Schema({
@@ -47,7 +48,7 @@ const blogSchema = new mongoose.Schema({
 });
 
 const waitListSchema = new mongoose.Schema({
-  email: String
+  email: String,
 });
 
 const User = mongoose.model("User", userSchema);
@@ -68,5 +69,5 @@ module.exports = {
   forum,
   forumComment,
   blog,
-  waitList
+  waitList,
 };

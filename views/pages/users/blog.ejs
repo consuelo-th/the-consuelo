@@ -26,7 +26,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//glenthemes.github.io/iconsax/geticons.js"></script>
-    <link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet">
+    <link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -39,7 +39,9 @@
   <body class="bg-secondary">
     <!-- component -->
     <div class="flex flex-row min-h-screen">
-      <aside class="sidebar fixed z-50 w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500">
+      <aside
+        class="sidebar fixed z-50 w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+      >
         <!-- sidebar header  -->
         <div
           class="flex h-screen flex-col border-r bg-primary-60 text-white static"
@@ -56,11 +58,7 @@
             aria-label="Main Nav"
             class="main-nav mt-5 md:mt-20 flex flex-col space-y-2 w-full"
           >
-            <a
-              href="/user/home"
-              class="flex items-center px-4 py-3"
-            >
-
+            <a href="/user/home" class="flex items-center px-4 py-3">
               <i class="iconsax" icon-name="layout-2"></i>
               <span class="ml-3 text-sm font-medium"> Home </span>
             </a>
@@ -81,26 +79,25 @@
               <span class="ml-3 text-sm font-medium"> Mental Health Tips </span>
             </a>
 
-            <a
-              href="/user/forum"
-              class="flex items-center px-4 py-3"
-            >
+            <a href="/user/forum" class="flex items-center px-4 py-3">
               <i class="iconsax" icon-name="group"></i>
               <span class="ml-3 text-sm font-medium"> Community </span>
             </a>
 
-            <a
-              href="/user/blog"
-              class="flex items-center px-4 py-3 nav-active"
-            >
-            <i class="iconsax" icon-name="document-text-1"></i>
+            <a href="/user/blog" class="flex items-center px-4 py-3 nav-active">
+              <i class="iconsax" icon-name="document-text-1"></i>
               <span class="ml-3 text-sm font-medium"> Blog </span>
             </a>
-            
+
             <a
-              href="/user/logout"
+              href="/user/meet-a-therapist"
               class="flex items-center px-4 py-3"
             >
+              <i class="iconsax" icon-name="message-dash-1"></i>
+              <span class="ml-3 text-sm font-medium"> Meet a therapist </span>
+            </a>
+
+            <a href="/user/logout" class="flex items-center px-4 py-3">
               <i class="iconsax" icon-name="logout-1"></i>
               <span class="ml-3 text-sm font-medium"> Logout </span>
             </a>
@@ -108,21 +105,32 @@
         </div>
       </aside>
 
-      <main class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]" >
+      <main
+        class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]"
+      >
         <div>
           <header
             class="header bg-white shadow py-4 flex justify-between items-center px-6 lg:px-10"
           >
-            <div class="md:hidden z-50 hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
-              <div class="hamburger-menu_1 mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
-              <div class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
-              <div class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+            <div
+              class="md:hidden z-50 hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer"
+            >
+              <div
+                class="hamburger-menu_1 mb-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black"
+              ></div>
+              <div
+                class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-black"
+              ></div>
+              <div
+                class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black"
+              ></div>
             </div>
             <div class="ml-4">
-              <h1 class="text-lg md:text-xl">
-                Meet a therapist
-              </h1>
-              <p class="leading-5 text-[12px] md:text-sm">Our blog features different perspectives and insights on mental health issues and topics.  </p>
+              <h1 class="text-lg md:text-xl">Meet a therapist</h1>
+              <p class="leading-5 text-[12px] md:text-sm">
+                Our blog features different perspectives and insights on mental
+                health issues and topics.
+              </p>
             </div>
 
             <div class="flex items-center space-x-3">
@@ -140,80 +148,183 @@
 
           <div class="main-content flex flex-col flex-grow py-4 px-6 lg:px-10">
             <div class="grid gap-2">
+              <div
+                class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl"
+              >
+                <img
+                  class="object-contain w-full h-52 md:h-48 rounded-t-lg lg:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                  src="/images/blog.png"
+                  alt="blog img"
+                />
 
-              <div  class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl">
-                <img class="object-contain w-full h-52 md:h-48 rounded-t-lg lg:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/blog.png" alt="blog img">
-                
-                <div class="flex flex-col md:px-4 py-4 lg:py-0 md:mt-10 lg:mt-0 leading-normal gap-2">
-                  <h2 class="">Healing through music; the impact of music therapy on mental health</h2>
-  
-                  <div class=" text-secondary-100 max-w-lg">
-                    <p>September 30, 2022&nbsp; | &nbsp;<span><i class="fa-regular fa-clock"></i>
-                      </span> 5 Mins Read  |  Written by Hussy
+                <div
+                  class="flex flex-col md:px-4 py-4 lg:py-0 md:mt-10 lg:mt-0 leading-normal gap-2"
+                >
+                  <h2 class="">
+                    Healing through music; the impact of music therapy on mental
+                    health
+                  </h2>
+
+                  <div class="text-secondary-100 max-w-lg">
+                    <p>
+                      September 30, 2022&nbsp; | &nbsp;<span
+                        ><i class="fa-regular fa-clock"></i>
+                      </span>
+                      5 Mins Read | Written by Hussy
                     </p>
                   </div>
-  
-                  <p class="md:mt-[calc(192px-140px)] md:-ml-52 lg:mt-0 lg:-ml-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor massa erat aliquam lectus. Duis duis id nibh sem morbi leo eget egestas eget. Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis <br> <a href="#" class="text-primary-60 font-bold">read more...</a></p>
+
+                  <p
+                    class="md:mt-[calc(192px-140px)] md:-ml-52 lg:mt-0 lg:-ml-0"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Tortor massa erat aliquam lectus. Duis duis id nibh sem
+                    morbi leo eget egestas eget. Purus at tristique elementum
+                    commodo odio. Velit lacus, a, eros, suspendisse sit ipsum
+                    quis <br />
+                    <a href="#" class="text-primary-60 font-bold"
+                      >read more...</a
+                    >
+                  </p>
                 </div>
               </div>
 
-              <div  class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl">
-                <img class="object-contain w-full h-52 md:h-48 rounded-t-lg lg:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/blog.png" alt="blog img">
-                
-                <div class="flex flex-col md:px-4 py-4 lg:py-0 md:mt-10 lg:mt-0 leading-normal gap-2">
-                  <h2 class="">Healing through music; the impact of music therapy on mental health</h2>
-  
-                  <div class=" text-secondary-100 max-w-lg">
-                    <p>September 30, 2022&nbsp; | &nbsp;<span><i class="fa-regular fa-clock"></i>
-                      </span> 5 Mins Read  |  Written by Hussy
+              <div
+                class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl"
+              >
+                <img
+                  class="object-contain w-full h-52 md:h-48 rounded-t-lg lg:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                  src="/images/blog.png"
+                  alt="blog img"
+                />
+
+                <div
+                  class="flex flex-col md:px-4 py-4 lg:py-0 md:mt-10 lg:mt-0 leading-normal gap-2"
+                >
+                  <h2 class="">
+                    Healing through music; the impact of music therapy on mental
+                    health
+                  </h2>
+
+                  <div class="text-secondary-100 max-w-lg">
+                    <p>
+                      September 30, 2022&nbsp; | &nbsp;<span
+                        ><i class="fa-regular fa-clock"></i>
+                      </span>
+                      5 Mins Read | Written by Hussy
                     </p>
                   </div>
-  
-                  <p class="md:mt-[calc(192px-140px)] md:-ml-52 lg:mt-0 lg:-ml-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor massa erat aliquam lectus. Duis duis id nibh sem morbi leo eget egestas eget. Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis <br> <a href="#" class="text-primary-60 font-bold">read more...</a></p>
+
+                  <p
+                    class="md:mt-[calc(192px-140px)] md:-ml-52 lg:mt-0 lg:-ml-0"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Tortor massa erat aliquam lectus. Duis duis id nibh sem
+                    morbi leo eget egestas eget. Purus at tristique elementum
+                    commodo odio. Velit lacus, a, eros, suspendisse sit ipsum
+                    quis <br />
+                    <a href="#" class="text-primary-60 font-bold"
+                      >read more...</a
+                    >
+                  </p>
                 </div>
               </div>
 
-              <div  class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl">
-                <img class="object-contain w-full h-52 md:h-48 rounded-t-lg lg:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/images/blog.png" alt="blog img">
-                
-                <div class="flex flex-col md:px-4 py-4 lg:py-0 md:mt-10 lg:mt-0 leading-normal gap-2">
-                  <h2 class="">Healing through music; the impact of music therapy on mental health</h2>
-  
-                  <div class=" text-secondary-100 max-w-lg">
-                    <p>September 30, 2022&nbsp; | &nbsp;<span><i class="fa-regular fa-clock"></i>
-                      </span> 5 Mins Read  |  Written by Hussy
+              <div
+                class="flex flex-col items-start rounded-lg md:flex-row max-w-4xl"
+              >
+                <img
+                  class="object-contain w-full h-52 md:h-48 rounded-t-lg lg:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                  src="/images/blog.png"
+                  alt="blog img"
+                />
+
+                <div
+                  class="flex flex-col md:px-4 py-4 lg:py-0 md:mt-10 lg:mt-0 leading-normal gap-2"
+                >
+                  <h2 class="">
+                    Healing through music; the impact of music therapy on mental
+                    health
+                  </h2>
+
+                  <div class="text-secondary-100 max-w-lg">
+                    <p>
+                      September 30, 2022&nbsp; | &nbsp;<span
+                        ><i class="fa-regular fa-clock"></i>
+                      </span>
+                      5 Mins Read | Written by Hussy
                     </p>
                   </div>
-  
-                  <p class=" md:mt-[calc(192px-140px)] md:-ml-52 lg:mt-0 lg:-ml-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor massa erat aliquam lectus. Duis duis id nibh sem morbi leo eget egestas eget. Purus at tristique elementum commodo odio. Velit lacus, a, eros, suspendisse sit ipsum quis <br> <a href="#" class="text-primary-60 font-bold">read more...</a></p>
+
+                  <p
+                    class="md:mt-[calc(192px-140px)] md:-ml-52 lg:mt-0 lg:-ml-0"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Tortor massa erat aliquam lectus. Duis duis id nibh sem
+                    morbi leo eget egestas eget. Purus at tristique elementum
+                    commodo odio. Velit lacus, a, eros, suspendisse sit ipsum
+                    quis <br />
+                    <a href="#" class="text-primary-60 font-bold"
+                      >read more...</a
+                    >
+                  </p>
                 </div>
               </div>
-
             </div>
-            
-
           </div>
 
           <footer class="footer px-4 py-6">
-              <nav aria-label="page navigation">
-                <ul class="flex justify-center gap-2 text-afribook font-semibold poppins text-lg">
-                  <li><button><i class="fa-solid fa-angle-left"></i></button></li>
-                  <li><button class="border border-primary-60 rounded-lg px-2">1</button></li>
-                  <li><button class="border border-afribook rounded-lg px-2">2</button></li>
-                  <li><button class="border border-afribook rounded-lg px-2">3</button></li>
-                  <li><button class="border border-afribook rounded-lg px-2">4</button></li>
-                  <li><button class="border border-afribook rounded-lg px-2">5</button></li>
-                  <li><button class="border border-afribook rounded-lg px-2">6</button></li>
-                  <li><button ><i class="fa-solid fa-angle-right"></i></button></li>
-                </ul>
-              </nav>
+            <nav aria-label="page navigation">
+              <ul
+                class="flex justify-center gap-2 text-afribook font-semibold poppins text-lg"
+              >
+                <li>
+                  <button><i class="fa-solid fa-angle-left"></i></button>
+                </li>
+                <li>
+                  <button class="border border-primary-60 rounded-lg px-2">
+                    1
+                  </button>
+                </li>
+                <li>
+                  <button class="border border-afribook rounded-lg px-2">
+                    2
+                  </button>
+                </li>
+                <li>
+                  <button class="border border-afribook rounded-lg px-2">
+                    3
+                  </button>
+                </li>
+                <li>
+                  <button class="border border-afribook rounded-lg px-2">
+                    4
+                  </button>
+                </li>
+                <li>
+                  <button class="border border-afribook rounded-lg px-2">
+                    5
+                  </button>
+                </li>
+                <li>
+                  <button class="border border-afribook rounded-lg px-2">
+                    6
+                  </button>
+                </li>
+                <li>
+                  <button><i class="fa-solid fa-angle-right"></i></button>
+                </li>
+              </ul>
+            </nav>
           </footer>
         </div>
       </main>
     </div>
 
     <!-- Overlay -->
-    <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-all duration-500 ease-in-out z-30"></div>            
+    <div
+      class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-all duration-500 ease-in-out z-30"
+    ></div>
 
     <script src="/js/sideBar.js"></script>
   </body>

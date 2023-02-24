@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
@@ -5,6 +6,11 @@ const User = require("../database/models").User;
 const MentalHealthTip = require("../database/models").MentalHealthTip;
 const Blog = require("../database/models").blog;
 let session;
+//GOOGLE
+const { OAuth2Client } = require("google-auth-library");
+const CLIENT_ID = process.env.CLIENT_ID;
+const client = new OAuth2Client(CLIENT_ID);
+//
 
 //GET REQUESTS
 router.get("/register", (req, res) => {
@@ -111,7 +117,7 @@ router.get("/blog", async (req, res) => {
       { password: 0, admin: 0, savedCardsId: 0, email: 0 }
     );
     const blogPosts = await Blog.find();
-    
+
     //pagination will come later
     res.render("pages/users/blog", { userDetails, blogPosts });
   } else {
@@ -123,7 +129,7 @@ router.get("/blog/:id", async (req, res) => {
   try {
     const blogItem = await Blog.findById(req.params.id);
     if (blogItem) {
-      res.render("templates/blog", {blogItem}); //the page that'll display a single blog post
+      res.render("templates/blog", { blogItem }); //the page that'll display a single blog post
     } else {
       //the ID Is invalid too
     }
@@ -133,8 +139,8 @@ router.get("/blog/:id", async (req, res) => {
 });
 
 router.get("/meet-a-therapist", (req, res) => {
-  res.render("pages/users/meet-a-therapist")
-})
+  res.render("pages/users/meet-a-therapist");
+});
 
 router.get("/logout", (req, res) => {
   req.session.destroy();
@@ -148,8 +154,6 @@ router.post("/register", async (req, res) => {
   if (firstName !== "" && lastName !== "" && email !== "" && password !== "") {
     const emailExists = await User.findOne({ email });
     if (emailExists) {
-      //frontend needs to display the error somewhere
-      //the formdata is for filling back the input fields(page reloads after submission)
       res.render("pages/users/register", {
         error: "Email already exist",
         formData: req.body,
@@ -222,5 +226,90 @@ router.post("/login", async (req, res) => {
     });
   }
 });
+
+router.post("/google-login", (req, res) => {
+  let token = req.body.token;
+  handleGoogleAuth(token, "login", res, req);
+});
+
+router.post("/google-register", (req, res) => {
+  let token = req.body.token;
+  handleGoogleAuth(token, "register", res, req);
+});
+
+function handleGoogleAuth(token, operation, res, req) {
+  async function verify() {
+    const ticket = await client.verifyIdToken({
+      idToken: token,
+      audience: CLIENT_ID,
+    });
+    const payload = ticket.getPayload();
+    if (
+      payload.aud === CLIENT_ID &&
+      (payload.iss === "accounts.google.com" ||
+        payload.iss === "https://accounts.google.com") &&
+      payload.exp > Date.now() / 1000
+    ) {
+      if (operation === "register") {
+        const googleAccountIdExist = await User.findOne({
+          googleAccountId: payload.sub,
+        });
+        if (googleAccountIdExist) {
+          res.json({
+            success: false,
+            message:
+              "Sorry, it looks like you already have an account with us. " +
+              "Please log in",
+          });
+        } else {
+          const newUser = new User({
+            firstName: payload.given_name,
+            lastName: payload.family_name,
+            email: payload.email,
+            profileImageUrl: payload.picture,
+            googleAccountId: payload.sub,
+          });
+          newUser.save((err, newUserDoc) => {
+            if (err) {
+              res.json({
+                success: false,
+                message: "something went wrong, please try again",
+              });
+            } else {
+              session = req.session;
+              session.userID = newUserDoc._id;
+              res.json({ success: true, redirectUrl: "/user/home" });
+            }
+          });
+        }
+      } else {
+        const user = await User.findOne({
+          googleAccountId: payload.sub,
+        });
+        if (user) {
+          session = req.session;
+          session.userID = user._id;
+          res.json({ success: true, redirectUrl: "/user/home" });
+        } else {
+          res.json({
+            success: false,
+            message:
+              "Sorry, we couldn't find an account associated with your Google account. " +
+              "Please sign up to create an account before you can log in.",
+          });
+        }
+      }
+    } else {
+      //either malicious, or the token has expired
+      // TODO
+    }
+  }
+  verify().catch((err) => {
+    if (err) {
+      //to be displayed on frontend
+      console.log(err);
+    }
+  });
+}
 
 module.exports = router;

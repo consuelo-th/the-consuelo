@@ -23,7 +23,6 @@ router.get("/patients", (req, res) => {
 
 router.get("/calendar", (req, res) => {
   res.render("pages/th/calendar");
-  
 });
 
 router.get("/chat", (req, res) => {
