@@ -118,23 +118,8 @@ router.get("/blog", async (req, res) => {
     );
     const blogPosts = await Blog.find();
 
-    //this should be in the ejs file
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-
-    res.render("pages/users/blog", { userDetails, blogPosts, months });
+    //pagination will come later
+    res.render("pages/users/blog", { userDetails, blogPosts });
   } else {
     res.redirect("/user/login");
   }
@@ -169,8 +154,6 @@ router.post("/register", async (req, res) => {
   if (firstName !== "" && lastName !== "" && email !== "" && password !== "") {
     const emailExists = await User.findOne({ email });
     if (emailExists) {
-      //frontend needs to display the error somewhere
-      //the formdata is for filling back the input fields(page reloads after submission)
       res.render("pages/users/register", {
         error: "Email already exist",
         formData: req.body,
