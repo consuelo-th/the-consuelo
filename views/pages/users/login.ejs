@@ -65,26 +65,6 @@
             data-client_id="100508844576-c1fadbvgpte5km7vt39vlc5prsneaa4t.apps.googleusercontent.com"
             data-callback="handleCredentialResponseLogin"
           ></div>
-          <!-- <script>
-            function handleCredentialResponse(response) {
-              const responsePayload = jwt_decode(response.credential); //111
-
-              console.log("this is the response payload", responsePayload);
-              console.log("ID: " + responsePayload.sub);
-              console.log("Full Name: " + responsePayload.name);
-              console.log("Given Name: " + responsePayload.given_name);
-              console.log("Family Name: " + responsePayload.family_name);
-              console.log("Image URL: " + responsePayload.picture);
-              console.log("Email: " + responsePayload.email);
-              var xhr = new XMLHttpRequest();
-              xhr.open("POST", "/google-register");
-              xhr.setRequestHeader("Content-Type", "application/json");
-              xhr.onload = function () {
-                console.log("signed in as:" + xhr.responseText);
-              };
-              xhr.send(JSON.stringify({ token: response.credential }));
-            }
-          </script> -->
 
           <p class="font-light">You are one step towards getting better!</p>
           <button
@@ -137,12 +117,13 @@
 
           <% if (locals.error) { %>
           <p class="text-error font-semibold text-sm">
-            <i class="fa-solid fa-circle-xmark"></i> <%= error %>
+            <i class="fa-solid fa-circle-xmark" id="reg__message"></i> <%= error
+            %>
           </p>
           <% } else {%>
           <p class="font-semibold text-sm">
-            <i class="fa-solid fa-circle-check"></i> Password must be up to 7
-            characters
+            <i class="fa-solid fa-circle-check" id="reg__message"></i> Password
+            must be up to 7 characters
           </p>
           <%}%>
           <p class="text-body font-light">

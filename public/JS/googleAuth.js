@@ -7,11 +7,13 @@ function handleCredentialResponseLogin(response) {
 }
 
 function xhrRequest(url, response) {
+  console.log(response);
   let xhr = new XMLHttpRequest();
   xhr.open("POST", url);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.onload = function () {
     let requestResponse = JSON.parse(xhr.responseText);
+    console.log(requestResponse);
     if (requestResponse.success) {
       window.location.href = requestResponse.redirectUrl;
     } else {
