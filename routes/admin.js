@@ -26,4 +26,8 @@ router.get("/feedback", (req, res) => {
   res.render("pages/admin/feedback");
 });
 
+router.get("/login", (req, res) => {
+  res.render("pages/admin/login");
+});
+
 module.exports = router;
