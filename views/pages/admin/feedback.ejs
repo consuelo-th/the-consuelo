@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONSUELO ~ HOME</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//glenthemes.github.io/iconsax/geticons.js"></script>
+    <link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    
+  </head>
+  <body class="bg-secondary">
+    <!-- component -->
+    <div class="flex flex-row min-h-screen">
+      <aside
+        class="sidebar fixed z-50 w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500">
+        <!-- sidebar header  -->
+        <div
+          class="flex h-screen flex-col border-r bg-primary-60 text-white static"
+        >
+          <div class="sidebar-header mt-28 md:mt-0  flex space-x-1 px-4 py-4">
+            <a href="/admin/home">
+              <img alt="consuelo-logo" src="/images/logo.png" />
+            </a>
+            <h1 class="px-2 text-white font-bold text-lg">Consuelo</h1>
+          </div>
+
+          <!-- sidebar -->
+          <nav
+            aria-label="Main Nav"
+            class="main-nav mt-5 md:mt-20 flex flex-col space-y-2 w-full"
+          >
+            <a
+              href="/admin/home"
+              class="flex items-center px-4 py-3"
+            >
+              <i class="iconsax" icon-name="layout-2"></i>
+              <span class="ml-3 text-sm font-medium"> Home </span>
+            </a>
+
+            <a
+              href="/admin/self-affirmation"
+              class="flex items-center px-4 py-3"
+            >
+              <i class="iconsax" icon-name="document-sketch"></i>
+              <span class="ml-3 text-sm font-medium"> Self Affirmation </span>
+            </a>
+
+            <a
+              href="/admin/mental-health-tips"
+              class="flex items-center px-4 py-3"
+            >
+              <i class="iconsax" icon-name="message-dots-notif"></i>
+              <span class="ml-3 text-sm font-medium"> Mental Health Tips </span>
+            </a>
+
+            <a
+                href="/admin/forum"
+                class="flex items-center px-4 py-3"
+            >
+                <i class="iconsax" icon-name="message-dots-notif"></i>
+                <span class="ml-3 text-sm font-medium"> Forum </span>
+            </a>
+
+            <a
+              href="/admin/blog"
+              class="flex items-center px-4 py-3"
+            >
+            <i class="iconsax" icon-name="document-text-1"></i>
+              <span class="ml-3 text-sm font-medium"> Blog </span>
+            </a>
+            
+            <a
+              href="/admin/feedback"
+              class="flex items-center px-4 py-3 nav-active"
+            >
+            <i class="iconsax" icon-name="document-text-1"></i>
+              <span class="ml-3 text-sm font-medium"> Feedback & Reviews </span>
+            </a>
+            
+            <a
+              href="/admin/home"
+              class="flex items-center px-4 py-3"
+            >
+              <i class="iconsax" icon-name="logout-1"></i>
+              <span class="ml-3 text-sm font-medium"> Logout </span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <main
+        class="main flex flex-col flex-grow md:ml-64 transition-all duration-150 ease-in bg-[#EFF3F6]">
+        <div>
+          <div class="w-full">
+            
+            <header
+              class="header bg-white shadow py-4 flex justify-between items-center px-6 lg:px-10 ">
+              
+              <div class="md:hidden z-50 hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer">
+                <div class="hamburger-menu_1 mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+                <div class="hamburger-menu_2 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+                <div class="hamburger-menu_3 mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black"></div>
+              </div>
+
+              <div class="ml-4">
+                <h1 class="text-lg md:text-xl">
+                    Welcome back Hassy,
+                </h1>
+                <p class="leading-5 text-[12px] md:text-sm">Your feelings are welcome here</p>
+              </div>
+  
+              <div class="flex items-center space-x-3">
+                <i class="fa-regular fa-bell"></i>
+  
+                <span
+                  class="flex gap-2 border-2 border-solid rounded-2xl px-2 py-1 hover:cursor-pointer"
+                >
+                  <i class="fa-regular fa-user"></i>
+  
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </div>
+            </header>
+
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-all duration-500 ease-in-out z-30"></div>            
+
+    <script src="/js/sideBar.js"></script>
+  </body>
+</html>
